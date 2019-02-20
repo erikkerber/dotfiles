@@ -1,0 +1,4 @@
+Bundle 'keith/parsec.vim'
+Bundle 'machakann/vim-highlightedyank'
+Bundle 'sjl/vitality.vim'
+

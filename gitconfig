@@ -1,0 +1,200 @@
+[user]
+  name = Erik Kerber
+  email = erik.kerber@target.com
+[core]
+  excludesfile = ~/.gitignore
+  attributesfile = ~/.gitattributes
+  editor = vim
+  whitespace = trailing-space,space-before-tab
+[init]
+  templatedir = ~/.git_template
+[push]
+  default = upstream
+[diff]
+  tool = Kaleidoscope
+  renames = copies
+  mnemonicprefix = true
+  algorithm = patience
+  indentHeuristic = true
+  colorMoved = zebra
+[difftool]
+  prompt = false
+[difftool "Kaleidoscope"]
+  cmd = ksdiff --partial-changeset --relative-path \"$MERGED\" -- \"$LOCAL\" \"$REMOTE\"
+[difftool "idiff"]
+  cmd = "diff -Nuri -U3 --minimal \"$LOCAL\" \"$REMOTE\" | sed 's/^-/\\x1b[1;31m-/;s/^+/\\x1b[1;32m+/;s/^@/\\x1b[1;34m@/;s/$/\\x1b[0m/' | diff-highlight"
+[mergetool "vim"]
+  cmd = vim -c "normal\\ gg]c" -f \"$MERGED\"
+  prompt = false
+[mergetool "Kaleidoscope"]
+  cmd = ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" --snapshot \"$REMOTE\" --snapshot
+[mergetool]
+  prompt = false
+  keepBackup = false
+  trustExitCode = true
+[merge]
+  tool = Kaleidoscope
+  keepBackup = false
+  log = true
+  stat = true
+[github]
+  user = eskerber
+[help]
+  autocorrect = 1
+[hub]
+  protocol = https
+[alias]
+  
+  # add
+  a           = add
+  ap          = add --patch
+  chunkyadd   = add --patch
+
+  # Be Good
+  praise      = blame
+
+  # branch 
+  b           = branch -v
+  ba          = branch -a
+  cb          = !sh -c 'git checkout --quiet -b $1 && (git push origin $1 --quiet 2> /dev/null && git branch -u origin/$1 $1 --quiet) &' -
+  branches    = for-each-ref --sort=-committerdate --format=\"%(color:blue)%(authordate:relative)\t%(color:red)%(authorname)\t%(color:white)%(color:bold)%(refname:short)\" refs/remotes
+
+  # checkout
+  co          = checkout
+  co-pr       = !sh -c 'git fetch origin pull/$1/head:pr/$1 && git checkout pr/$1' -
+  
+  # commit
+  c           = commit --verbose -m
+  ca          = commit --verbose -am
+  amend       = commit --verbose --amend
+  ammend      = commit --verbose --amend
+  amendne     = commit --verbose --amend --no-edit
+  comf        = commit --verbose --fixup=HEAD
+
+  # diff
+  d           = diff                               # diff unstaged changes
+  dc          = diff --cached                      # diff staged changes
+  last        = diff HEAD^                         # diff last committed change
+  dt          = difftool
+  dtc         = difftool --cached
+
+  # rebase
+  ra          = rebase --abort
+  rc          = rebase --continue
+  rs          = rebase --skip
+  rma         = rebase master
+  rmi         = rebase master -i
+
+  # reflog
+  rl      = reflog -20
+  
+  # remote
+  r           = remote -v
+  ps          = push
+  punch       = push --force-with-lease
+
+  # reset
+  nuke        = reset --hard HEAD
+  undo        = reset --soft HEAD^
+  unstage     = reset HEAD
+  uncommit    = reset --soft HEAD
+  clean       = clean -f -d
+
+  # merge
+  mt          = mergetool
+
+  # stash
+  ss          = stash
+  sl          = stash list
+  sa          = stash apply
+  sd          = stash drop
+  # via http://blog.apiaxle.com/post/handy-git-tips-to-stop-you-getting-fired/
+  snapshot = !git stash save "snapshot: $(date)" && git stash apply "stash@{0}"
+  snapshots = !git stash list --grep snapshot
+
+  # status
+  s           = status -sb
+  l           = log -20 --topo-order --pretty='format:%Cblue%h%Creset %s%Cred%d%Creset %C(yellow)(%an)%Creset'
+  changes     = log --pretty=format:\"%C(blue)%h%Creset %C(green)%cr%Creset %C(red)%an%Creset %s\" --name-status
+  short       = log --pretty=format:\"%C(blue)%h%Creset %C(red)%an%Creset%<(13) %C(green)%cr%Creset %s\"
+  simple      = log --pretty=format:\" * %s\"
+  shortnocolor= log --pretty=format:\"%h %cr %an %s\"
+  dylan       = log --diff-filter=R --summary
+  filelog     = log -u
+  last        = diff HEAD^ HEAD
+  last-msg    = !git --no-pager log --format=format:%B -1
+  last-sha    = !git --no-pager log --format=format:%H -1
+
+  # submodules
+  sub         = submodule update --init --recursive
+
+  # tag
+  t           = tag -n
+
+  # typos
+  g           = !exec git     # Execute Git if the command is accidentally repeated
+  git         = !exec git     # Execute Git if the command is accidentally repeated
+
+  # for fun
+  wtc         = !sh -c 'git commit $@ -m \""`curl -s http://whatthecommit.com/index.txt`"\"' -
+
+  # To Organize
+  adeleted    = !sh -c 'git ls-files `git rev-parse --show-toplevel` --deleted -z | xargs -0 git rm -r'
+  auntracked  = !sh -c 'git ls-files `git rev-parse --show-toplevel` --others --exclude-standard -z | xargs -0 git add'
+  cop         = !sh -c 'git branch | cut -c 3- | fzy --query=$1 | xargs git checkout' -
+  copr        = !sh -c 'git branch -r | cut -c 3- | grep -v HEAD | cut -d "/" -f 2 | fzy --query=$1 | xargs git checkout' -
+  ctags       = !.git/hooks/ctags
+  dm          = !sh -c 'git diff $@ $(git merge-base master $(git name-rev --name-only HEAD))' -
+  dstash      = !sh -c 'git stash show -p stash@{${1-0}}' -
+
+[fetch]
+  prune = true
+[branch]
+  autosetupmerge = true
+[rerere]
+  enabled = true
+[rebase]
+  autosquash = true
+  autostash = true
+  stat = true
+[stash]
+  showPatch = true
+[gpg]
+  program = gpg
+[commit]
+  verbose = true
+[submodule]
+  fetchJobs = 8
+[interactive]
+  diffFilter = diff-highlight
+[diff "plist"]
+  textconv = plutil -convert xml1 -o -
+[diff "provision"]
+  textconv = security cms -D -i
+[diff "exif"]
+  textconv = exiftool
+[difftool "ksdiff"]
+  cmd = ksdiff --partial-changeset --relative-path \"$MERGED\" -- \"$LOCAL\" \"$REMOTE\"
+[format]
+  pretty = format:%C(blue)%ad%Creset %C(yellow)%h%C(green)%d%Creset %C(blue)%s %C(magenta) [%an]%Creset
+[mergetool "ksdiff"]
+  cmd = ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" \"$REMOTE\"
+[status]
+  showUntrackedFiles = all
+[sendemail]
+  smtpEncryption = tls
+  smtpServer = /usr/local/bin/msmtp
+  smtpServerOption = -afastmail
+[log]
+  follow = true
+[grep]
+  column = true
+  lineNumber = true
+[advice]
+  waitingForEditor = false
+[pager]
+  branch = false
+[pull]
+  rebase = true
+[credential]
+  helper = osxkeychain

@@ -1,0 +1,5 @@
+Bundle 'gfontenot/vim-xcode'
+Bundle 'keith/gist.vim'
+Bundle 'tommcdo/vim-lion'
+Bundle 'tpope/vim-commentary'
+Bundle 'neomake/neomake'
