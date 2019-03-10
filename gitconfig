@@ -1,6 +1,10 @@
 [user]
   name = Erik Kerber
   email = erik.kerber@target.com
+[github]
+  user = eskerber
+[hub]
+  protocol = https
 [core]
   excludesfile = ~/.gitignore
   attributesfile = ~/.gitattributes
@@ -37,12 +41,8 @@
   keepBackup = false
   log = true
   stat = true
-[github]
-  user = eskerber
 [help]
   autocorrect = 1
-[hub]
-  protocol = https
 [alias]
   
   # add
