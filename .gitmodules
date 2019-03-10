@@ -1,6 +1,3 @@
-[submodule "vim/pathogen"]
-	path = vim/pathogen
-	url = git@github.com:tpope/vim-pathogen.git
 [submodule "lldb_commands/derbear"]
 	path = lldb_commands/derbear
 	url = git@github.com:DerekSelander/LLDB.git
