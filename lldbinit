@@ -7,16 +7,8 @@ settings set target.load-cwd-lldbinit true
 # Add type summary for Unmanaged in Swift
 type summary add --category swift --summary-string "Unmanaged Contains: ${var._value%@}" Swift.Unmanaged<AnyObject>
 
-command script import ~/.lldb_commands/aslr.py
-command script import ~/.lldb_commands/break_here.py
-command script import ~/.lldb_commands/breakpoints.py
-command script import ~/.lldb_commands/context.py
-command script import ~/.lldb_commands/delete_breakpoint.py
-command script import ~/.lldb_commands/function_address.py
-command script import ~/.lldb_commands/iblog.py
-command script import ~/.lldb_commands/keypath.py
-command script import ~/.lldb_commands/seq.py
-command script import ~/.lldb_commands/symbol_address.py
+# Loads all personal/local lldb commands
+command script import ~/.lldb_commands/initall.py
 
 # Thanks Der ❤
 command script import ~/.lldb_commands/derbear/lldb_commands/dslldb.py
