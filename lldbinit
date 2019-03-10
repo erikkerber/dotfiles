@@ -7,20 +7,24 @@ settings set target.load-cwd-lldbinit true
 # Add type summary for Unmanaged in Swift
 type summary add --category swift --summary-string "Unmanaged Contains: ${var._value%@}" Swift.Unmanaged<AnyObject>
 
-command script import ~/.lldbhelpers/aslr.py
-command script import ~/.lldbhelpers/break_here.py
-command script import ~/.lldbhelpers/breakpoints.py
-command script import ~/.lldbhelpers/context.py
-command script import ~/.lldbhelpers/delete_breakpoint.py
-command script import ~/.lldbhelpers/function_address.py
-command script import ~/.lldbhelpers/iblog.py
-command script import ~/.lldbhelpers/keypath.py
-command script import ~/.lldbhelpers/seq.py
-command script import ~/.lldbhelpers/symbol_address.py
+command script import ~/.lldb_commands/aslr.py
+command script import ~/.lldb_commands/break_here.py
+command script import ~/.lldb_commands/breakpoints.py
+command script import ~/.lldb_commands/context.py
+command script import ~/.lldb_commands/delete_breakpoint.py
+command script import ~/.lldb_commands/function_address.py
+command script import ~/.lldb_commands/iblog.py
+command script import ~/.lldb_commands/keypath.py
+command script import ~/.lldb_commands/seq.py
+command script import ~/.lldb_commands/symbol_address.py
+
+# Thanks Der ❤
+command script import ~/.lldb_commands/derbear/lldb_commands/dslldb.py
+
+# Facebook Chisel (brew install chisel)
+command script import /usr/local/opt/chisel/libexec/fblldb.py
 
 command regex fw 's/(.+)/expr -l objective-c -O -- @import %1/'
-
-command script import /usr/local/opt/chisel/libexec/fblldb.py
 
 command alias rs process launch --stop-at-entry
 command alias reveal expr -l objc++ -- (void*)dlopen("/Applications/Reveal.app/Contents/SharedSupport/iOS-Libraries/libReveal.dylib", 0x2); (void)[(NSNotificationCenter*)[NSNotificationCenter defaultCenter] postNotificationName:@"IBARevealRequestStart" object:nil];
