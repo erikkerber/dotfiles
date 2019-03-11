@@ -9,6 +9,9 @@ set -x DOTFILES (dirname (readlink "$HOME/.config"))
 ## rbenv
 status --is-interactive; and source (rbenv init -|psub)
 
+#set -gx PATH \$PATH ~/
+set -gx PATH ~/.bin $PATH
+
 # Source all fish files
 for file in $DOTFILES/**/fish/*.fish
   switch $file
