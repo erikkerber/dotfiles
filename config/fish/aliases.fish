@@ -77,3 +77,10 @@ alias deeplink='xcrun simctl openurl booted'
 alias dockerkillall='docker kill (docker ps -q)'
 alias dockerdac='docker rm (docker ps -a -q)'
 alias dockerdai='docker rmi (docker images -q)'
+
+# AG
+alias ag='ag --follow --hidden'
+
+# Homebrew upgrade/date is confusing
+alias brew_update="brew -v update; brew upgrade --force-bottle --cleanup; brew cleanup; brew cask cleanup; brew prune; brew doctor"
+
