@@ -5,6 +5,7 @@
   user = eskerber
 [hub]
   protocol = https
+	host = git.target.com
 [core]
   excludesfile = ~/.gitignore
   attributesfile = ~/.gitattributes
@@ -78,6 +79,9 @@
   last        = diff HEAD^                         # diff last committed change
   dt          = difftool
   dtc         = difftool --cached
+  dtk         = difftool --tool=Kaleidoscope
+  dtck        = difftool --cached --tool=Kaleidoscope
+
 
   # rebase
   ra          = rebase --abort
