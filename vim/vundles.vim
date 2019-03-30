@@ -10,17 +10,12 @@
 " Filetype off is required by vundle
 filetype off
 
-set rtp+=~/.vim/bundle/Vundle.vim/
 set rtp+=~/.vim/vundles/ "Submodules
-call vundle#rc()
-
-" let Vundle manage Vundle (required)
-Bundle "gmarik/vundle"
+call plug#begin('~/.vim/plugged')
 
 " YADR's vundles are split up by category into smaller files
 " This reduces churn and makes it easier to fork. See
 " ~/.vim/vundles/ to edit them:
-runtime keith.vundle
 runtime ruby.vundle
 runtime languages.vundle
 runtime git.vundle
@@ -30,6 +25,8 @@ runtime search.vundle
 runtime project.vundle
 runtime tools.vundle
 runtime vim-improvements.vundle
+
+call plug#end()
 
 "Filetype plugin indent on is required by vundle
 filetype plugin indent on

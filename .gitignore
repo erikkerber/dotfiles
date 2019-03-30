@@ -12,6 +12,7 @@ Icon
 Session.vim
 vim/*.spl
 vim/bundle/*
+vim/plugged/*
 
 !mutt/temp/.gitkeep
 mutt/cache

@@ -1,6 +1,6 @@
-Bundle "gregsexton/gitv"
-Bundle "mattn/gist-vim"
-Bundle "tpope/vim-fugitive"
-Bundle "tpope/vim-git"
-Bundle "airblade/vim-gitgutter"
-Bundle 'tpope/vim-rhubarb'
+Plug 'gregsexton/gitv'
+Plug 'mattn/gist-vim'
+Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-git'
+Plug 'airblade/vim-gitgutter'
+Plug 'tpope/vim-rhubarb'
