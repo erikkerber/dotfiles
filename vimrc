@@ -7,7 +7,7 @@ source ~/.vim/before/*.vim
 
 " ================ General Config ====================
 
-set shell=/bin/bash             "Bash required for Vundle
+set shell=/bin/bash             "Bash
 set number                      "Line numbers are good
 set backspace=indent,eol,start  "Allow backspace in insert mode
 set history=1000                "Store lots of :cmdline history
@@ -45,13 +45,12 @@ set shortmess=Ia
 " Plugin setup
 filetype off
 
-" =============== Vundle Initialization ===============
-" This loads all the plugins specified in ~/.vim/vundles.vim
-" Use Vundle plugin to manage all other plugins
-if filereadable(expand("~/.vim/vundles.vim"))
-  source ~/.vim/vundles.vim
+" =============== Plugin Initialization ===============
+" This loads all the plugins specified in ~/.vim/plugs.vim
+if filereadable(expand("~/.vim/plugs.vim"))
+  source ~/.vim/plugs.vim
 endif
-au BufNewFile,BufRead *.vundle set filetype=vim
+au BufNewFile,BufRead *.plugs set filetype=vim
 
 " ================ Turn Off Swap Files ==============
 
