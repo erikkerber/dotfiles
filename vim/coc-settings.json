@@ -1,0 +1,14 @@
+{
+  "languageserver": {
+    "sourcekit-lsp": {
+      "command": "sourcekit-lsp",
+      "filetypes": ["swift"],
+      "trace.server": "verbose",
+      "rootPatterns": ["root.yml"],
+      "initializationOptions": {
+      },
+      "settings": {
+      }
+    }
+  }
+}
