@@ -14,12 +14,17 @@ function g        ; git $argv ; end
 function grep     ; command grep --color=auto $argv ; end
 
 # Git
-alias push="git push"
 alias g="git"
+alias gti="git"
+alias push="git push"
+alias gcm="g co master"
+alias gcl="g co -"
+alias grbm="g rebase master"
+alias gap='g add .;g amendne; g punch'
 
 # Vim
-alias v="vim"
-alias vv="vim ."
+alias v="nvim"
+alias vv="nvim ."
 
 alias chmox='chmod +x'
 
@@ -84,3 +89,5 @@ alias ag='ag --follow --hidden'
 # Homebrew upgrade/date is confusing
 alias brew_update="brew -v update; brew upgrade --force-bottle --cleanup; brew cleanup; brew cask cleanup; brew prune; brew doctor"
 
+# JSON Pretty Print
+alias jpp='pbpaste | jsonpp | less'

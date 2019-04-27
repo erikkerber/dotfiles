@@ -12,6 +12,8 @@ status --is-interactive; and source (rbenv init -|psub)
 #set -gx PATH \$PATH ~/
 set -gx PATH ~/.bin $PATH
 
+set -x EDITOR nvim
+
 # Source all fish files
 for file in $DOTFILES/**/fish/*.fish
   switch $file
@@ -22,3 +24,5 @@ for file in $DOTFILES/**/fish/*.fish
   end
 end
 
+# Special one-off for scmpuff
+source $DOTFILES/**/fish/conf.d/scmpuff.fish
