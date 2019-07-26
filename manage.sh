@@ -1,6 +1,7 @@
 #!/bin/bash
 
 files=(\
+  Brewfile \
   config \
   curlrc \
   gemrc \

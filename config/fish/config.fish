@@ -26,3 +26,6 @@ end
 
 # Special one-off for scmpuff
 source $DOTFILES/**/fish/conf.d/scmpuff.fish
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/z013sbd/google-cloud-sdk/path.fish.inc' ]; . '/Users/z013sbd/google-cloud-sdk/path.fish.inc'; end

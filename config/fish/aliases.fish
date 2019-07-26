@@ -22,6 +22,11 @@ alias gcl="g co -"
 alias grbm="g rebase master"
 alias gap='g add .;g amendne; g punch'
 
+# Flagship Git
+alias gitnore="git update-index --skip-worktree"
+alias gitmember="git update-index --no-skip-worktree"
+alias mb="make bootstrap"
+
 # Vim
 alias v="nvim"
 alias vv="nvim ."
@@ -74,6 +79,8 @@ alias ge='vim ~/.gitconfig'
 # XcodeGen
 alias xcg='mint run xcodegen'
 alias rmdd='rm -fr ~/Library/Developer/Xcode/DerivedData'
+alias resignxcode='sudo codesign -f -s XcodeSigner' # Pass Xcode path
+alias provfiles='cd ~/Library/MobileDevice/Provisioning\ Profiles'
 
 # iOS Simulator
 alias deeplink='xcrun simctl openurl booted'
@@ -91,3 +98,11 @@ alias brew_update="brew -v update; brew upgrade --force-bottle --cleanup; brew c
 
 # JSON Pretty Print
 alias jpp='pbpaste | jsonpp | less'
+
+# Simctl
+alias xcdevices='xcrun simctl list devices'
+alias xcbuildsim="xcodebuild -workspace Harmony.xcworkspace -scheme Harmony -destination 'platform=iOS Simulator,name=iPhone 5s' -derivedDataPath './derivedData' build"
+alias killsim='killall "com.apple.CoreSimulator.CoreSimulatorService" && killall "Simulator"'
+
+# Marked
+alias marked='open -a Marked\ 2'
