@@ -114,7 +114,7 @@ set wildignore+=*.png,*.jpg,*.gif
 set scrolloff=8         "Start scrolling when we're 8 lines away from margins
 set sidescrolloff=15
 set sidescroll=1
-
+map <C-U> 20<C-Y>
 " ================ Search ===========================
 
 set incsearch       " Find the next match as we type the search

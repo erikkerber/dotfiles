@@ -38,8 +38,6 @@ alias brewu='brew update && brew upgrade && brew cleanup && brew doctor'
 
 alias hosts='sudo $EDITOR /etc/hosts'
 
-alias ag='ag --follow --hidden'
-
 alias fs="stat -f \"%z bytes\""
 
 # Networking. IP address, dig, DNS
@@ -75,12 +73,14 @@ alias fe='vim ~/.config/fish/config.fish'
 alias ae='vim ~/.config/fish/aliases.fish'
 alias ve='vim ~/.vimrc'
 alias ge='vim ~/.gitconfig'
+alias be='vim ~/.Brewfile'
 
 # XcodeGen
 alias xcg='mint run xcodegen'
 alias rmdd='rm -fr ~/Library/Developer/Xcode/DerivedData'
 alias resignxcode='sudo codesign -f -s XcodeSigner' # Pass Xcode path
 alias provfiles='cd ~/Library/MobileDevice/Provisioning\ Profiles'
+alias methoddump-'otool -ov'
 
 # iOS Simulator
 alias deeplink='xcrun simctl openurl booted'
@@ -91,7 +91,7 @@ alias dockerdac='docker rm (docker ps -a -q)'
 alias dockerdai='docker rmi (docker images -q)'
 
 # AG
-alias ag='ag --follow --hidden'
+alias ag='ag --follow --hidden --ignore .git --ignore derivedData --ignore Carthage'
 
 # Homebrew upgrade/date is confusing
 alias brew_update="brew -v update; brew upgrade --force-bottle --cleanup; brew cleanup; brew cask cleanup; brew prune; brew doctor"
@@ -106,3 +106,6 @@ alias killsim='killall "com.apple.CoreSimulator.CoreSimulatorService" && killall
 
 # Marked
 alias marked='open -a Marked\ 2'
+
+# macOS
+alias makespacer='defaults write com.apple.dock persistent-apps -array-add \'{"tile-type"="spacer-tile";}\'; killall Dock'

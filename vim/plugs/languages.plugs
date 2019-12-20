@@ -11,4 +11,4 @@ Plug 'keith/swift.vim'
 Plug 'keith/xcconfig.vim'
 Plug 'tpope/vim-markdown'
 Plug 'udalov/kotlin-vim'
-Plug 'neoclide/coc.nvim', {'do': { -> coc#util#install()}}
+" Plug 'neoclide/coc.nvim', {'do': { -> coc#util#install()}}
