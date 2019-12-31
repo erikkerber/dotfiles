@@ -25,14 +25,17 @@ brew "git"
 brew "git-extras"
 brew "git-lfs"
 brew "gnu-sed"
+brew "gitsome"
 brew "gource"
 brew "graphviz"
+brew "charmbracelet/homebrew-tap/glow"
 brew "heroku/brew/heroku"
 brew "hexyl" # Pretty hex viewer
 brew "hub"
 brew "hyperfine" # Command line perf
 brew "isacikgoz/gitin/gitin"
 brew "jfrog-cli-go"
+brew "jtool" # macOS internals, Mach-O analyzer - http://newosxbook.com/tools/jtool.html
 brew "keith/formulae/tag" # keith/formula
 brew "mdcat" # Terminal Markdown rendering
 brew "mint"
@@ -58,9 +61,11 @@ cask "java"
 cask "periphery"
 cask "provisionql"
 cask "quitter"
+cask "rocket" # Slack-esque emoji picker for macOS
 cask "tripmode"
 tap "bazelbuild/tap", pin: true
 tap "blender/tap"
+tap "charmbracelet/homebrew-tap"
 tap "dduan/homebrew-formulae"
 tap "drone/drone"
 tap "heroku/brew"
