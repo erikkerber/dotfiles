@@ -23,8 +23,6 @@ alias grbm="g rebase master"
 alias gap='g add .;g amendne; g punch'
 
 # Flagship Git
-alias gitnore="git update-index --skip-worktree"
-alias gitmember="git update-index --no-skip-worktree"
 alias mb="make bootstrap"
 
 # Vim
@@ -36,9 +34,10 @@ alias chmox='chmod +x'
 alias cask='brew cask'
 alias brewu='brew update && brew upgrade && brew cleanup && brew doctor'
 
+# *nix
 alias hosts='sudo $EDITOR /etc/hosts'
-
 alias fs="stat -f \"%z bytes\""
+alias tryst='cd (mktemp -d)'
 
 # Networking. IP address, dig, DNS
 alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
@@ -104,8 +103,14 @@ alias xcdevices='xcrun simctl list devices'
 alias xcbuildsim="xcodebuild -workspace Harmony.xcworkspace -scheme Harmony -destination 'platform=iOS Simulator,name=iPhone 5s' -derivedDataPath './derivedData' build"
 alias killsim='killall "com.apple.CoreSimulator.CoreSimulatorService" && killall "Simulator"'
 
-# Marked
-alias marked='open -a Marked\ 2'
-
 # macOS
 alias makespacer='defaults write com.apple.dock persistent-apps -array-add \'{"tile-type"="spacer-tile";}\'; killall Dock'
+
+# Build Farm
+alias bf1='ssh svbuildmobile@10.101.131.71'
+alias bf2='ssh svbuildmobile@10.101.131.72'
+alias bf3='ssh svbuildmobile@10.101.131.73'
+alias bf4='ssh svbuildmobile@10.101.131.74'
+alias bf5='ssh svbuildmobile@10.101.131.75'
+alias bfturtle='ssh svbuildmobile@10.101.131.27'
+alias trashcan='ssh massroot@10.108.110.74'
