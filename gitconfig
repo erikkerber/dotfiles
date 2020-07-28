@@ -3,19 +3,29 @@
   email = erik.kerber@target.com
 [github]
   user = eskerber
-[hub]
-  protocol = https
-  host = git.target.com
 [core]
   excludesfile = ~/.gitignore
   attributesfile = ~/.gitattributes
   editor = vim
   whitespace = trailing-space,space-before-tab
   pager = diff-so-fancy | less --tabs=4 -RFX
+[hub]
+  protocol = https
+  host = git.target.com
 [init]
   templatedir = ~/.git_template
+	defaultBranch = main
+[help]
+  autocorrect = 1
 [push]
   default = upstream
+[fetch]
+  prune = true
+[branch]
+  autosetupmerge = true
+[blame]
+  date = short
+  coloring = highlightRecent
 [diff]
   tool = Kaleidoscope
   renames = copies
@@ -23,6 +33,8 @@
   algorithm = patience
   indentHeuristic = true
   colorMoved = zebra
+[diff "swift"]
+  xfuncname = "^ *(\\w+ +)*((class|struct|enum|protocol|extension|func) +|(de)?init\\b).*$"
 [difftool]
   prompt = false
 [difftool "Kaleidoscope"]
@@ -43,10 +55,75 @@
   keepBackup = false
   log = true
   stat = true
-[help]
-  autocorrect = 1
+[rerere]
+  enabled = true
+  autoUpdate = true
+[rebase]
+  autosquash = true
+  autostash = true
+  stat = true
+[stash]
+  showPatch = true
+[gpg]
+  program = gpg
+[commit]
+  verbose = true
+[submodule]
+  fetchJobs = 8
+[interactive]
+  diffFilter = diff-highlight
+[diff "plist"]
+  textconv = plutil -convert xml1 -o -
+[diff "provision"]
+  textconv = security cms -D -i
+[diff "exif"]
+  textconv = exiftool
+[difftool "ksdiff"]
+  cmd = ksdiff --partial-changeset --relative-path \"$MERGED\" -- \"$LOCAL\" \"$REMOTE\"
+[format]
+  pretty = format:%C(blue)%ad%Creset %C(yellow)%h%C(green)%d%Creset %C(blue)%s %C(magenta) [%an]%Creset
+[mergetool "ksdiff"]
+  cmd = ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" \"$REMOTE\"
+[status]
+  showUntrackedFiles = all
+  showStash = true
+[sendemail]
+  smtpEncryption = tls
+  smtpServer = /usr/local/bin/msmtp
+  smtpServerOption = -afastmail
+[log]
+  follow = true
+[grep]
+  column = true
+  lineNumber = true
+[advice]
+  waitingForEditor = false
+[pager]
+  branch = false
+[pull]
+  rebase = true
+[credential]
+  helper = osxkeychain
+[color]
+	ui = true
+[color "diff-highlight"]
+  oldNormal = red
+  oldHighlight = red ul
+  newNormal = green
+  newHighlight = green ul
+[color "diff"]
+  meta = yellow
+  frag = magenta
+  commit = yellow
+  old = red
+  new = green
+  whitespace = red reverse
+[filter "lfs"]
+  clean = git-lfs clean -- %f
+  smudge = git-lfs smudge -- %f
+  process = git-lfs filter-process
+  required = true
 [alias]
-  
   # add
   a           = add
   ap          = add --patch
@@ -60,7 +137,8 @@
   ba          = branch -a
   cb          = !sh -c 'git checkout --quiet -b $1 && (git push origin $1 --quiet 2> /dev/null && git branch -u origin/$1 $1 --quiet) &' -
   branches    = for-each-ref --sort=-committerdate --format=\"%(color:blue)%(authordate:relative)\t%(color:red)%(authorname)\t%(color:white)%(color:bold)%(refname:short)\" refs/remotes
-  fixmaster   = git co -b master upstream/develop
+  fixmain   = git co -b main upstream/develop
+  cleanupb    = !sh -c 'git branch -vv >/tmp/merged-branches && vim /tmp/merged-branches && cat /tmp/merged-branches | awk '{print $1}' | xargs git branch -D'
 
   # checkout
   co          = checkout
@@ -92,23 +170,26 @@
   ra          = rebase --abort
   rc          = rebase --continue
   rs          = rebase --skip
-  rma         = rebase master
-  rmi         = rebase master -i
+  rma         = rebase main
+  rmi         = rebase main -i
 
   # reflog
   rl      = reflog -20
-  
+
   # remote
   r           = remote -v
+  f           = fetch
   ps          = push
   punch       = push --force-with-lease
+  # Prints the refs only on the remote, suitable for scripting tag cleanup
+  remote-tags = "!f() { git ls-remote --refs -t $1 | awk '{print $2}'; }; f"
 
   # reset
   nuke        = reset --hard HEAD
   undo        = reset --soft HEAD^
   unstage     = reset HEAD
   uncommit    = reset --soft HEAD
-  clean       = clean -f -d
+  cleann       = clean -f -d
 
   # merge
   mt          = mergetool
@@ -166,76 +247,5 @@
   adeleted    = !sh -c 'git ls-files `git rev-parse --show-toplevel` --deleted -z | xargs -0 git rm -r'
   auntracked  = !sh -c 'git ls-files `git rev-parse --show-toplevel` --others --exclude-standard -z | xargs -0 git add'
   ctags       = !.git/hooks/ctags
-  dm          = !sh -c 'git diff $@ $(git merge-base master $(git name-rev --name-only HEAD))' -
+  dm          = !sh -c 'git diff $@ $(git merge-base main $(git name-rev --name-only HEAD))' -
   dstash      = !sh -c 'git stash show -p stash@{${1-0}}' -
-
-[fetch]
-  prune = true
-[branch]
-  autosetupmerge = true
-[rerere]
-  enabled = true
-[rebase]
-  autosquash = true
-  autostash = true
-  stat = true
-[stash]
-  showPatch = true
-[gpg]
-  program = gpg
-[commit]
-  verbose = true
-[submodule]
-  fetchJobs = 8
-[interactive]
-  diffFilter = diff-highlight
-[diff "plist"]
-  textconv = plutil -convert xml1 -o -
-[diff "provision"]
-  textconv = security cms -D -i
-[diff "exif"]
-  textconv = exiftool
-[difftool "ksdiff"]
-  cmd = ksdiff --partial-changeset --relative-path \"$MERGED\" -- \"$LOCAL\" \"$REMOTE\"
-[format]
-  pretty = format:%C(blue)%ad%Creset %C(yellow)%h%C(green)%d%Creset %C(blue)%s %C(magenta) [%an]%Creset
-[mergetool "ksdiff"]
-  cmd = ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" \"$REMOTE\"
-[status]
-  showUntrackedFiles = all
-[sendemail]
-  smtpEncryption = tls
-  smtpServer = /usr/local/bin/msmtp
-  smtpServerOption = -afastmail
-[log]
-  follow = true
-[grep]
-  column = true
-  lineNumber = true
-[advice]
-  waitingForEditor = false
-[pager]
-  branch = false
-[pull]
-  rebase = true
-[credential]
-  helper = osxkeychain
-[color]
-	ui = true
-[color "diff-highlight"]
-  oldNormal = red
-  oldHighlight = red ul
-  newNormal = green
-  newHighlight = green ul
-[color "diff"]
-  meta = yellow
-  frag = magenta
-  commit = yellow
-  old = red
-  new = green
-  whitespace = red reverse
-[filter "lfs"]
-  clean = git-lfs clean -- %f
-  smudge = git-lfs smudge -- %f
-  process = git-lfs filter-process
-  required = true
