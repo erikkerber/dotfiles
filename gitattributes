@@ -1,2 +1,6 @@
 *.mobileprovision diff=provision
-*.plist diff=plist
+*.swift           diff=swift
+*.plist           diff=plist
+BUILD*            diff=python
+WORKSPACE         diff=python
+*.py              diff=python

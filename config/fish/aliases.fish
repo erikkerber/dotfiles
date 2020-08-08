@@ -17,10 +17,11 @@ function grep     ; command grep --color=auto $argv ; end
 alias g="git"
 alias gti="git"
 alias push="git push"
-alias gcm="g co master"
+alias gcm="g co main"
 alias gcl="g co -"
-alias grbm="g rebase master"
+alias grbm="g rebase main"
 alias gap='g add .;g amendne; g punch'
+alias ggone="g branch -v | grep '\[gone\]' | awk '{ print \$1 }'"
 
 # Flagship Git
 alias mb="make bootstrap"
@@ -77,6 +78,9 @@ alias be='vim ~/.Brewfile'
 # XcodeGen
 alias xcg='mint run xcodegen'
 alias rmdd='rm -fr ~/Library/Developer/Xcode/DerivedData'
+
+# Xcode
+alias cleansims='xcrun simctl delete unavailable'
 alias resignxcode='sudo codesign -f -s XcodeSigner' # Pass Xcode path
 alias provfiles='cd ~/Library/MobileDevice/Provisioning\ Profiles'
 alias methoddump-'otool -ov'
@@ -100,11 +104,20 @@ alias jpp='pbpaste | jsonpp | less'
 
 # Simctl
 alias xcdevices='xcrun simctl list devices'
-alias xcbuildsim="xcodebuild -workspace Harmony.xcworkspace -scheme Harmony -destination 'platform=iOS Simulator,name=iPhone 5s' -derivedDataPath './derivedData' build"
 alias killsim='killall "com.apple.CoreSimulator.CoreSimulatorService" && killall "Simulator"'
 
 # macOS
 alias makespacer='defaults write com.apple.dock persistent-apps -array-add \'{"tile-type"="spacer-tile";}\'; killall Dock'
+alias daemonblame='launchctl list | grep -v com.apple'
+alias kextblame='kextstat -l | grep -v com.apple'
+
+# Secrets
+
+## Fish-friendly signin to 1Password. Sets OP_SESSION_my env var
+alias ops='set -x OP_SESSION_my (op signin|sed -n \'s/.*OP_SESSION_my=//p\'|tr -d \'"\')'
+
+## After login above, source my secrets file
+alias opsource='op get document 7dgga4l2zndutiafauklhwfweq | source'
 
 # Build Farm
 alias bf1='ssh svbuildmobile@10.101.131.71'
@@ -114,3 +127,5 @@ alias bf4='ssh svbuildmobile@10.101.131.74'
 alias bf5='ssh svbuildmobile@10.101.131.75'
 alias bfturtle='ssh svbuildmobile@10.101.131.27'
 alias trashcan='ssh massroot@10.108.110.74'
+alias uitest1='ssh svbuildmobile@10.101.131.24'
+alias uitest2='ssh svbuildmobile@10.101.131.25'

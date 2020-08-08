@@ -6,11 +6,15 @@ set fish_greeting "Hi"
 # Path to dotfiles repo
 set -x DOTFILES (dirname (readlink "$HOME/.config"))
 
+# Target stuff
+set -x DRONE_SERVER drone6.target.com
+
 ## rbenv
 status --is-interactive; and source (rbenv init -|psub)
 
 #set -gx PATH \$PATH ~/
 set -gx PATH ~/.bin $PATH
+set -gx PATH ~/usr/local/sbin $PATH
 
 set -x EDITOR nvim
 
@@ -29,3 +33,5 @@ source $DOTFILES/**/fish/conf.d/scmpuff.fish
 
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f '/Users/z013sbd/google-cloud-sdk/path.fish.inc' ]; . '/Users/z013sbd/google-cloud-sdk/path.fish.inc'; end
+
+  #set -x RUBY_CONFIGURE_OPTS (echo "--with-openssl-dir=" (brew --prefix openssl@1.1))
