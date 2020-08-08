@@ -19,6 +19,7 @@ brew "drone"
 brew "exa" # Better ls
 brew "fd" # Better find
 brew "fish"
+brew "flight-school/formulae/ner"
 brew "fzf"
 brew "ghi"
 brew "git"
@@ -48,7 +49,9 @@ brew "scmpuff"
 brew "swiftlint"
 brew "tgt/brewhouse/tapctl"
 brew "the_silver_searcher"
+brew "tokei" # Better cloc
 brew "tig"
+brew "vela" # Drone for Target
 brew "vim"
 brew "watchexec" # Watch directory, perform action
 brew "wget"
@@ -62,12 +65,14 @@ cask "periphery"
 cask "provisionql"
 cask "quitter"
 cask "rocket" # Slack-esque emoji picker for macOS
+cask "swiftformat-for-xcode" # SwiftFormat Xcode Extension
 cask "tripmode"
 tap "bazelbuild/tap", pin: true
 tap "blender/tap"
 tap "charmbracelet/homebrew-tap"
 tap "dduan/homebrew-formulae"
 tap "drone/drone"
+tap "go-vela/vela"
 tap "heroku/brew"
 tap "homebrew/bundle"
 tap "homebrew/cask"
@@ -76,3 +81,4 @@ tap "isacikgoz/gitin"
 tap "keith/formulae"
 tap "peripheryapp/periphery"
 tap "tgt/brewhouse", "git@git.target.com:brew/house.git"
+tap "uptech/oss/alt"
