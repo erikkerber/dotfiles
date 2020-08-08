@@ -1,3 +1,20 @@
+cask_args appdir: "/Applications"
+tap "homebrew/cask-fonts"
+
+mas "A Companion for SwiftUI", id: 1485436674
+mas "DaisyDisk", id: 411643860
+mas "Dato", id: 1470584107
+mas "Deliveries", id: 924726344
+mas "Developer", id: 640199958
+mas "pixelmator", id: 407963104
+mas "Transporter", id: 1450874784
+mas "Magnet", id: 441258766
+mas "Slack", id: 803453959
+mas "Soulver 2", id: 413965349
+mas "Tot", id: 1491071483
+mas "TweetBot", id: 1384080005
+mas "Ulysses", id: 1225570693
+
 brew "uptech/oss/alt"
 brew "apktool"
 brew "awscli"
@@ -15,7 +32,6 @@ brew "dduan/formulae/drstring"
 brew "dduan/homebrew-formulae/tre" #dduan/formulae
 brew "diff-so-fancy"
 brew "dust" # Better du -sh
-brew "drone"
 brew "exa" # Better ls
 brew "fd" # Better find
 brew "fish"
@@ -26,7 +42,7 @@ brew "git"
 brew "git-extras"
 brew "git-lfs"
 brew "gnu-sed"
-brew "gitsome"
+brew "go"
 brew "gource"
 brew "graphviz"
 brew "charmbracelet/homebrew-tap/glow"
@@ -36,7 +52,6 @@ brew "hub"
 brew "hyperfine" # Command line perf
 brew "isacikgoz/gitin/gitin"
 brew "jfrog-cli-go"
-brew "jtool" # macOS internals, Mach-O analyzer - http://newosxbook.com/tools/jtool.html
 brew "keith/formulae/tag" # keith/formula
 brew "mdcat" # Terminal Markdown rendering
 brew "mint"
@@ -46,7 +61,6 @@ brew "node"
 brew "python"
 brew "rbenv"
 brew "scmpuff"
-brew "swiftlint"
 brew "tgt/brewhouse/tapctl"
 brew "the_silver_searcher"
 brew "tokei" # Better cloc
@@ -57,22 +71,30 @@ brew "watchexec" # Watch directory, perform action
 brew "wget"
 brew "zsh"
 brew "z" # Smart directory browsing
+
+# cask "FlawlessApp"
+cask "1Password"
 cask "1password-cli"
+cask "alfred"
 cask "bartender"
 cask "bettertouchtool"
+cask "cleanshot"
+cask "deckset"
 cask "java"
-cask "periphery"
+cask "kaleidoscope"
+cask "notion"
+cask "omnifocus"
+cask "paw"
 cask "provisionql"
 cask "quitter"
 cask "rocket" # Slack-esque emoji picker for macOS
-cask "swiftformat-for-xcode" # SwiftFormat Xcode Extension
-cask "tripmode"
+cask "reveal"
+cask "visual-studio-code"
+
 tap "bazelbuild/tap", pin: true
 tap "blender/tap"
 tap "charmbracelet/homebrew-tap"
 tap "dduan/homebrew-formulae"
-tap "drone/drone"
-tap "go-vela/vela"
 tap "heroku/brew"
 tap "homebrew/bundle"
 tap "homebrew/cask"
