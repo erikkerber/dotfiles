@@ -1,6 +1,7 @@
 #!/bin/bash
 
 files=(\
+  bin \
   Brewfile \
   config \
   curlrc \
@@ -10,7 +11,6 @@ files=(\
   gitconfig \
   gitignore \
   haskeline \
-  hgrc \
   lldb_commands \
   lldbinit \
   vim \
