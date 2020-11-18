@@ -1,6 +1,6 @@
 [user]
-  name = Erik Kerber
-  email = erik.kerber@target.com
+	name = Erik Kerber
+	email = erik.kerber@target.com
 [github]
   user = eskerber
 [core]
@@ -18,7 +18,7 @@
 [help]
   autocorrect = 1
 [push]
-  default = upstream
+	default = current
 [fetch]
   prune = true
 [branch]
