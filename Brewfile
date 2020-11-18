@@ -37,6 +37,7 @@ brew "fd" # Better find
 brew "fish"
 brew "flight-school/formulae/ner"
 brew "fzf"
+brew "gh"
 brew "ghi"
 brew "git"
 brew "git-extras"
