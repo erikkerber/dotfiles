@@ -13,6 +13,7 @@ files=(\
   haskeline \
   lldb_commands \
   lldbinit \
+  raycast \
   vim \
   vimrc \
   xvimrc \
