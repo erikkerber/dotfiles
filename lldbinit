@@ -22,3 +22,5 @@ command alias reveal expr -l objc++ -- (void*)dlopen("/Applications/Reveal.app/C
 # Add type summary for Unmanaged in Swift
 type summary add --category swift --summary-string "Unmanaged Contains: ${var._value%@}" Swift.Unmanaged<AnyObject>
 
+# Flagship Bazel support
+command source ~/.lldbinit-bazel-flagship-ios
