@@ -1,5 +1,3 @@
-set fish_greeting "Hi"
-
 # Uncomment this if the modal indicator becomes annoying
 #function fish_mode_prompt; end
 
@@ -10,10 +8,13 @@ set -x DOTFILES (dirname (readlink "$HOME/.config"))
 set -x DRONE_SERVER drone6.target.com
 
 ## rbenv
-status --is-interactive; and source (rbenv init -|psub)
+. (rbenv init -|psub)
 
 #set -gx PATH \$PATH ~/
 set -gx PATH ~/.bin $PATH
+# abrew
+set -gx PATH /opt/homebrew/bin $PATH
+# ibrew
 set -gx PATH ~/usr/local/sbin $PATH
 
 set -x EDITOR nvim
@@ -31,7 +32,4 @@ end
 # Special one-off for scmpuff
 source $DOTFILES/**/fish/conf.d/scmpuff.fish
 
-# The next line updates PATH for the Google Cloud SDK.
-if [ -f '/Users/z013sbd/google-cloud-sdk/path.fish.inc' ]; . '/Users/z013sbd/google-cloud-sdk/path.fish.inc'; end
-
-  #set -x RUBY_CONFIGURE_OPTS (echo "--with-openssl-dir=" (brew --prefix openssl@1.1))
+ #set -x RUBY_CONFIGURE_OPTS (echo "--with-openssl-dir=" (brew --prefix openssl@1.1))

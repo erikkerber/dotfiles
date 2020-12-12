@@ -3,6 +3,7 @@
 files=(\
   bin \
   Brewfile \
+  Brewfile_intel \
   config \
   curlrc \
   gemrc \

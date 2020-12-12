@@ -34,6 +34,9 @@ alias chmox='chmod +x'
 
 alias cask='brew cask'
 alias brewu='brew update && brew upgrade && brew cleanup && brew doctor'
+alias ibrew='arch -x86_64 /usr/local/bin/brew'
+# Homebrew upgrade/date is confusing
+alias brew_update="brew -v update; brew upgrade --force-bottle --cleanup; brew cleanup; brew cask cleanup; brew prune; brew doctor"
 
 # *nix
 alias hosts='sudo $EDITOR /etc/hosts'
@@ -95,9 +98,6 @@ alias dockerdai='docker rmi (docker images -q)'
 
 # AG
 alias ag='ag --follow --hidden --ignore .git --ignore derivedData --ignore Carthage'
-
-# Homebrew upgrade/date is confusing
-alias brew_update="brew -v update; brew upgrade --force-bottle --cleanup; brew cleanup; brew cask cleanup; brew prune; brew doctor"
 
 # JSON Pretty Print
 alias jpp='pbpaste | jsonpp | less'
