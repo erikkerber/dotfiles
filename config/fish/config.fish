@@ -7,9 +7,6 @@ set -x DOTFILES (dirname (readlink "$HOME/.config"))
 # Target stuff
 set -x DRONE_SERVER drone6.target.com
 
-## rbenv
-. (rbenv init -|psub)
-
 #set -gx PATH \$PATH ~/
 set -gx PATH ~/.bin $PATH
 # abrew
@@ -28,6 +25,9 @@ for file in $DOTFILES/**/fish/*.fish
     source $file
   end
 end
+
+## rbenv
+. (rbenv init -|psub)
 
 # Special one-off for scmpuff
 source $DOTFILES/**/fish/conf.d/scmpuff.fish
