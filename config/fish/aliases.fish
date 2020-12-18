@@ -32,6 +32,7 @@ alias vv="nvim ."
 
 alias chmox='chmod +x'
 
+# Brew
 alias cask='brew cask'
 alias brewu='brew update && brew upgrade && brew cleanup && brew doctor'
 alias ibrew='arch -x86_64 /usr/local/bin/brew'
@@ -42,6 +43,9 @@ alias brew_update="brew -v update; brew upgrade --force-bottle --cleanup; brew c
 alias hosts='sudo $EDITOR /etc/hosts'
 alias fs="stat -f \"%z bytes\""
 alias tryst='cd (mktemp -d)'
+
+# Rosetta
+alias i="arch -x86_64"
 
 # Networking. IP address, dig, DNS
 alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
