@@ -24,3 +24,7 @@ type summary add --category swift --summary-string "Unmanaged Contains: ${var._v
 
 # Flagship Bazel support
 command source ~/.lldbinit-bazel-flagship-ios
+
+### Reveal LLDB commands support - DO NOT MODIFY
+command script import /Users/erik/Library/Application\ Support/Reveal/RevealServerCommands.py
+###
