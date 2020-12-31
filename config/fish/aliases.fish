@@ -69,12 +69,6 @@ alias gs='git status'
 alias gsh='git show'
 alias gl='git l'
 
-# Rome
-alias romesync='romedown && bootstrap && romeup'
-alias bootstrap='carthage bootstrap --platform iOS --no-use-binaries --cache-builds --new-resolver'
-alias romedown='rome download --platform iOS'
-alias romeup='rome list --missing --platform iOS | awk \'{print $1}\' | xargs rome upload --platform iOS'
-
 # Quick Edits
 alias fe='vim ~/.config/fish/config.fish'
 alias ae='vim ~/.config/fish/aliases.fish'
