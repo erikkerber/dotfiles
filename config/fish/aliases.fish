@@ -11,7 +11,7 @@ function ....  ; cd ../../.. ; end
 function ..... ; cd ../../../.. ; end
 
 function g        ; git $argv ; end
-function grep     ; command grep --color=auto $argv ; end
+function grep     ; command grep --color=always $argv ; end
 
 # Git
 alias g="git"
