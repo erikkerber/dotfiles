@@ -80,7 +80,7 @@ alias be='vim ~/.Brewfile'
 alias cleansims='xcrun simctl delete unavailable'
 alias resignxcode='sudo codesign -f -s XcodeSigner' # Pass Xcode path
 alias provfiles='cd ~/Library/MobileDevice/Provisioning\ Profiles'
-alias methoddump-'otool -ov'
+alias methoddump='otool -ov'
 alias rmdd='rm -fr ~/Library/Developer/Xcode/DerivedData'
 
 # iOS Simulator
