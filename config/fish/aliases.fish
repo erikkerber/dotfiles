@@ -76,15 +76,12 @@ alias ve='vim ~/.vimrc'
 alias ge='vim ~/.gitconfig'
 alias be='vim ~/.Brewfile'
 
-# XcodeGen
-alias xcg='mint run xcodegen'
-alias rmdd='rm -fr ~/Library/Developer/Xcode/DerivedData'
-
 # Xcode
 alias cleansims='xcrun simctl delete unavailable'
 alias resignxcode='sudo codesign -f -s XcodeSigner' # Pass Xcode path
 alias provfiles='cd ~/Library/MobileDevice/Provisioning\ Profiles'
 alias methoddump-'otool -ov'
+alias rmdd='rm -fr ~/Library/Developer/Xcode/DerivedData'
 
 # iOS Simulator
 alias deeplink='xcrun simctl openurl booted'
