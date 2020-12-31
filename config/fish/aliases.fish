@@ -95,6 +95,9 @@ alias methoddump-'otool -ov'
 # iOS Simulator
 alias deeplink='xcrun simctl openurl booted'
 
+# Bazel
+alias bazelbinloc='bazel info bazel-bin'
+
 # Docker
 alias dockerkillall='docker kill (docker ps -q)'
 alias dockerdac='docker rm (docker ps -a -q)'
