@@ -24,8 +24,10 @@ brew "bash"
 brew "bat"
 #brew "bazelbuild/tap/bazel"
 brew "blender/tap/rome"
+brew "bzip2" # Needed manually for idb-companion
 brew "chisel"
 brew "chruby"
+brew "cloc"
 brew "colordiff"
 brew "coreutils"
 brew "ctags"
@@ -53,27 +55,34 @@ brew "hexyl" # Pretty hex viewer
 brew "hub"
 brew "hugo"
 brew "hyperfine" # Command line perf
+brew "idb-companion" # iOS development bridge (Flipper)
+brew "ios-deploy"
 brew "isacikgoz/gitin/gitin"
 brew "jfrog-cli-go"
 brew "keith/formulae/tag" # keith/formula
+brew "less" # Keep less up to date
 brew "mdcat" # Terminal Markdown rendering
 brew "mint"
 brew "mitmproxy"
 brew "neovim"
 brew "node"
 brew "python"
+brew "radare2"
 brew "rbenv"
 brew "scmpuff"
 brew "speedtest"
 brew "the_silver_searcher"
+brew "swiftdocorg/formulae/swift-doc"
 brew "tokei" # Better cloc
 brew "tig"
 brew "vela" # Drone for Target
 brew "vim"
 brew "watchexec" # Watch directory, perform action
 brew "wget"
+brew "xclip" # Makes copying bat output easier
 brew "zsh"
 #brew "z" # NOTE: Use fisher-z
+brew "zlib" # Needed manually for idb-companion
 
 # cask "FlawlessApp"
 cask "1Password"
@@ -95,6 +104,7 @@ cask "obsidian"
 cask "omnifocus"
 cask "paw"
 cask "provisionql"
+cask "proxyman"
 cask "quitter"
 cask "rocket" # Slack-esque emoji picker for macOS
 cask "reveal"
@@ -105,6 +115,7 @@ cask "zoom"
 tap "blender/tap"
 tap "charmbracelet/homebrew-tap"
 tap "dduan/homebrew-formulae"
+tap "facebook/fb"
 tap "heroku/brew"
 tap "homebrew/bundle"
 tap "homebrew/cask"
