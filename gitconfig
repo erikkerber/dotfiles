@@ -205,6 +205,8 @@
 
   # status
   s           = status -sb
+
+  # log
   l           = log -20 --topo-order --pretty='format:%Cblue%h%Creset %s%Cred%d%Creset %C(yellow)(%an)%Creset'
   changes     = log --pretty=format:\"%C(blue)%h%Creset %C(green)%cr%Creset %C(red)%an%Creset %s\" --name-status
   short       = log --pretty=format:\"%C(blue)%h%Creset %C(red)%an%Creset%<(13) %C(green)%cr%Creset %s\"
@@ -214,6 +216,7 @@
   filelog     = log -u
   lol         = log --graph --decorate --pretty=oneline --abbrev-commit # http://blog.kfish.org/2010/04/git-lola.html
   lola        = log --graph --decorate --pretty=oneline --abbrev-commit --all # http://blog.kfish.org/2010/04/git-lola.html
+  scoreboard  = shortlog -sn --all --since=12.month
 
   last        = diff HEAD^ HEAD
   last-msg    = !git --no-pager log --format=format:%B -1
