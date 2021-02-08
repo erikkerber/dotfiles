@@ -1,18 +1,14 @@
 # This file contains fish universal variable definitions.
 # VERSION: 3.0
-SETUVAR ZO_CMD:zo
-SETUVAR Z_CMD:z
-SETUVAR Z_DATA:/Users/erik/\x2elocal/share/z/data
 SETUVAR Z_DATA_DIR:/Users/erik/\x2elocal/share/z
-SETUVAR Z_EXCLUDE:\x5e/Users/erik\x24
 SETUVAR __fish_init_2_39_8:\x1d
 SETUVAR __fish_init_2_3_0:\x1d
 SETUVAR __fish_init_3_x:\x1d
 SETUVAR __fish_initialized:3100
-SETUVAR _fisher_jethrokuan_2F_z_files:/Users/erik/\x2econfig/fish/functions/__z\x2efish\x1e/Users/erik/\x2econfig/fish/functions/__z_add\x2efish\x1e/Users/erik/\x2econfig/fish/functions/__z_clean\x2efish\x1e/Users/erik/\x2econfig/fish/functions/__z_complete\x2efish\x1e/Users/erik/\x2econfig/fish/conf\x2ed/z\x2efish
+SETUVAR _fisher_fishgretel_2F_fasd_files:/Users/erik/\x2econfig/fish/functions/__fasd_print_completion\x2efish\x1e/Users/erik/\x2econfig/fish/functions/a\x2efish\x1e/Users/erik/\x2econfig/fish/functions/d\x2efish\x1e/Users/erik/\x2econfig/fish/functions/f\x2efish\x1e/Users/erik/\x2econfig/fish/functions/fasd_cd\x2efish\x1e/Users/erik/\x2econfig/fish/functions/s\x2efish\x1e/Users/erik/\x2econfig/fish/functions/sd\x2efish\x1e/Users/erik/\x2econfig/fish/functions/sf\x2efish\x1e/Users/erik/\x2econfig/fish/functions/z\x2efish\x1e/Users/erik/\x2econfig/fish/functions/zz\x2efish\x1e/Users/erik/\x2econfig/fish/conf\x2ed/__fasd_run\x2efish\x1e/Users/erik/\x2econfig/fish/conf\x2ed/aliases\x2efish\x1e/Users/erik/\x2econfig/fish/completions/a\x2efish\x1e/Users/erik/\x2econfig/fish/completions/d\x2efish\x1e/Users/erik/\x2econfig/fish/completions/f\x2efish\x1e/Users/erik/\x2econfig/fish/completions/fasd\x2efish\x1e/Users/erik/\x2econfig/fish/completions/s\x2efish\x1e/Users/erik/\x2econfig/fish/completions/sd\x2efish\x1e/Users/erik/\x2econfig/fish/completions/sf\x2efish\x1e/Users/erik/\x2econfig/fish/completions/z\x2efish\x1e/Users/erik/\x2econfig/fish/completions/zz\x2efish
 SETUVAR _fisher_jorgebucaran_2F_fisher_files:/Users/erik/\x2econfig/fish/functions/fisher\x2efish\x1e/Users/erik/\x2econfig/fish/completions/fisher\x2efish
 SETUVAR _fisher_jorgebucaran_2F_nvm_2E_fish_files:/Users/erik/\x2econfig/fish/functions/_nvm_index_update\x2efish\x1e/Users/erik/\x2econfig/fish/functions/_nvm_list\x2efish\x1e/Users/erik/\x2econfig/fish/functions/_nvm_version_activate\x2efish\x1e/Users/erik/\x2econfig/fish/functions/_nvm_version_deactivate\x2efish\x1e/Users/erik/\x2econfig/fish/functions/nvm\x2efish\x1e/Users/erik/\x2econfig/fish/conf\x2ed/nvm\x2efish\x1e/Users/erik/\x2econfig/fish/completions/nvm\x2efish
-SETUVAR _fisher_plugins:jorgebucaran/fisher\x1ejorgebucaran/nvm\x2efish\x1ejethrokuan/z
+SETUVAR _fisher_plugins:jorgebucaran/fisher\x1ejorgebucaran/nvm\x2efish\x1efishgretel/fasd
 SETUVAR fish_color_autosuggestion:555\x1ebrblack
 SETUVAR fish_color_cancel:\x2dr
 SETUVAR fish_color_command:005fd7
