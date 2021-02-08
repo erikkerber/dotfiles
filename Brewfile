@@ -36,6 +36,7 @@ brew "dduan/homebrew-formulae/tre" #dduan/formulae
 brew "diff-so-fancy"
 brew "dust" # Better du -sh
 brew "exa" # Better ls
+brew "fasd" # Fuzzy open for recent files
 brew "fd" # Better find
 brew "fish"
 brew "flight-school/formulae/ner"
