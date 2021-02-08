@@ -14,6 +14,7 @@ files=(\
   haskeline \
   lldb_commands \
   lldbinit \
+  nvm \
   raycast \
   vim \
   vimrc \
