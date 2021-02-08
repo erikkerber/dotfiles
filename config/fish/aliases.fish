@@ -11,7 +11,7 @@ function ....  ; cd ../../.. ; end
 function ..... ; cd ../../../.. ; end
 
 function g        ; git $argv ; end
-function grep     ; command grep --color=always $argv ; end
+function grep     ; command grep --color=auto $argv ; end
 
 # Git
 alias g="git"
@@ -65,7 +65,6 @@ alias cleardock="defaults write com.apple.dock persistent-apps -array \"\" && ki
 alias gd='git diff'
 alias gdc='git diff --cached -w'
 alias gds='git diff --staged -w'
-alias gs='git status'
 alias gsh='git show'
 alias gl='git l'
 
@@ -81,6 +80,7 @@ alias cleansims='xcrun simctl delete unavailable'
 alias resignxcode='sudo codesign -f -s XcodeSigner' # Pass Xcode path
 alias provfiles='cd ~/Library/MobileDevice/Provisioning\ Profiles'
 alias methoddump='otool -ov'
+alias dd='cd ~/Library/Developer/Xcode/DerivedData'
 alias rmdd='rm -fr ~/Library/Developer/Xcode/DerivedData'
 
 # iOS Simulator
@@ -88,6 +88,7 @@ alias deeplink='xcrun simctl openurl booted'
 
 # Bazel
 alias bazelbinloc='bazel info bazel-bin'
+alias bb='cd /private/var/tmp/_bazel_erik/'
 
 # Docker
 alias dockerkillall='docker kill (docker ps -q)'

@@ -32,4 +32,8 @@ end
 # Special one-off for scmpuff
 source $DOTFILES/**/fish/conf.d/scmpuff.fish
 
- #set -x RUBY_CONFIGURE_OPTS (echo "--with-openssl-dir=" (brew --prefix openssl@1.1))
+#set -x RUBY_CONFIGURE_OPTS (echo "--with-openssl-dir=" (brew --prefix openssl@1.1))
+
+source /usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.fish.inc
+
+set -g fish_user_paths "/opt/homebrew/opt/node@14/bin" $fish_user_paths
