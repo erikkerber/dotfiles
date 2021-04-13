@@ -8,11 +8,15 @@ set -x DOTFILES (dirname (readlink "$HOME/.config"))
 set -x DRONE_SERVER drone6.target.com
 
 #set -gx PATH \$PATH ~/
-set -gx PATH ~/.bin $PATH
+set -gx PATH $HOME/.bin $PATH
 # abrew
 set -gx PATH /opt/homebrew/bin $PATH
 # ibrew
-set -gx PATH ~/usr/local/sbin $PATH
+set -gx PATH $HOME/usr/local/sbin $PATH
+# go
+set -gx PATH $HOME/go/bin $PATH
+# rust
+set -Ua fish_user_paths $HOME/.cargo/bin
 
 set -x EDITOR nvim
 
