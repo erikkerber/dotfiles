@@ -1,5 +1,0 @@
-Plug 'gfontenot/vim-xcode'
-Plug 'keith/gist.vim'
-Plug 'tommcdo/vim-lion'
-Plug 'tpope/vim-commentary'
-Plug 'neomake/neomake'
