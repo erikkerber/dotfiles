@@ -153,8 +153,8 @@
   c           = commit --verbose -m
   ca          = commit --verbose -am
   amend       = commit --verbose --amend
-  ammend      = commit --verbose --amend
   amendne     = commit --verbose --amend --no-edit
+  ane         = amendne
   comf        = commit --verbose --fixup=HEAD
 
   # diff
