@@ -1,29 +1,29 @@
 cask_args appdir: "/Applications"
 tap "homebrew/cask-fonts"
 
-#mas "A Companion for SwiftUI", id: 1485436674
-#mas "DaisyDisk", id: 411643860
-#mas "Dato", id: 1470584107
-#mas "Deliveries", id: 924726344
-#mas "Developer", id: 640199958
-#mas "pixelmator", id: 407963104
-#mas "Transporter", id: 1450874784
-#mas "Magnet", id: 441258766
-#mas "Paste", id: 967805235
-#mas "Slack", id: 803453959
-#mas "Soulver 2", id: 413965349
-#mas "Spark", id: 1176895641
-#mas "Tot", id: 1491071483
-#mas "TweetBot", id: 1384080005
-#mas "Ulysses", id: 1225570693
+mas "A Companion for SwiftUI", id: 1485436674
+mas "DaisyDisk", id: 411643860
+mas "Dato", id: 1470584107
+mas "Deliveries", id: 924726344
+mas "Developer", id: 640199958
+mas "Fantastical", id: 975937182
+mas "Pixelmator", id: 407963104
+mas "Transporter", id: 1450874784
+mas "Magnet", id: 441258766
+mas "Paste", id: 967805235
+mas "Reeder 5", id: 1529448980
+mas "Slack", id: 803453959
+mas "Soulver 2", id: 413965349
+mas "Spark", id: 1176895641
+mas "Tot", id: 1491071483
+mas "TweetBot", id: 1384080005
+mas "Ulysses", id: 1225570693
 
-brew "uptech/oss/alt"
 brew "apktool"
 brew "awscli"
 brew "bash"
 brew "bat"
 #brew "bazelbuild/tap/bazel"
-brew "blender/tap/rome"
 brew "bzip2" # Needed manually for idb-companion
 brew "chisel"
 brew "chruby"
@@ -31,15 +31,13 @@ brew "cloc"
 brew "colordiff"
 brew "coreutils"
 brew "ctags"
-brew "dduan/formulae/drstring"
-brew "dduan/homebrew-formulae/tre" #dduan/formulae
 brew "diff-so-fancy"
 brew "dust" # Better du -sh
 brew "exa" # Better ls
 brew "fasd" # Fuzzy open for recent files
 brew "fd" # Better find
+brew "findutils" # Extensions on 'find' such as --type f
 brew "fish"
-brew "flight-school/formulae/ner"
 brew "fzf"
 brew "gh"
 brew "ghi"
@@ -86,7 +84,6 @@ brew "zsh"
 #brew "z" # NOTE: Use fisher-z
 brew "zlib" # Needed manually for idb-companion
 
-brew "uptech/oss/alt"
 brew "apktool" 
 brew "bat"
 brew "chisel" 
@@ -120,11 +117,11 @@ cask "bartender"
 cask "bettertouchtool"
 cask "charles"
 cask "cleanshot"
+cask "dash"
 cask "deckset"
 cask "docker"
 cask "fork"
 cask "iterm2"
-cask "java"
 cask "kaleidoscope"
 cask "lingon-x"
 cask "notion"
@@ -135,13 +132,13 @@ cask "paw"
 cask "provisionql"
 cask "proxyman"
 cask "quitter"
+cask "raycast"
 cask "rocket" # Slack-esque emoji picker for macOS
 cask "reveal"
 cask "visual-studio-code"
 cask "zoom"
 
 #tap "bazelbuild/tap"
-tap "blender/tap"
 tap "charmbracelet/homebrew-tap"
 tap "dduan/homebrew-formulae"
 tap "facebook/fb"
@@ -153,4 +150,3 @@ tap "isacikgoz/gitin"
 tap "keith/formulae"
 tap "peripheryapp/periphery"
 tap "teamookla/speedtest"
-tap "uptech/oss/alt"
