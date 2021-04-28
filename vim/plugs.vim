@@ -51,7 +51,7 @@ Plug 'keith/gist.vim'
 Plug 'tommcdo/vim-lion'
 Plug 'tpope/vim-commentary'
 Plug 'neomake/neomake'
-Plug 'wellle/targets.vim' # Several common text objects
+Plug 'wellle/targets.vim'
 
 
 
