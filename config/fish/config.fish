@@ -15,6 +15,8 @@ set -gx PATH /opt/homebrew/bin $PATH
 set -gx PATH $HOME/usr/local/sbin $PATH
 # go
 set -gx PATH $HOME/go/bin $PATH
+# Slack/Work
+set -gx PATH $HOME/dev/slack-objc/bin $PATH
 # rust
 set -Ua fish_user_paths $HOME/.cargo/bin
 
@@ -35,9 +37,5 @@ end
 
 # Special one-off for scmpuff
 source $DOTFILES/**/fish/conf.d/scmpuff.fish
-
-#set -x RUBY_CONFIGURE_OPTS (echo "--with-openssl-dir=" (brew --prefix openssl@1.1))
-
-source /usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.fish.inc
 
 set -g fish_user_paths "/opt/homebrew/opt/node@14/bin" $fish_user_paths

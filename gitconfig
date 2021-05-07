@@ -1,6 +1,6 @@
 [user]
 	name = Erik Kerber
-	email = erik.kerber@target.com
+	email = ekerber@slack-corp.com
 [github]
   user = eskerber
 [core]
@@ -132,7 +132,7 @@
   # Be Good
   praise      = blame
 
-  # branch 
+  # branch
   b           = branch -v
   ba          = branch -a
   cb          = !sh -c 'git checkout --quiet -b $1 && (git push origin $1 --quiet 2> /dev/null && git branch -u origin/$1 $1 --quiet) &' -
