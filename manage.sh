@@ -3,7 +3,6 @@
 files=(\
   bin \
   Brewfile \
-  Brewfile_intel \
   config \
   curlrc \
   gemrc \
@@ -14,7 +13,6 @@ files=(\
   haskeline \
   lldb_commands \
   lldbinit \
-  nvm \
   raycast \
   vim \
   vimrc \
@@ -71,6 +69,11 @@ install_links() {
   done
 }
 
+run_scripts() {
+  ./iterm/import-scheme.sh iterm/schemes/*
+  ./macos/defaults.sh
+}
+
 # Function to remove all linked files
 remove_links() {
   for file in "${files[@]}"
@@ -93,6 +96,7 @@ fi
 # Check whether the user is installing or removing
 if [[ $1 == "install" ]]; then
   install_links
+  run_scripts
 elif [[ $1 == "remove" ]]; then
   remove_links
 elif [[ $1 == "clean" ]]; then
