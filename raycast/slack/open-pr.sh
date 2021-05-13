@@ -6,8 +6,8 @@
 # @raycast.mode fullOutput
 #
 # Optional parameters:
-# @raycast.icon flagship.png
-# @raycast.packageName Flagship
+# @raycast.icon slack.png
+# @raycast.packageName Slack
 # @raycast.argument1 { "type": "text", "placeholder": "pr" }
 
-open "https://git.target.com/mobile-apps/ios/pull/${1}"
+open "https://github.com/tinyspeck/slack-objc/pull/${1}"
