@@ -15,6 +15,8 @@ set -gx PATH /opt/homebrew/bin $PATH
 set -gx PATH $HOME/usr/local/sbin $PATH
 # go
 set -gx PATH $HOME/go/bin $PATH
+# slack
+set -gx PATH $HOME/dev/slack-objc/bin $PATH
 # rust
 set -Ua fish_user_paths $HOME/.cargo/bin
 
