@@ -19,7 +19,7 @@ alias gti="git"
 alias push="git push"
 alias gcm="g co main"
 alias gcl="g co -"
-alias grbm="g rebase main"
+alias grbm="g rebase master"
 alias gap='g add .;g amendne; g punch'
 alias ggone="g branch -v | grep '\[gone\]' | awk '{ print \$1 }'"
 
