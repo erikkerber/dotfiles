@@ -213,6 +213,7 @@
   simple      = log --pretty=format:\" * %s\"
   shortnocolor= log --pretty=format:\"%h %cr %an %s\"
   dylan       = log --diff-filter=R --summary
+  klog        = log --author=Kerber # It me
   filelog     = log -u
   lol         = log --graph --decorate --pretty=oneline --abbrev-commit # http://blog.kfish.org/2010/04/git-lola.html
   lola        = log --graph --decorate --pretty=oneline --abbrev-commit --all # http://blog.kfish.org/2010/04/git-lola.html
