@@ -23,8 +23,9 @@ alias grbm="g rebase master"
 alias gap='g add .;g amendne; g punch'
 alias ggone="g branch -v | grep '\[gone\]' | awk '{ print \$1 }'"
 
-# Flagship Git
-alias mb="make bootstrap"
+# Slack Helpers
+alias gx="./bazel run -- //project-gen:SlackXcode"
+alias gb="./bazel run -- //project-gen:SlackBazel"
 
 # Vim
 alias v="nvim"
