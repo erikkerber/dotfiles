@@ -5,65 +5,49 @@
 filetype off
 
 set rtp+=~/.vim/plugs/ "Submodules
+set rtp+=/usr/local/bin/fzf
+
 call plug#begin('~/.vim/plugged')
 
+Plug 'gfontenot/vim-xcode'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
 Plug 'keith/parsec.vim'
-Plug 'machakann/vim-highlightedyank'
-Plug 'sjl/vitality.vim'
-Plug 'gregsexton/gitv'
-Plug 'mattn/gist-vim'
+Plug 'keith/swift.vim'
+Plug 'psliwka/vim-smoothie'
+Plug 'scrooloose/nerdtree'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-git'
-Plug 'airblade/vim-gitgutter'
-Plug 'tpope/vim-rhubarb'
-Plug 'sheerun/vim-polyglot'
-Plug 'honza/vim-snippets'
-" Plug 'jtratner/vim-flavored-markdown.git'
-" Plug 'scrooloose/syntastic.git'
-Plug 'scrooloose/nerdcommenter'
-Plug 'nelstrom/vim-markdown-preview'
-Plug 'skwp/vim-html-escape'
-Plug 'mxw/vim-jsx'
-Plug 'jparise/vim-graphql'
-Plug 'keith/swift.vim'
-Plug 'keith/xcconfig.vim'
-Plug 'tpope/vim-markdown'
-Plug 'udalov/kotlin-vim'
-" Plug 'neoclide/coc.nvim', {'do': { -> coc#util#install()}}
-Plug 'jistr/vim-nerdtree-tabs'
-Plug 'scrooloose/nerdtree'
-Plug 'ctrlpvim/ctrlp.vim'
-Plug 'JazzCore/ctrlp-cmatcher'
-Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-Plug 'junegunn/fzf.vim'
-Plug 'xolox/vim-misc'
-Plug 'xolox/vim-session'
-Plug 'jistr/vim-nerdtree-tabs'
-Plug 'scrooloose/nerdtree'
-Plug 'ctrlpvim/ctrlp.vim'
-Plug 'JazzCore/ctrlp-cmatcher'
-Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-Plug 'junegunn/fzf.vim'
-Plug 'xolox/vim-misc'
-Plug 'xolox/vim-session'
-Plug 'gfontenot/vim-xcode'
-Plug 'keith/gist.vim'
-Plug 'tommcdo/vim-lion'
-Plug 'tpope/vim-commentary'
-Plug 'neomake/neomake'
-Plug 'wellle/targets.vim'
+Plug 'vim-syntastic/syntastic'
+
+" Archive (look back into after simplifying Vim life)
+" Plug 'JazzCore/ctrlp-cmatcher'
+" Plug 'airblade/vim-gitgutter'
+" Plug 'ctrlpvim/ctrlp.vim'
+" Plug 'gregsexton/gitv'
+" Plug 'honza/vim-snippets'
+" Plug 'jparise/vim-graphql'
+" Plug 'keith/gist.vim'
+" Plug 'keith/xcconfig.vim'
+" Plug 'machakann/vim-highlightedyank'
+" Plug 'mattn/gist-vim'
+" Plug 'mxw/vim-jsx'
+" Plug 'nelstrom/vim-markdown-preview'
+" Plug 'neomake/neomake'
+" Plug 'sheerun/vim-polyglot'
+" Plug 'sjl/vitality.vim'
+" Plug 'skwp/vim-html-escape'
+" Plug 'tommcdo/vim-lion'
+" Plug 'tpope/vim-markdown'
+" Plug 'tpope/vim-rhubarb'
+" Plug 'udalov/kotlin-vim'
+" Plug 'wellle/targets.vim'
+" Plug 'xolox/vim-misc'
+" Plug 'xolox/vim-session'
 
 
-
-runtime ruby.plugs
-runtime languages.plugs
-runtime git.plugs
-runtime appearance.plugs
-runtime textobjects.plugs
-runtime search.plugs
-runtime project.plugs
-runtime tools.plugs
-runtime vim-improvements.plugs
+" Reminder if I ever want to split these out
+" runtime someplugs.plugs
 
 call plug#end()
 
