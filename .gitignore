@@ -34,3 +34,6 @@ hosts.yml
 
 # GCS configs and secrets
 gcloud
+
+# npm state file
+update-notifier-npm.json
