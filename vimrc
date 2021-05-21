@@ -148,16 +148,13 @@ endfunction
 
 
 " ============== Autocommand =======================
-augroup ft_settings
-  autocmd!
 
-  " Treat .ipas as .zip files
-  autocmd BufReadCmd *.ipa call zip#Browse(expand("<amatch>"))
-
-  " Set color column based on textwidth setting
-  autocmd FileType * call s:SetColorColumn()
+" https://vim.fandom.com/wiki/Highlight_current_line
+augroup CursorLine
+  au!
+  au VimEnter,WinEnter,BufWinEnter * setlocal cursorline
+  au WinLeave * setlocal nocursorline
 augroup END
-
 
 " Create a directory if it doesn't exist yet
 function! s:EnsureDirectory(directory)
