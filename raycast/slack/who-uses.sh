@@ -15,7 +15,7 @@
   	'let module = '${1}' in
 		filter(".*(?<!\..*)$", 
 	  		kind(
-			  "swift_library|ios_application", 
+			  "objc_library|swift_library|ios_application",
 		  		rdeps(
 			  		kind(ios_application, //App/...), 
 			  		$module
