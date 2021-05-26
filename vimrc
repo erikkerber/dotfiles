@@ -5,9 +5,27 @@ set nocompatible
 " Source files before plugins
 source ~/.vim/before/*.vim
 
+" =============== Plugin Initialization ===============
+" This loads all the plugins specified in ~/.vim/plugs.vim
+
+filetype off
+
+if filereadable(expand("~/.vim/plugs.vim"))
+  source ~/.vim/plugs.vim
+endif
+au BufNewFile,BufRead *.plugs set filetype=vim
+
 " ================ General Config ====================
 
-set shell=/bin/bash             "Bash
+"turn on syntax highlighting
+syntax on " Enable vim syntax highlighting as is (enable != on)
+
+" I - Disable the startup message
+" a - Avoid pressing enter after saves
+" set shortmess=Ia
+
+set shortmess=Ia
+set shell=$SHELL                "Bash (or Fish!)
 set number                      "Line numbers are good
 set backspace=indent,eol,start  "Allow backspace in insert mode
 set history=1000                "Store lots of :cmdline history
@@ -26,46 +44,34 @@ set updatetime=2000             "Set the time before plugins assume you're not t
 set display=lastline            "Display super long wrapped lines
 set tags^=.tags                 "Add local .tags file
 
-" This makes vim act like all other editors, buffers can
-" exist in the background without being in a window.
-" http://items.sjbach.com/319/configuring-vim-right
-set hidden
+" Create a directory if it doesn't exist yet
+function! s:EnsureDirectory(directory)
+  if !isdirectory(expand(a:directory))
+    call mkdir(expand(a:directory), 'p')
+  endif
+endfunction
 
-"turn on syntax highlighting
-syntax on " Enable vim syntax highlighting as is (enable != on)
+" Save backup files, storage is cheap, losing changes is sad
+set backup
+set backupdir=$HOME/.tmp/vim/backup
+call s:EnsureDirectory(&backupdir)
 
-" Use space as leader!
+" Write undo tree to a file to resume from next time the file is opened
+if has('persistent_undo')
+  set undolevels=2000            " The number of undo items to remember
+  set undofile                   " Save undo history to files locally
+  set undodir=$HOME/.vimundo     " Set the directory of the undofile
+  call s:EnsureDirectory(&undodir)
+endif
+
+set directory=$HOME/.tmp/vim/swap
+call s:EnsureDirectory(&directory)
+
+set viewdir=$HOME/.tmp/vim/view
+call s:EnsureDirectory(&viewdir)
+
+" Use space as leader
 let g:mapleader="\<Space>"
-
-" I - Disable the startup message
-" a - Avoid pressing enter after saves
-" set shortmess=Ia
-set shortmess=Ia
-
-" Plugin setup
-filetype off
-
-" =============== Plugin Initialization ===============
-" This loads all the plugins specified in ~/.vim/plugs.vim
-if filereadable(expand("~/.vim/plugs.vim"))
-  source ~/.vim/plugs.vim
-endif
-au BufNewFile,BufRead *.plugs set filetype=vim
-
-" ================ Turn Off Swap Files ==============
-
-set noswapfile
-set nobackup
-set nowb
-
-" ================ Persistent Undo ==================
-" Keep undo history across sessions, by storing in file.
-" Only works all the time.
-if has('persistent_undo') && isdirectory(expand('~').'/.vim/backups')
-  silent !mkdir ~/.vim/backups > /dev/null 2>&1
-  set undodir=~/.vim/backups
-  set undofile
-endif
 
 " ================ Indentation ======================
 
@@ -77,44 +83,27 @@ set softtabstop=2              " Number of spaces for some tab operations
 set shiftround                 " Round << and >> to multiples of shiftwidth
 set expandtab                  " Insert spaces instead of actual tabs
 set smarttab                   " Delete entire shiftwidth of tabs when they're inserted
+set wrap                    " Softwrap text
+set linebreak               " Don't wrap in the middle of words
+
+" ================= Remaps ===========================
 
 " Auto indent pasted text
 nnoremap p p=`]<C-o>
 nnoremap P P=`]<C-o>
 
-" Display tabs and trailing spaces visually
-set list listchars=tab:\ \ ,trail:·
+" Switch to the last file
+nnoremap <leader><leader> <C-^>
 
-set wrap                    " Softwrap text
-set linebreak               " Don't wrap in the middle of words
-
-" ================ Folds ============================
-
-set foldmethod=indent   "fold based on indent
-set foldnestmax=3       "deepest fold is 3 levels
-set nofoldenable        "dont fold by default
-
-" ================ Completion =======================
-
-set wildmode=list:longest
-set wildmenu                "enable ctrl-n and ctrl-p to scroll thru matches
-set wildignore=*.o,*.obj,*~ "stuff to ignore when tab completing
-set wildignore+=*vim/backups*
-set wildignore+=*sass-cache*
-set wildignore+=*DS_Store*
-set wildignore+=vendor/rails/**
-set wildignore+=vendor/cache/**
-set wildignore+=*.gem
-set wildignore+=log/**
-set wildignore+=tmp/**
-set wildignore+=*.png,*.jpg,*.gif
+" Clear highlight after a search
+nnoremap <silent> <leader>c :let @/=""<CR>
 
 " ================ Scrolling ========================
 
 set scrolloff=8         "Start scrolling when we're 8 lines away from margins
 set sidescrolloff=15
 set sidescroll=1
-map <C-U> 20<C-Y>
+
 " ================ Search ===========================
 
 set incsearch       " Find the next match as we type the search
@@ -146,7 +135,6 @@ function! s:SetColorColumn()
   endif
 endfunction
 
-
 " ============== Autocommand =======================
 
 " https://vim.fandom.com/wiki/Highlight_current_line
@@ -156,23 +144,13 @@ augroup CursorLine
   au WinLeave * setlocal nocursorline
 augroup END
 
-" Create a directory if it doesn't exist yet
-function! s:EnsureDirectory(directory)
-  if !isdirectory(expand(a:directory))
-    call mkdir(expand(a:directory), 'p')
-  endif
-endfunction
+augroup FileSettings
+  " Set color column based on textwidth setting
+  autocmd FileType * call s:SetColorColumn()
 
-" Save backup files, storage is cheap, losing changes is sad
-set backup
-set backupdir=$HOME/.tmp/vim/backup
-call s:EnsureDirectory(&backupdir)
-
-set directory=$HOME/.tmp/vim/swap
-call s:EnsureDirectory(&directory)
-
-set viewdir=$HOME/.tmp/vim/view
-call s:EnsureDirectory(&viewdir)
+  " Don't auto insert a comment when using O/o for a newline
+  autocmd VimEnter,BufRead,FileType * set formatoptions-=o
+augroup end
 
 " On quit reset title
 let &titleold=getcwd()
