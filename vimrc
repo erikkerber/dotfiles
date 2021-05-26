@@ -98,6 +98,10 @@ nnoremap <leader><leader> <C-^>
 " Clear highlight after a search
 nnoremap <silent> <leader>c :let @/=""<CR>
 
+" Save and Quit cheat codes
+nnoremap Q :quit<CR>
+nnoremap W :write<CR>
+
 " ================ Scrolling ========================
 
 set scrolloff=8         "Start scrolling when we're 8 lines away from margins
