@@ -75,6 +75,7 @@ alias ae='vim ~/.config/fish/aliases.fish'
 alias ve='vim ~/.vimrc'
 alias ge='vim ~/.gitconfig'
 alias be='vim ~/.Brewfile'
+alias bre='vim ~/.bazelrc'
 alias pe='vim ~/.vim/plugs.vim'
 
 # Xcode
