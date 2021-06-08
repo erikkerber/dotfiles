@@ -7,7 +7,7 @@
 #
 # Optional parameters:
 # @raycast.icon slack.png
-# @raycast.currentDirectoryPath ~/dev/slack-objc
+# @raycast.currentDirectoryPath ~/dev/slack/slack-objc
 # @raycast.packageName Slack
 
 ./bazel build --config=development -- //App:Slack
