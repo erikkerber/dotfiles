@@ -106,7 +106,7 @@ alias dockerdai='docker rmi (docker images -q)'
 alias ag='ag --follow --hidden --ignore .git --ignore derivedData --ignore Carthage'
 
 # JSON Pretty Print
-alias jpp='pbpaste | jsonpp | less'
+alias jpp='pbpaste | json_pp | bat'
 
 # Simctl
 alias xcdevices='xcrun simctl list devices'
