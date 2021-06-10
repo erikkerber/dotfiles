@@ -37,3 +37,6 @@ gcloud
 
 # npm state file
 update-notifier-npm.json
+
+# Fish
+fish_variables
