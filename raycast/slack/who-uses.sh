@@ -7,11 +7,11 @@
 #
 # Optional parameters:
 # @raycast.icon slack.png
-# @raycast.currentDirectoryPath ~/dev/slack-objc
+# @raycast.currentDirectoryPath ~/dev/slack/slack-objc
 # @raycast.packageName Slack
 # @raycast.argument1 { "type": "text", "placeholder": "//Modules/Features/AV" }
 
-./bazel query --notool_deps --nonodep_deps --noshow_progress -- \
+bazel query --notool_deps --nonodep_deps --ui_event_filters=-info,-stderr --noshow_progress -- \
   	'let module = '${1}' in
 		filter(".*(?<!\..*)$", 
 	  		kind(

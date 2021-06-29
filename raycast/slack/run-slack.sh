@@ -10,4 +10,4 @@
 # @raycast.currentDirectoryPath ~/dev/slack-objc
 # @raycast.packageName Slack
 
-./bazel run --config=development --noshow_progress -- //App:Slack
+bazel run --config=development --noshow_progress -- //App:Slack

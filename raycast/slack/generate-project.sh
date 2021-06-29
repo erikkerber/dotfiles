@@ -22,4 +22,4 @@ else
 	label="SlackBazel"
 fi
 
-./bazel run --config=development -- //project-gen:${label}
+bazel run --config=development -- //project-gen:${label}

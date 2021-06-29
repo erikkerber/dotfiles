@@ -10,4 +10,4 @@
 # @raycast.currentDirectoryPath ~/dev/slack/slack-objc
 # @raycast.packageName Slack
 
-./bazel build --config=development -- //App:Slack
+bazel build --config=development -- //App:Slack
