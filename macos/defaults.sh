@@ -16,3 +16,9 @@ while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
 # Enables press-and-hold for nav in Vim + VSCode
 defaults write com.microsoft.VSCode ApplePressAndHoldEnabled -bool false
+
+
+# Xcode
+
+defaults write com.apple.dt.Xcode IDEIndexerActivityShowNumericProgress -bool true
+

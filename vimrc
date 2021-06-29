@@ -102,6 +102,14 @@ nnoremap <silent> <leader>c :let @/=""<CR>
 nnoremap Q :quit<CR>
 nnoremap W :write<CR>
 
+" delete without yanking
+nnoremap <leader>d "_d
+vnoremap <leader>d "_d
+
+" replace currently selected text with default register
+" without yanking it
+vnoremap <leader>p "_dP
+
 " ================ Scrolling ========================
 
 set scrolloff=8         "Start scrolling when we're 8 lines away from margins

@@ -17,7 +17,7 @@ set -Ua fish_user_paths $HOME/.cargo/bin
 
 # FZF
 set -gx FZF_DEFAULT_OPTS '--cycle --layout=reverse --border --height=90% --preview-window=wrap --marker="*" --ansi'
-set -gx FZF_DEFAULT_COMMAND 'fd --type file --follow --hidden --exclude .git --color=always'
+set -gx FZF_DEFAULT_COMMAND 'fd --type file --follow --hidden --exclude .git --exclude carthage'
 set -Ux FZF_CTRL_T_COMMAND "$FZF_DEFAULT_COMMAND"
 
 set -x EDITOR nvim
