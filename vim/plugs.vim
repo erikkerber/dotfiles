@@ -18,6 +18,7 @@ Plug 'psliwka/vim-smoothie'
 Plug 'scrooloose/nerdtree'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-git'
+Plug 'tpope/vim-surround'
 Plug 'vim-syntastic/syntastic'
 
 " Archive (look back into after simplifying Vim life)
