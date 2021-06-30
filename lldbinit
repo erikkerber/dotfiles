@@ -6,9 +6,6 @@ settings set target.load-cwd-lldbinit true
 # Loads all personal/local lldb commands
 command script import ~/.lldb_commands/initall.py
 
-# Flagship Bazel support
-command source ~/.lldbinit-bazel-flagship-ios
-
 ### Reveal LLDB commands support - DO NOT MODIFY
 command script import /Users/erik/Library/Application\ Support/Reveal/RevealServerCommands.py
 ###
