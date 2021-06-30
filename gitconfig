@@ -23,6 +23,10 @@
   prune = true
 [branch]
   autosetupmerge = true
+[branch "main"]
+  pushRemote = AREYOUSURE
+[branch "master"]
+  pushRemote = AREYOUSURE
 [blame]
   date = short
   coloring = highlightRecent
@@ -148,6 +152,7 @@
   co-pr       = !sh -c 'git fetch origin pull/$1/head:pr/$1 && git checkout pr/$1' -
 
   # cherry-pick
+  cp          = cherry-pick
   cpn         = cherry-pick --no-commit
 
   # commit
@@ -218,7 +223,7 @@
   filelog     = log -u
   lol         = log --graph --decorate --pretty=oneline --abbrev-commit # http://blog.kfish.org/2010/04/git-lola.html
   lola        = log --graph --decorate --pretty=oneline --abbrev-commit --all # http://blog.kfish.org/2010/04/git-lola.html
-  scoreboard  = shortlog -sn --all --since=12.month
+  scoreboard  = shortlog -sn --since=12.month
 
   last        = diff HEAD^ HEAD
   last-msg    = !git --no-pager log --format=format:%B -1
