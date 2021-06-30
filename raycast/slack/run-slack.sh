@@ -7,7 +7,7 @@
 #
 # Optional parameters:
 # @raycast.icon slack.png
-# @raycast.currentDirectoryPath ~/dev/slack-objc
+# @raycast.currentDirectoryPath ~/dev/slack/slack-objc
 # @raycast.packageName Slack
 
 bazel run --config=development --noshow_progress -- //App:Slack
