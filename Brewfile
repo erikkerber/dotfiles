@@ -91,7 +91,6 @@ brew "zlib" # Needed manually for idb-companion
 brew "zsh"
 #brew "z" # NOTE: Use fisher-z
 
-cask "1Password"
 cask "1password-cli"
 cask "alfred"
 cask "bartender"
