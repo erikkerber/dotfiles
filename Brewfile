@@ -18,6 +18,7 @@ mas "Spark", id: 1176895641
 mas "Tot", id: 1491071483
 mas "TweetBot", id: 1384080005
 mas "Ulysses", id: 1225570693
+mas "Quip", id: 1003160018
 
 brew "apktool"
 brew "awscli"
@@ -83,6 +84,7 @@ brew "the_silver_searcher"
 brew "tig"
 brew "tokei"
 brew "tokei" # Better cloc
+brew "tree"
 brew "vim"
 brew "watchexec" # Watch directory, perform action
 brew "wget"
