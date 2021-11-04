@@ -7,5 +7,5 @@ settings set target.load-cwd-lldbinit true
 command script import ~/.lldb_commands/initall.py
 
 ### Reveal LLDB commands support - DO NOT MODIFY
-command script import /Users/erik/Library/Application\ Support/Reveal/RevealServerCommands.py
+command script import /Users/ekerber/Library/Application\ Support/Reveal/RevealServerCommands.py
 ###
