@@ -55,6 +55,11 @@ alias dig="dig +nocmd any +multiline +noall +answer"
 alias diskspace_report="df -P -kHl"
 alias free_diskspace_report="diskspace_report"
 
+# macOS
+
+# Thermal throttling monitor
+alias thermlog="pmset -g thermlog"
+
 # Archives
 alias mktar="tar -pvczf"
 alias untar="tar -zxvf"
@@ -124,16 +129,3 @@ alias ops='set -x OP_SESSION_my (op signin|sed -n \'s/.*OP_SESSION_my=//p\'|tr -
 
 ## After login above, source my secrets file
 alias opsource='op get document 7dgga4l2zndutiafauklhwfweq | source'
-
-# Build Farm
-alias bf1='ssh svbuildmobile@10.101.131.71'
-alias bf2='ssh svbuildmobile@10.101.131.72'
-alias bf3='ssh svbuildmobile@10.101.131.73'
-alias bf4='ssh svbuildmobile@10.101.131.74'
-alias bf5='ssh svbuildmobile@10.101.131.75'
-alias bf6='ssh svbuildmobile@edge-ios-build-06.target.com'
-alias bf7='ssh svbuildmobile@edge-ios-build-07.target.com'
-alias bfturtle='ssh svbuildmobile@10.101.131.27'
-alias trashcan='ssh massroot@10.108.110.74'
-alias uitest1='ssh svbuildmobile@10.101.131.24'
-alias uitest2='ssh svbuildmobile@10.101.131.25'
