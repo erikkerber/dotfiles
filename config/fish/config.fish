@@ -35,5 +35,11 @@ end
 ## rbenv
 . (rbenv init -|psub)
 
+## pyenv
+status is-login; and pyenv init --path | source
+status is-interactive; and pyenv init - | source
+
 # Special one-off for scmpuff
 source $DOTFILES/**/fish/conf.d/scmpuff.fish
+
+
