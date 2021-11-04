@@ -20,7 +20,6 @@ mas "TweetBot", id: 1384080005
 mas "Ulysses", id: 1225570693
 mas "Quip", id: 1003160018
 
-brew "apktool"
 brew "awscli"
 brew "bash"
 brew "bat"
@@ -41,7 +40,6 @@ brew "fasd" # Fuzzy open for recent files
 brew "fd" # Better find
 brew "findutils" # Extensions on 'find' such as --type f
 brew "fish"
-brew "flight-school/formulae/ner"
 brew "fzf"
 brew "gh"
 brew "ghi"
@@ -53,13 +51,11 @@ brew "go"
 brew "go"
 brew "gource"
 brew "graphviz"
-brew "heroku/brew/heroku"
 brew "hexyl" # Pretty hex viewer
 brew "hub"
 brew "hugo"
 brew "hyperfine"
 brew "hyperfine" # Command line perf
-brew "idb-companion" # iOS development bridge (Flipper)
 brew "ios-deploy"
 brew "isacikgoz/gitin/gitin"
 brew "jfrog-cli-go"
@@ -73,6 +69,7 @@ brew "mitmproxy"
 brew "neovim"
 brew "neovim"
 brew "node"
+brew "pyenv"
 brew "python"
 brew "radare2"
 brew "rbenv"
@@ -89,7 +86,6 @@ brew "vim"
 brew "watchexec" # Watch directory, perform action
 brew "wget"
 brew "xclip" # Makes copying bat output easier
-brew "zlib" # Needed manually for idb-companion
 brew "zsh"
 #brew "z" # NOTE: Use fisher-z
 
