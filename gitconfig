@@ -112,10 +112,10 @@
 [color]
 	ui = true
 [color "diff-highlight"]
-  oldNormal = red
-  oldHighlight = red ul
-  newNormal = green
-  newHighlight = green ul
+# oldNormal = red
+# oldHighlight = red ul
+#  newNormal = green
+#  newHighlight = green ul
 [color "diff"]
   meta = yellow
   frag = magenta
