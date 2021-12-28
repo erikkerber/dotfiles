@@ -13,6 +13,7 @@ mas "Magnet", id: 441258766
 mas "Paste", id: 967805235
 mas "Reeder 5", id: 1529448980
 mas "Slack", id: 803453959
+mas "Sourcery Pro", id: 1561780836
 mas "Soulver 2", id: 413965349
 mas "Spark", id: 1176895641
 mas "Tot", id: 1491071483
