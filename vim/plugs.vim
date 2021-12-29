@@ -9,6 +9,7 @@ set rtp+=/usr/local/bin/fzf
 
 call plug#begin('~/.vim/plugged')
 
+Plug 'dracula/vim', { 'as': 'dracula' }
 Plug 'gfontenot/vim-xcode'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'

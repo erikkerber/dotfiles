@@ -169,5 +169,5 @@ let &titleold=getcwd()
 
 " ============== Color ========================
 set background=dark
-silent! colorscheme parsec
+silent! colorscheme dracula
 
