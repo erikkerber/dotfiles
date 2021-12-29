@@ -13,6 +13,7 @@ Plug 'dracula/vim', { 'as': 'dracula' }
 Plug 'gfontenot/vim-xcode'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
+Plug 'neovim/nvim-lspconfig'
 Plug 'keith/parsec.vim'
 Plug 'keith/swift.vim'
 Plug 'psliwka/vim-smoothie'

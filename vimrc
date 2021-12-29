@@ -171,3 +171,7 @@ let &titleold=getcwd()
 set background=dark
 silent! colorscheme dracula
 
+" =========== Move to Lua ===========
+lua << EOF
+require'lspconfig'.pyright.setup{}
+EOF
