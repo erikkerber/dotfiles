@@ -11,8 +11,11 @@ call plug#begin('~/.vim/plugged')
 
 Plug 'dracula/vim', { 'as': 'dracula' }
 Plug 'gfontenot/vim-xcode'
+Plug 'hrsh7th/nvim-cmp'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+Plug 'nvim-treesitter/playground'
 Plug 'neovim/nvim-lspconfig'
 Plug 'keith/parsec.vim'
 Plug 'keith/swift.vim'
@@ -22,6 +25,12 @@ Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-git'
 Plug 'tpope/vim-surround'
 Plug 'vim-syntastic/syntastic'
+
+" telescope
+Plug 'nvim-telescope/telescope.nvim'
+" dependencies
+Plug 'nvim-lua/popup.nvim'
+Plug 'nvim-lua/plenary.nvim'
 
 " Archive (look back into after simplifying Vim life)
 " Plug 'JazzCore/ctrlp-cmatcher'
