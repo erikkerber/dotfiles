@@ -8,7 +8,7 @@
   attributesfile = ~/.gitattributes
   editor = vim
   whitespace = trailing-space,space-before-tab
-  pager = diff-so-fancy | less --tabs=4 -RFX
+  pager = delta
 [hub]
   protocol = https
   host = git.target.com
@@ -30,13 +30,15 @@
 [blame]
   date = short
   coloring = highlightRecent
+[delta]
+  navigate = true
 [diff]
   tool = Kaleidoscope
   renames = copies
   mnemonicprefix = true
   algorithm = patience
   indentHeuristic = true
-  colorMoved = zebra
+  colorMoved = default
   noprefix = true
 [diff "swift"]
   xfuncname = "^ *(\\w+ +)*((class|struct|enum|protocol|extension|func) +|(de)?init\\b).*$"
@@ -60,6 +62,7 @@
   keepBackup = false
   log = true
   stat = true
+  conflictstyle = diff3
 [rerere]
   enabled = true
   autoUpdate = true
@@ -76,7 +79,7 @@
 [submodule]
   fetchJobs = 8
 [interactive]
-  diffFilter = diff-highlight
+  diffFilter = delta --color-only
 [diff "plist"]
   textconv = plutil -convert xml1 -o -
 [diff "provision"]
@@ -112,10 +115,10 @@
 [color]
 	ui = true
 [color "diff-highlight"]
-# oldNormal = red
-# oldHighlight = red ul
-# newNormal = green
-# newHighlight = green ul
+  oldNormal = red
+  oldHighlight = red ul
+  newNormal = green
+  newHighlight = green ul
 [color "diff"]
   meta = yellow
   frag = magenta
@@ -129,6 +132,8 @@
   process = git-lfs filter-process
   required = true
 [alias]
+  g           = !exec git
+  git         = !exec git
   # add
   a           = add
   ap          = add --patch
