@@ -22,3 +22,4 @@ defaults write com.microsoft.VSCode ApplePressAndHoldEnabled -bool false
 
 defaults write com.apple.dt.Xcode IDEIndexerActivityShowNumericProgress -bool true
 
+defaults write http://com.apple.dt.Xcode ShowDVTDebugMenu -bool YES
