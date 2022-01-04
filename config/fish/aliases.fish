@@ -75,13 +75,13 @@ alias gsh='git show'
 alias gl='git l'
 
 # Quick Edits
-alias fe='vim ~/.config/fish/config.fish'
-alias ae='vim ~/.config/fish/aliases.fish'
-alias ve='vim ~/.vimrc'
-alias ge='vim ~/.gitconfig'
-alias be='vim ~/.Brewfile'
-alias bre='vim ~/.bazelrc'
-alias pe='vim ~/.vim/plugs.vim'
+alias fe='v ~/.config/fish/config.fish'
+alias ae='v ~/.config/fish/aliases.fish'
+alias ve='v ~/.vimrc'
+alias ge='v ~/.gitconfig'
+alias be='v ~/.Brewfile'
+alias bre='v ~/.bazelrc'
+alias pe='v ~/.vim/plugs.vim'
 
 # Xcode
 alias xc-cleansims='xcrun simctl delete unavailable'
