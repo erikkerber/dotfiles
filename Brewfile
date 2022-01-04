@@ -63,7 +63,7 @@ brew 'speedtest-cli'
 brew 'swiftlint'
 brew 'the_silver_searcher'
 brew 'tig'
-brew 'tokei'
+brew 'tmux'
 brew 'tokei' # Better cloc
 brew 'tree'
 brew 'vim'
