@@ -15,7 +15,6 @@ mas 'Reeder 5', id: 1529448980
 mas 'Slack', id: 803453959
 mas 'Sourcery Pro', id: 1561780836
 mas 'Soulver 2', id: 413965349
-mas 'Spark', id: 1176895641
 mas 'Tot', id: 1491071483
 mas 'TweetBot', id: 1384080005
 mas 'Ulysses', id: 1225570693
@@ -113,6 +112,7 @@ cask 'istat-menus'
 cask 'iterm2'
 cask 'kaleidoscope'
 cask 'lingon-x'
+cask 'mimestream'
 cask 'notion'
 cask 'nova'
 cask 'obsidian'
