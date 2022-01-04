@@ -1,5 +1,12 @@
 #!/usr/bin/env bash
 
+set -euo pipefail
+
+if [[ ! -e ./manage.sh ]]; then
+  echo "This script must be run from the root of the dotfiles repo"
+  exit 1
+fi
+
 # ~/.osx — http://mths.be/osx
 # Watch for changes in files with either of
 #  sudo fs_usage | grep plist
@@ -8,15 +15,8 @@
 
 killall System\ Preferences
 
-# Ask for the administrator password upfront
-sudo -v
-
-# Keep-alive: update existing 'sudo' time stamp until '.osx' has finished
-while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
-
 # Enables press-and-hold for nav in Vim + VSCode
 defaults write com.microsoft.VSCode ApplePressAndHoldEnabled -bool false
-
 
 # Xcode
 
@@ -29,6 +29,7 @@ defaults write http://com.apple.dt.Xcode ShowDVTDebugMenu -bool YES
 if command -v dockutil; then
   dockutil --remove all
 
+  dockutil --add "/Applications/Safari.app"
   dockutil --add "/System/Applications/Messages.app"
   dockutil --add "/Applications/Alacritty.app"
   dockutil --add "/Applications/OmniFocus.app"
@@ -39,3 +40,7 @@ if command -v dockutil; then
 else
   echo "Install dockutil via brew bundle first"
 fi
+
+ln -s $PWD/macos/com.marcoarment.quitter.plist $HOME/Library/Preferences/com.marcoarment.quitter.plist
+
+echo "Done"
