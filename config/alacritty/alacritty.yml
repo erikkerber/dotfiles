@@ -1,0 +1,28 @@
+live_config_reload: true
+
+dpi:
+  x: 120.0
+  y: 120.0
+
+window:
+  startup_mode: Maximized
+
+font:
+  normal:
+    family: Operator Mono
+    style: Medium
+  bold:
+    style: Bold
+  italic:
+    style: Italic
+  size: 15.0
+  # OS X only: use thin stroke font rendering. Thin strokes are suitable
+  # for retina displays, but for non-retina you probably want this set to
+  # false.
+  use_thin_strokes: false
+
+bell:
+  duration: 0
+
+import:
+  - ~/.config/alacritty/dracula.yml
