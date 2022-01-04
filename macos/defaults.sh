@@ -23,3 +23,19 @@ defaults write com.microsoft.VSCode ApplePressAndHoldEnabled -bool false
 defaults write com.apple.dt.Xcode IDEIndexerActivityShowNumericProgress -bool true
 
 defaults write http://com.apple.dt.Xcode ShowDVTDebugMenu -bool YES
+
+# Dock
+
+if command -v dockutil; then
+  dockutil --remove all
+
+  dockutil --add "/System/Applications/Messages.app"
+  dockutil --add "/Applications/Alacritty.app"
+  dockutil --add "/Applications/OmniFocus.app"
+  dockutil --add "/Applications/Slack.app"
+
+  dockutil --add "/Applications" --view list --display folder --sort name
+  dockutil --add "$HOME/Downloads" --view grid --display stack --sort dateadded
+else
+  echo "Install dockutil via brew bundle first"
+fi

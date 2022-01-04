@@ -36,6 +36,7 @@ brew 'colordiff'
 brew 'coreutils'
 brew 'ctags'
 brew 'diff-so-fancy'
+brew 'dockutil'
 brew 'dust' # Better du -sh
 brew 'exa' # Better ls
 brew 'fasd' # Fuzzy open for recent files
