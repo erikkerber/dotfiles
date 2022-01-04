@@ -14,6 +14,7 @@ files=(\
   lldb_commands \
   lldbinit \
   raycast \
+  tmux.conf \
   vim \
   vimrc \
   xvimrc \
