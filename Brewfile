@@ -1,25 +1,3 @@
-cask_args appdir: '/Applications'
-tap 'homebrew/cask-fonts'
-
-mas 'A Companion for SwiftUI', id: 1485436674
-mas 'DaisyDisk', id: 411643860
-mas 'Dato', id: 1470584107
-mas 'Deliveries', id: 924726344
-mas 'Developer', id: 640199958
-mas 'Fantastical', id: 975937182
-mas 'Pixelmator', id: 407963104
-mas 'Transporter', id: 1450874784
-mas 'Magnet', id: 441258766
-mas 'Paste', id: 967805235
-mas 'Reeder 5', id: 1529448980
-mas 'Slack', id: 803453959
-mas 'Sourcery Pro', id: 1561780836
-mas 'Soulver 2', id: 413965349
-mas 'Tot', id: 1491071483
-mas 'TweetBot', id: 1384080005
-mas 'Ulysses', id: 1225570693
-mas 'Quip', id: 1003160018
-
 brew 'awscli'
 brew 'bash'
 brew 'bat'
@@ -61,7 +39,7 @@ brew 'hyperfine'
 brew 'hyperfine' # Command line perf
 brew 'ios-deploy'
 brew 'isacikgoz/gitin/gitin'
-brew 'jfrog-cli-go'
+brew 'jfrog-cli'
 brew 'jq'
 brew 'keith/formulae/tag' # keith/formula
 brew 'less' # Keep less up to date
@@ -95,48 +73,12 @@ brew 'xclip' # Makes copying bat output easier
 brew 'zsh'
 #brew 'z' # NOTE: Use fisher-z
 
-cask '1password-cli'
-cask 'alacritty'
-cask 'alfred'
-cask 'bartender'
-cask 'bettertouchtool'
-cask 'camo-studio'
-cask 'charles'
-cask 'cleanshot'
-cask 'dash'
-cask 'deckset'
-cask 'discord'
-cask 'docker'
-cask 'fork'
-cask 'istat-menus'
-cask 'iterm2'
-cask 'kaleidoscope'
-cask 'lingon-x'
-cask 'mimestream'
-cask 'notion'
-cask 'nova'
-cask 'obsidian'
-cask 'omnifocus'
-cask 'paw'
-cask 'provisionql'
-cask 'proxyman'
-cask 'quitter'
-cask 'raycast'
-cask 'reveal'
-cask 'rocket' # Slack-esque emoji picker for macOS
-cask 'visual-studio-code'
-cask 'xcodes'
-cask 'zoom'
-
 tap 'buildkite/cli'
 tap 'charmbracelet/homebrew-tap'
-tap 'dduan/homebrew-formulae'
-tap 'facebook/fb'
 tap 'heroku/brew'
 tap 'homebrew/bundle'
 tap 'homebrew/cask'
 tap 'homebrew/core'
 tap 'isacikgoz/gitin'
 tap 'keith/formulae'
-tap 'peripheryapp/periphery'
 tap 'teamookla/speedtest'
