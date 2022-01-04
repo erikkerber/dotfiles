@@ -12,12 +12,13 @@ set -gx PATH /opt/homebrew/bin $PATH
 set -gx PATH $HOME/go/bin $PATH
 # slack
 set -gx PATH $HOME/dev/slack/slack-objc/bin $PATH
+
 # rust
 set -Ua fish_user_paths $HOME/.cargo/bin
 #openjdk
 fish_add_path /opt/homebrew/opt/openjdk/bin
-set -gx JAVA_HOME /opt/homebrew/opt/openjdk
 set -gx CPPFLAGS "-I/opt/homebrew/opt/openjdk/include"
+
 
 # FZF
 set -gx FZF_DEFAULT_OPTS '--cycle --layout=reverse --border --height=90% --preview-window=wrap --marker="*" --ansi'
@@ -37,7 +38,8 @@ for file in $DOTFILES/**/fish/*.fish
 end
 
 ## rbenv
-. (rbenv init -|psub)
+set -x PATH $HOME/.rbenv/bin $PATH
+rbenv init - | source
 
 ## pyenv
 status is-login; and pyenv init --path | source
