@@ -82,6 +82,8 @@ alias ge='v ~/.gitconfig'
 alias be='v ~/.Brewfile'
 alias bre='v ~/.bazelrc'
 alias pe='v ~/.vim/plugs.vim'
+alias te='v ~/.tmux.conf'
+alias ace='v ~/.config/alacritty/alacritty.yml'
 
 # Xcode
 alias xc-cleansims='xcrun simctl delete unavailable'
