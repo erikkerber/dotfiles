@@ -96,6 +96,7 @@ brew "zsh"
 #brew "z" # NOTE: Use fisher-z
 
 cask "1password-cli"
+cask "alacritty"
 cask "alfred"
 cask "bartender"
 cask "bettertouchtool"
