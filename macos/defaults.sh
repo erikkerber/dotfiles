@@ -13,8 +13,6 @@ fi
 #  sudo opensnoop | grep plist
 # Useful reference: http://www.hcs.harvard.edu/~jrus/Site/Cocoa%20Text%20System.html
 
-killall System\ Preferences
-
 # Enables press-and-hold for nav in Vim + VSCode
 defaults write com.microsoft.VSCode ApplePressAndHoldEnabled -bool false
 
@@ -42,5 +40,3 @@ else
 fi
 
 ln -s $PWD/macos/com.marcoarment.quitter.plist $HOME/Library/Preferences/com.marcoarment.quitter.plist
-
-echo "Done"
