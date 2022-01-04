@@ -88,10 +88,6 @@ set linebreak               " Don't wrap in the middle of words
 
 " ================= Remaps ===========================
 
-" Auto indent pasted text
-nnoremap p p=`]<C-o>
-nnoremap P P=`]<C-o>
-
 " Switch to the last file
 nnoremap <leader><leader> <C-^>
 
