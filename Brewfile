@@ -20,6 +20,7 @@ brew 'fasd' # Fuzzy open for recent files
 brew 'fd' # Better find
 brew 'findutils' # Extensions on 'find' such as --type f
 brew 'fish'
+brew 'fx'
 brew 'fzf'
 brew 'gh'
 brew 'ghi'
