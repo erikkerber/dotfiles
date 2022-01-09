@@ -13,6 +13,8 @@ function ..... ; cd ../../../.. ; end
 function g        ; git $argv ; end
 function grep     ; command grep --color=auto $argv ; end
 
+alias ls="exa"
+
 # Git
 alias g="git"
 alias gti="git"
