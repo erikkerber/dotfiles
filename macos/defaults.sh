@@ -19,8 +19,16 @@ defaults write com.microsoft.VSCode ApplePressAndHoldEnabled -bool false
 # Xcode
 
 defaults write com.apple.dt.Xcode IDEIndexerActivityShowNumericProgress -bool true
+defaults write com.apple.dt.Xcode ShowBuildOperationDuration -bool YES
+defaults write com.apple.dt.Xcode ShowDVTDebugMenu -bool YES
+#sudo touch /Applications/Xcode.app/Contents/Developer/AppleInternal/Library/Xcode/AppleInternal.plist
+echo "%admin ALL=NOPASSWD: /usr/bin/xcode-select,/usr/bin/xcodebuild -runFirstLaunch" | sudo tee /etc/sudoers.d/xcode
 
-defaults write http://com.apple.dt.Xcode ShowDVTDebugMenu -bool YES
+# Additional counterparts
+defaults write com.apple.dt.Xcode IDEAdditionalCounterpartSuffixes -array-add "ViewModel" "View" "Screen"
+
+# Don't open the last open project on launch
+defaults write com.apple.dt.Xcode ApplePersistenceIgnoreState -bool YES
 
 # Dock
 
