@@ -37,6 +37,11 @@ defaults write com.apple.dock autohide -bool true
 defaults write com.apple.dock autohide-delay -float 0.0
 defaults write com.apple.dock autohide-time-modifier -float 0.2
 
+defaults write com.apple.dock autohide-time-modifier -float 0.2
+
+# Disable 3-finger gesture
+defaults write com.apple.dock showLaunchpadGestureEnabled -int 0
+
 if command -v dockutil; then
   dockutil --remove all
 
