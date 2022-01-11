@@ -50,6 +50,7 @@ cask 'raycast'
 cask 'reveal'
 cask 'rocket' # Slack-esque emoji picker for macOS
 cask 'visual-studio-code'
+cask 'xbar'
 cask 'xcodes'
 cask 'zoom'
 
