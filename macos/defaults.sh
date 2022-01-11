@@ -57,4 +57,6 @@ else
   echo "Install dockutil via brew bundle first"
 fi
 
+# Quitter
 ln -s $PWD/macos/com.marcoarment.quitter.plist $HOME/Library/Preferences/com.marcoarment.quitter.plist
+
