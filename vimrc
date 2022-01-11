@@ -163,6 +163,9 @@ augroup end
 " On quit reset title
 let &titleold=getcwd()
 
+" Saves on changing buffers or losing focus
+autocmd BufLeave,FocusLost * nested silent! wall
+
 " ============== Color ========================
 set background=dark
 silent! colorscheme dracula
