@@ -4,6 +4,7 @@ brew 'bat'
 brew 'bazelisk'
 brew 'buildifier'
 brew 'bk'
+brew 'buildkite/buildkite/buildkite-agent' # Dependency of bk
 brew 'bzip2' # Needed manually for idb-companion
 brew 'charmbracelet/homebrew-tap/glow'
 brew 'chisel'
@@ -23,6 +24,7 @@ brew 'findutils' # Extensions on 'find' such as --type f
 brew 'fish'
 brew 'fx'
 brew 'fzf'
+brew 'gdu'
 brew 'gh'
 brew 'ghi'
 brew 'git'
@@ -31,9 +33,9 @@ brew 'git-extras'
 brew 'git-lfs'
 brew 'gnu-sed'
 brew 'go'
-brew 'go'
 brew 'gource'
 brew 'graphviz'
+brew 'gron'
 brew 'hexyl' # Pretty hex viewer
 brew 'hub'
 brew 'hugo'
@@ -41,6 +43,7 @@ brew 'hyperfine'
 brew 'hyperfine' # Command line perf
 brew 'ios-deploy'
 brew 'isacikgoz/gitin/gitin'
+brew 'jless'
 brew 'jfrog-cli'
 brew 'jq'
 brew 'keith/formulae/tag' # keith/formula
@@ -49,7 +52,6 @@ brew 'mdcat'
 brew 'mdcat' # Terminal Markdown rendering
 brew 'mint'
 brew 'mitmproxy'
-brew 'neovim'
 brew 'neovim'
 brew 'node'
 brew 'openjdk'
@@ -68,7 +70,6 @@ brew 'tig'
 brew 'tmux'
 brew 'tokei' # Better cloc
 brew 'tree'
-brew 'vim'
 brew 'watchexec' # Watch directory, perform action
 brew 'wget'
 brew 'xclip' # Makes copying bat output easier
