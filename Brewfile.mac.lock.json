@@ -1,0 +1,376 @@
+{
+  "entries": {
+    "tap": {
+      "homebrew/cask-fonts": {
+        "revision": "132c473969e14b7aa41c2f072673163b75728c24"
+      }
+    },
+    "mas": {
+      "A Companion for SwiftUI": {
+        "id": "1485436674",
+        "version": "3.2"
+      },
+      "DaisyDisk": {
+        "id": "411643860",
+        "version": "4.21.4"
+      },
+      "Dato": {
+        "id": "1470584107",
+        "version": "3.2.0"
+      },
+      "Deliveries": {
+        "id": "924726344",
+        "version": "3.2.4"
+      },
+      "Developer": {
+        "id": "640199958",
+        "version": "9.3.1"
+      },
+      "Fantastical": {
+        "id": "975937182",
+        "version": "3.5.1"
+      },
+      "Pixelmator": {
+        "id": "407963104",
+        "version": "3.9.9"
+      },
+      "Transporter": {
+        "id": "1450874784",
+        "version": "1.2.2"
+      },
+      "Magnet": {
+        "id": "441258766",
+        "version": "2.7.0"
+      },
+      "Paste": {
+        "id": "967805235",
+        "version": "3.1.4"
+      },
+      "Reeder 5": null,
+      "Slack": {
+        "id": "803453959",
+        "version": "4.23.0"
+      },
+      "Sourcery Pro": null,
+      "Soulver 2": {
+        "id": "413965349",
+        "version": "2.9.0"
+      },
+      "Tot": {
+        "id": "1491071483",
+        "version": "1.2.3"
+      },
+      "TweetBot": null,
+      "Ulysses": {
+        "id": "1225570693",
+        "version": "24.5"
+      },
+      "Quip": {
+        "id": "1003160018",
+        "version": "7.50.0"
+      }
+    },
+    "cask": {
+      "1password-cli": {
+        "version": "1.12.3",
+        "options": {
+          "full_name": "1password-cli",
+          "args": {
+            "appdir": "/Applications"
+          }
+        }
+      },
+      "alacritty": {
+        "version": "0.9.0",
+        "options": {
+          "full_name": "alacritty",
+          "args": {
+            "appdir": "/Applications"
+          }
+        }
+      },
+      "alfred": {
+        "version": "4.6.1,1274",
+        "options": {
+          "full_name": "alfred",
+          "args": {
+            "appdir": "/Applications"
+          }
+        }
+      },
+      "bartender": {
+        "version": "4.1.21,41021",
+        "options": {
+          "full_name": "bartender",
+          "args": {
+            "appdir": "/Applications"
+          }
+        }
+      },
+      "bettertouchtool": {
+        "version": "3.699,1837",
+        "options": {
+          "full_name": "bettertouchtool",
+          "args": {
+            "appdir": "/Applications"
+          }
+        }
+      },
+      "camo-studio": {
+        "version": "1.5.1,5687",
+        "options": {
+          "full_name": "camo-studio",
+          "args": {
+            "appdir": "/Applications"
+          }
+        }
+      },
+      "charles": {
+        "version": "4.6.2",
+        "options": {
+          "full_name": "charles",
+          "args": {
+            "appdir": "/Applications"
+          }
+        }
+      },
+      "cleanshot": {
+        "version": "4.0",
+        "options": {
+          "full_name": "cleanshot",
+          "args": {
+            "appdir": "/Applications"
+          }
+        }
+      },
+      "dash": {
+        "version": "6.2.1,990",
+        "options": {
+          "full_name": "dash",
+          "args": {
+            "appdir": "/Applications"
+          }
+        }
+      },
+      "deckset": {
+        "version": "2.0.20,2595",
+        "options": {
+          "full_name": "deckset",
+          "args": {
+            "appdir": "/Applications"
+          }
+        }
+      },
+      "discord": {
+        "version": "0.0.264",
+        "options": {
+          "full_name": "discord",
+          "args": {
+            "appdir": "/Applications"
+          }
+        }
+      },
+      "docker": {
+        "version": "4.3.2,72729",
+        "options": {
+          "full_name": "docker",
+          "args": {
+            "appdir": "/Applications"
+          }
+        }
+      },
+      "fork": {
+        "version": "2.14",
+        "options": {
+          "full_name": "fork",
+          "args": {
+            "appdir": "/Applications"
+          }
+        }
+      },
+      "istat-menus": {
+        "version": "6.61",
+        "options": {
+          "full_name": "istat-menus",
+          "args": {
+            "appdir": "/Applications"
+          }
+        }
+      },
+      "iterm2": {
+        "version": "3.4.15",
+        "options": {
+          "full_name": "iterm2",
+          "args": {
+            "appdir": "/Applications"
+          }
+        }
+      },
+      "kaleidoscope": {
+        "version": "3.1.3,2027",
+        "options": {
+          "full_name": "kaleidoscope",
+          "args": {
+            "appdir": "/Applications"
+          }
+        }
+      },
+      "lingon-x": {
+        "version": "8.4.1",
+        "options": {
+          "full_name": "lingon-x",
+          "args": {
+            "appdir": "/Applications"
+          }
+        }
+      },
+      "mimestream": {
+        "version": "0.31.5",
+        "options": {
+          "full_name": "mimestream",
+          "args": {
+            "appdir": "/Applications"
+          }
+        }
+      },
+      "notion": {
+        "version": "2.0.19",
+        "options": {
+          "full_name": "notion",
+          "args": {
+            "appdir": "/Applications"
+          }
+        }
+      },
+      "nova": {
+        "version": "8.3",
+        "options": {
+          "full_name": "nova",
+          "args": {
+            "appdir": "/Applications"
+          }
+        }
+      },
+      "obsidian": {
+        "version": "0.13.14",
+        "options": {
+          "full_name": "obsidian",
+          "args": {
+            "appdir": "/Applications"
+          }
+        }
+      },
+      "omnifocus": {
+        "version": "3.12.2",
+        "options": {
+          "full_name": "omnifocus",
+          "args": {
+            "appdir": "/Applications"
+          }
+        }
+      },
+      "paw": {
+        "version": "3.3.2,3003002002",
+        "options": {
+          "full_name": "paw",
+          "args": {
+            "appdir": "/Applications"
+          }
+        }
+      },
+      "provisionql": {
+        "version": "1.6.2",
+        "options": {
+          "full_name": "provisionql",
+          "args": {
+            "appdir": "/Applications"
+          }
+        }
+      },
+      "proxyman": {
+        "version": "2.35.4,23540",
+        "options": {
+          "full_name": "proxyman",
+          "args": {
+            "appdir": "/Applications"
+          }
+        }
+      },
+      "quitter": {
+        "version": "1.0,108",
+        "options": {
+          "full_name": "quitter",
+          "args": {
+            "appdir": "/Applications"
+          }
+        }
+      },
+      "raycast": {
+        "version": "1.26.3",
+        "options": {
+          "full_name": "raycast",
+          "args": {
+            "appdir": "/Applications"
+          }
+        }
+      },
+      "reveal": {
+        "version": "32,15614",
+        "options": {
+          "full_name": "reveal",
+          "args": {
+            "appdir": "/Applications"
+          }
+        }
+      },
+      "rocket": {
+        "version": "1.8.2,79",
+        "options": {
+          "full_name": "rocket",
+          "args": {
+            "appdir": "/Applications"
+          }
+        }
+      },
+      "visual-studio-code": {
+        "version": "1.63.2",
+        "options": {
+          "full_name": "visual-studio-code",
+          "args": {
+            "appdir": "/Applications"
+          }
+        }
+      },
+      "xcodes": {
+        "version": "1.2.0,8",
+        "options": {
+          "full_name": "xcodes",
+          "args": {
+            "appdir": "/Applications"
+          }
+        }
+      },
+      "zoom": {
+        "version": "5.9.1.3506",
+        "options": {
+          "full_name": "zoom",
+          "args": {
+            "appdir": "/Applications"
+          }
+        }
+      }
+    }
+  },
+  "system": {
+    "macos": {
+      "monterey": {
+        "HOMEBREW_VERSION": "3.3.9",
+        "HOMEBREW_PREFIX": "/opt/homebrew",
+        "Homebrew/homebrew-core": "b7da3c8536b7370281b626e25455bd1aeb0b1550",
+        "CLT": "13.1.0.0.1.1633545042",
+        "Xcode": "13.1",
+        "macOS": "12.0.1"
+      }
+    }
+  }
+}

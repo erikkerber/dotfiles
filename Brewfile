@@ -41,6 +41,7 @@ brew 'hub'
 brew 'hugo'
 brew 'hyperfine'
 brew 'hyperfine' # Command line perf
+brew 'ipatool' # tap majd/repo
 brew 'ios-deploy'
 brew 'isacikgoz/gitin/gitin'
 brew 'jless'
@@ -73,6 +74,7 @@ brew 'tree'
 brew 'watchexec' # Watch directory, perform action
 brew 'wget'
 brew 'xclip' # Makes copying bat output easier
+brew 'youtube-dl'
 brew 'zsh'
 #brew 'z' # NOTE: Use fisher-z
 
@@ -85,3 +87,4 @@ tap 'homebrew/core'
 tap 'isacikgoz/gitin'
 tap 'keith/formulae'
 tap 'teamookla/speedtest'
+tap 'majd/repo'
