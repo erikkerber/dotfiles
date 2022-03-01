@@ -1,10 +1,13 @@
-{
+{    
+  "coc.preferences.useQuickfixForLocations": true,
+  "diagnostic.checkCurrentLine": true,
+  "git.addGBlameToVirtualText": true,
   "languageserver": {
     "sourcekit-lsp": {
       "command": "sourcekit-lsp",
-      "filetypes": ["swift"],
+      "filetypes": ["swift", "objc"],
       "trace.server": "verbose",
-      "rootPatterns": ["root.yml"],
+      "rootPatterns": ["WORKSPACE", "Swift.package"],
       "initializationOptions": {
       },
       "settings": {
