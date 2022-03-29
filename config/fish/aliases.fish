@@ -59,6 +59,9 @@ alias free_diskspace_report="diskspace_report"
 
 # macOS
 
+# Credit @kyleve
+alias fix_the_fucking_audio='xcrun simctl shutdown all && sudo killall coreaudiod'
+
 # Thermal throttling monitor
 alias thermlog="pmset -g thermlog"
 
