@@ -26,8 +26,13 @@ alias gap='g add .;g amendne; g punch'
 alias ggone="g branch -v | grep '\[gone\]' | awk '{ print \$1 }'"
 
 # Slack Helpers
-alias gx="./bazel run -- //project_gen:SlackXcode"
-alias gb="./bazel run -- //project_gen:SlackBazel"
+alias gx="bazel run -- //project_gen:SlackXcode"
+alias gb="bazel run -- //project_gen:SlackBazel"
+alias bwx="bazel run -- //project_gen:SlackXcode-BB"
+alias bwb="bazel run -- //project_gen:SlackBazel-BB"
+alias bb="bwb && bwx"
+alias bbo="bwb && bwx && xed App/Slack-BwX.xcodeproj && xed App/Slack-BwB.xcodeproj"
+
 
 # Vim
 alias v="nvim"
@@ -59,8 +64,13 @@ alias free_diskspace_report="diskspace_report"
 
 # macOS
 
-# Credit @kyleve
-alias fix_the_fucking_audio='xcrun simctl shutdown all && sudo killall coreaudiod'
+# TODO / (ultralist)
+alias td='ultralist'
+alias tdc='ultralist complete'
+alias tda='ultralist add'
+alias tdd='ultralist list group:contexts'
+alias tdn='ultralist list group:contexts --notes'
+alias tdl='tdd'
 
 # Thermal throttling monitor
 alias thermlog="pmset -g thermlog"
@@ -106,7 +116,6 @@ alias deeplink='xcrun simctl openurl booted'
 
 # Bazel
 alias bazelbinloc='bazel info bazel-bin'
-alias bb='cd /private/var/tmp/_bazel_erik/'
 alias bi='bazel info'
 
 # Docker
@@ -128,6 +137,8 @@ alias killsim='killall "com.apple.CoreSimulator.CoreSimulatorService" && killall
 alias makespacer='defaults write com.apple.dock persistent-apps -array-add \'{"tile-type"="spacer-tile";}\'; killall Dock'
 alias daemonblame='launchctl list | grep -v com.apple'
 alias kextblame='kextstat -l | grep -v com.apple'
+# Credit @kyleve
+alias fix_the_fucking_audio='xcrun simctl shutdown all && sudo killall coreaudiod'
 
 # Secrets
 
