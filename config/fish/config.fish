@@ -25,7 +25,11 @@ set -gx FZF_DEFAULT_OPTS '--cycle --layout=reverse --border --height=90% --previ
 set -gx FZF_DEFAULT_COMMAND 'fd --type file --follow --hidden --exclude .git --exclude carthage'
 set -Ux FZF_CTRL_T_COMMAND "$FZF_DEFAULT_COMMAND"
 
-set -x EDITOR nvim
+# git-pile
+set -gx GIT_PILE_PREFIX ekerber/
+set -gx GIT_PILE_USE_PR_TEMPLATE 1
+
+set -gx EDITOR nvim
 
 # Source all fish files
 for file in $DOTFILES/**/fish/*.fish

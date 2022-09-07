@@ -9,6 +9,7 @@
   editor = nvim 
   whitespace = trailing-space,space-before-tab
   pager = delta
+	ignorecase = true
 [hub]
   protocol = https
   host = git.target.com
@@ -107,6 +108,7 @@
   lineNumber = true
 [advice]
   waitingForEditor = false
+  skippedCherryPicks = true
 [pager]
   branch = false
 [pull]
