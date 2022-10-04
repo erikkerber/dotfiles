@@ -72,6 +72,7 @@
   autosquash = true
   autostash = true
   stat = true
+  updateRefs = true
 [stash]
   showPatch = true
 [gpg]
@@ -108,7 +109,7 @@
   lineNumber = true
 [advice]
   waitingForEditor = false
-  skippedCherryPicks = true
+  skippedCherryPicks = false
 [pager]
   branch = false
 [pull]
