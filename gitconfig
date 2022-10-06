@@ -92,7 +92,7 @@
 [difftool "ksdiff"]
   cmd = ksdiff --partial-changeset --relative-path \"$MERGED\" -- \"$LOCAL\" \"$REMOTE\"
 [format]
-  pretty = format:%C(blue)%ad%Creset %C(yellow)%h%C(green)%d%Creset %C(blue)%s %C(magenta) [%an]%Creset
+  pretty = erik
 [mergetool "ksdiff"]
   cmd = ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" \"$REMOTE\"
 [status]
@@ -104,6 +104,8 @@
   smtpServerOption = -afastmail
 [log]
   follow = true
+[pretty]
+	erik = %C(blue)%h%Creset %C(green)%ar%Creset %C(magenta)%an%Creset %s
 [grep]
   column = true
   lineNumber = true
@@ -224,24 +226,28 @@
 
   # log
   l           = log -20 --topo-order --pretty='format:%Cblue%h%Creset %s%Cred%d%Creset %C(yellow)(%an)%Creset'
-  changes     = log --pretty=format:\"%C(blue)%h%Creset %C(green)%cr%Creset %C(red)%an%Creset %s\" --name-status
-  short       = log --pretty=format:\"%C(blue)%h%Creset %<(20)%C(red)%an%Creset%C(green)%cr%Creset %s\"
-  long        = log --pretty=format:\"%C(blue)%H%Creset %<(21)%C(red)%an%Creset%C(green)%cr%Creset %<(80,trunc)%s\"
-  shortnocolor= log --pretty=format:\"%h %cr %an %s\"
-  dylan       = log --diff-filter=R --summary
-  klog        = log --author=Kerber # It me
-  filelog     = log -u
+  logshort    = log --pretty=format:\"%C(blue)%h%Creset %<(20)%C(red)%an%Creset%C(green)%cr%Creset %s\"
+  loglong     = log --pretty=format:\"%C(blue)%H%Creset %<(21)%C(red)%an%Creset%C(green)%cr%Creset %<(80,trunc)%s\"
+  logfiles    = log --pretty=erik --name-status
+  logchanges  = log --pretty=erik -u
+  logk        = log --author=Kerber # It me
+  logrename   = log --diff-filter=R --summary
+  logorigin   = log origin/main..main
+  logo        = logorigin 
+
+  # log graphs
   lol         = log --graph --decorate --pretty=oneline --abbrev-commit # http://blog.kfish.org/2010/04/git-lola.html
   lola        = log --graph --decorate --pretty=oneline --abbrev-commit --all # http://blog.kfish.org/2010/04/git-lola.html
-  scoreboard  = shortlog -sn --since=12.month
 
+  # Last commit helpers
   last        = diff HEAD^ HEAD
   last-msg    = !git --no-pager log --format=format:%B -1
   last-sha    = !git --no-pager log --format=format:%H -1
-  blog        = log main..HEAD # All commits from main
   
-  history     = log -p -M --follow --stat --
+  history     = log --pretty=format:\"%C(blue)%h%Creset %C(green)%cr%Creset %C(red)%an%Creset %s\" -p -M --follow --stat --
 
+  scoreboard  = shortlog -sn --since=12.month
+  
   # submodules
   sub         = submodule update --init --recursive
 
