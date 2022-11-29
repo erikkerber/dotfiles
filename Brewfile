@@ -1,4 +1,5 @@
 brew 'awscli'
+brew 'aria2' # Used to speed up xcodes
 brew 'bash'
 brew 'bat'
 brew 'bazelisk'
@@ -31,9 +32,11 @@ brew 'git'
 brew 'git-delta'
 brew 'git-extras'
 brew 'git-lfs'
+brew 'git-pile'
 brew 'gnu-sed'
 brew 'go'
 brew 'gource'
+brew 'gpg'
 brew 'graphviz'
 brew 'gron'
 brew 'hexyl' # Pretty hex viewer
@@ -45,6 +48,7 @@ brew 'hyperfine' # Command line perf
 brew 'ipatool' # tap majd/repo
 brew 'ios-deploy'
 brew 'isacikgoz/gitin/gitin'
+brew 'jira-cli'
 brew 'jless'
 brew 'jfrog-cli'
 brew 'jq'
@@ -75,10 +79,12 @@ brew 'tree'
 brew 'watchexec' # Watch directory, perform action
 brew 'wget'
 brew 'xclip' # Makes copying bat output easier
+brew 'xcodes'
 brew 'youtube-dl'
 brew 'zsh'
 #brew 'z' # NOTE: Use fisher-z
 
+tap 'ankitpokhrel/jira-cli'
 tap 'buildkite/cli'
 tap 'charmbracelet/homebrew-tap'
 tap 'heroku/brew'
@@ -88,5 +94,6 @@ tap 'homebrew/core'
 tap 'isacikgoz/gitin'
 tap 'keith/formulae'
 tap 'milend/taps'
+tap 'robotsandpencils/made'
 tap 'teamookla/speedtest'
 tap 'majd/repo'
