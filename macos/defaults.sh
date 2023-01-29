@@ -45,18 +45,21 @@ defaults write com.apple.dock showLaunchpadGestureEnabled -int 0
 if command -v dockutil; then
   dockutil --remove all
 
-  dockutil --add "/Applications/Safari.app"
-  dockutil --add "/System/Applications/Messages.app"
-  dockutil --add "/Applications/Alacritty.app"
-  dockutil --add "/Applications/OmniFocus.app"
-  dockutil --add "/Applications/Slack.app"
+  dockutil --add "/System/Applications/Messages.app" --no-restart
+  dockutil --add '' --type small-spacer --section apps --no-restart
+  dockutil --add "/Applications/Arc.app" --no-restart
+  dockutil --add "/Applications/Alacritty.app" --no-restart
+  dockutil --add "/Applications/Slack.app" --no-restart
+  dockutil --add "/Applications/Things3.app" --no-restart
+  dockutil --add '' --type small-spacer --section apps --after Things3 --no-restart
 
-  dockutil --add "/Applications" --view list --display folder --sort name
+  dockutil --add "/Applications" --view list --display folder --sort name --no-restart
   dockutil --add "$HOME/Downloads" --view grid --display stack --sort dateadded
 else
-  echo "Install dockutil via brew bundle first"
+  echo "Install dockutil GitHub releases first"
 fi
 
 # Quitter
-ln -s $PWD/macos/com.marcoarment.quitter.plist $HOME/Library/Preferences/com.marcoarment.quitter.plist
+rm $HOME/Library/Preferences/com.marcoarment.quitter.plist
+ln -ns $PWD/macos/com.marcoarment.quitter.plist $HOME/Library/Preferences/com.marcoarment.quitter.plist
 
