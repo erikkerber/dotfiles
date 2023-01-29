@@ -3,6 +3,7 @@
 files=(\
   bin \
   Brewfile \
+  Brewfile.mac \
   config \
   curlrc \
   gemrc \
@@ -14,6 +15,7 @@ files=(\
   lldb_commands \
   lldbinit \
   raycast \
+  tmux \
   tmux.conf \
   vim \
   vimrc \
