@@ -11,14 +11,16 @@ set -gx PATH /opt/homebrew/bin $PATH
 # go
 set -gx PATH $HOME/go/bin $PATH
 # slack
-set -gx PATH $HOME/dev/slack/slack-objc/bin $PATH
+set -gx PATH $HOME/Developer/slack/slack-objc/bin $PATH
 
+set -gx PATH $HOME/.local/bin $PATH
 # rust
 set -Ua fish_user_paths $HOME/.cargo/bin
 #openjdk
 fish_add_path /opt/homebrew/opt/openjdk/bin
 set -gx CPPFLAGS "-I/opt/homebrew/opt/openjdk/include"
-
+# gpg
+set -gx GPG_TTY (tty)
 
 # FZF
 set -gx FZF_DEFAULT_OPTS '--cycle --layout=reverse --border --height=90% --preview-window=wrap --marker="*" --ansi'

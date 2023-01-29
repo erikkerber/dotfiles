@@ -23,16 +23,16 @@ alias gcm="g co main"
 alias gcl="g co -"
 alias grbm="g rebase main"
 alias gap='g add .;g amendne; g punch'
+alias ga='g headpr' # git-pile helper
+alias ghs='g headpr --squash' # git-pile helper
 alias ggone="g branch -v | grep '\[gone\]' | awk '{ print \$1 }'"
+alias glo="g lo"
 
-# Slack Helpers
-alias gx="bazel run -- //project_gen:SlackXcode"
-alias gb="bazel run -- //project_gen:SlackBazel"
-alias bwx="bazel run -- //project_gen:SlackXcode-BB"
-alias bwb="bazel run -- //project_gen:SlackBazel-BB"
-alias bb="bwb && bwx"
-alias bbo="bwb && bwx && xed App/Slack-BwX.xcodeproj && xed App/Slack-BwB.xcodeproj"
-
+# Bazel
+alias b="bazel"
+alias br="bazel run"
+alias bb="bazel build"
+alias bt="bazel test"
 
 # Vim
 alias v="nvim"
@@ -69,6 +69,7 @@ alias td='ultralist'
 alias tdc='ultralist complete'
 alias tda='ultralist add'
 alias tdd='ultralist list group:contexts'
+alias tddn='tdd context:Now'
 alias tdn='ultralist list group:contexts --notes'
 alias tdl='tdd'
 
@@ -95,6 +96,7 @@ alias ae='v ~/.config/fish/aliases.fish'
 alias ve='v ~/.vimrc'
 alias ge='v ~/.gitconfig'
 alias be='v ~/.Brewfile'
+alias bce='v ~/.Brewfile.mac'
 alias bre='v ~/.bazelrc'
 alias pe='v ~/.vim/plugs.vim'
 alias te='v ~/.tmux.conf'
@@ -147,3 +149,6 @@ alias ops='set -x OP_SESSION_my (op signin|sed -n \'s/.*OP_SESSION_my=//p\'|tr -
 
 ## After login above, source my secrets file
 alias opsource='op get document 7dgga4l2zndutiafauklhwfweq | source'
+
+# Reminders
+alias rs='reminders add Slack'
