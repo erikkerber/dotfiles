@@ -1,6 +1,7 @@
 [user]
 	name = Erik Kerber
 	email = ekerber@slack-corp.com
+	signingkey = 1482FB8E874E4BC3
 [github]
   user = erikkerber
 [core]
@@ -79,6 +80,7 @@
   program = gpg
 [commit]
   verbose = true
+	gpgsign = true
 [submodule]
   fetchJobs = 8
 [interactive]
