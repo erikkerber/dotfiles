@@ -15,7 +15,7 @@ brew 'colordiff'
 brew 'coreutils'
 brew 'ctags'
 brew 'diff-so-fancy'
-brew 'dockutil'
+#brew 'dockutil' # Install manually
 brew 'duf'
 brew 'dust' # Better du -sh
 brew 'exa' # Better ls
@@ -43,7 +43,6 @@ brew 'hexyl' # Pretty hex viewer
 brew 'hmap'
 brew 'hub'
 brew 'hugo'
-brew 'hyperfine'
 brew 'hyperfine' # Command line perf
 brew 'ipatool' # tap majd/repo
 brew 'ios-deploy'
@@ -52,6 +51,7 @@ brew 'jira-cli'
 brew 'jless'
 brew 'jfrog-cli'
 brew 'jq'
+brew 'keith/formulae/reminders-cli' # keith/formula
 brew 'keith/formulae/tag' # keith/formula
 brew 'less' # Keep less up to date
 brew 'mdcat'
