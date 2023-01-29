@@ -1,3 +1,7 @@
 #!/bin/sh
 
 .git/hooks/ctags >/dev/null 2>&1 &
+
+LANG="" && PATH="$PATH:/Users/ekerber/.rbenv/versions/3.1.3/bin:/opt/homebrew/bin" && if [ ! -d "$GIT_DIR/rebase-merge" ] &
+       │ & [ "$LOLCOMMITS_CAPTURE_DISABLED" != "true" ]; then lolcommits --capture ; fi
+
