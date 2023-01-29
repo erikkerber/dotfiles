@@ -2,7 +2,7 @@
 	name = Erik Kerber
 	email = ekerber@slack-corp.com
 [github]
-  user = eskerber
+  user = erikkerber
 [core]
   excludesfile = ~/.gitignore
   attributesfile = ~/.gitattributes
@@ -105,7 +105,7 @@
 [log]
   follow = true
 [pretty]
-	erik = %C(blue)%h%Creset %C(green)%ar%Creset %C(magenta)%an%Creset %s
+	erik = %C(blue)%h%Creset %C(green)%ar%Creset %C(magenta)%an%Creset %s%C(cyan)%d%Creset
 [grep]
   column = true
   lineNumber = true
@@ -214,6 +214,7 @@
 
   # stash
   ss          = stash
+  sc          = stash --cached
   sl          = stash list
   sa          = stash apply
   sd          = stash drop
@@ -229,11 +230,12 @@
   logshort    = log --pretty=format:\"%C(blue)%h%Creset %<(20)%C(red)%an%Creset%C(green)%cr%Creset %s\"
   loglong     = log --pretty=format:\"%C(blue)%H%Creset %<(21)%C(red)%an%Creset%C(green)%cr%Creset %<(80,trunc)%s\"
   logfiles    = log --pretty=erik --name-status
+  logf        = logfiles
   logchanges  = log --pretty=erik -u
   logk        = log --author=Kerber # It me
   logrename   = log --diff-filter=R --summary
   logorigin   = log origin/main..main
-  logo        = logorigin 
+  lo          = logorigin 
 
   # log graphs
   lol         = log --graph --decorate --pretty=oneline --abbrev-commit # http://blog.kfish.org/2010/04/git-lola.html
@@ -271,6 +273,14 @@
   # Use this to fetch the branch of a GitHub PR without needing to add other remotes
   # Example: git fetch-pr 8785
   fetch-pr = "!f() { git fetch upstream pull/$1/head:${2:-pr-$1}; }; f"
+
+  # Git-pile
+  a           = absorb
+  as          = absorb --squash
+  h           = headpr
+  hs          = headpr --squash
+  u           = updatepr
+  us          = updatepr --squash
 
   # To Organize
   adeleted    = !sh -c 'git ls-files `git rev-parse --show-toplevel` --deleted -z | xargs -0 git rm -r'
