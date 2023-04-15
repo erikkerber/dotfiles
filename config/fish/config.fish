@@ -51,6 +51,9 @@ rbenv init - | source
 status is-login; and pyenv init --path | source
 status is-interactive; and pyenv init - | source
 
+# FZF key bindings and fuzzy completion:
+fzf_key_bindings
+
 # Special one-off for scmpuff
 source $DOTFILES/**/fish/conf.d/scmpuff.fish
 
