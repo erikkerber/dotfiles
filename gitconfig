@@ -11,6 +11,7 @@
   whitespace = trailing-space,space-before-tab
   pager = delta
 	ignorecase = true
+  #sshCommand = ssh -vvv 2>> ~/ssherrlog >> ~/sshlog
 [hub]
   protocol = https
   host = git.target.com
@@ -235,6 +236,7 @@
   logf        = logfiles
   logchanges  = log --pretty=erik -u
   logk        = log --author=Kerber # It me
+  klog        = logk
   logrename   = log --diff-filter=R --summary
   logorigin   = log origin/main..main
   lo          = logorigin 
