@@ -13,14 +13,117 @@ fi
 #  sudo opensnoop | grep plist
 # Useful reference: http://www.hcs.harvard.edu/~jrus/Site/Cocoa%20Text%20System.html
 
+###############################################################################
+# General UI/UX                                                               #
+###############################################################################
+
+# Menu bar: show battery percentage
+defaults write com.apple.menuextra.battery ShowPercent -string "YES"
+
+# Scrollbars
+defaults write NSGlobalDomain AppleShowScrollBars -string "WhenScrolling"
+# Possible values: `WhenScrolling`, `Automatic` and `Always`
+
+# Expand save panel by default
+defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode -bool true
+defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode2 -bool true
+
+# Expand print panel by default
+defaults write NSGlobalDomain PMPrintingExpandedStateForPrint -bool true
+defaults write NSGlobalDomain PMPrintingExpandedStateForPrint2 -bool true
+
+# Save to disk (not to iCloud) by default
+defaults write NSGlobalDomain NSDocumentSaveNewDocumentsToCloud -bool false
+
+# Automatically quit printer app once the print jobs complete
+defaults write com.apple.print.PrintingPrefs "Quit When Finished" -bool true
+
+# Check for software updates daily, not just once per week
+defaults write com.apple.SoftwareUpdate ScheduleFrequency -int 1
+
+# Disable the “Are you sure you want to open this application?” dialog
+defaults write com.apple.LaunchServices LSQuarantine -bool false
+
+# Disable smart quotes as they’re annoying when typing code
+defaults write NSGlobalDomain NSAutomaticQuoteSubstitutionEnabled -bool false
+
+# Disable smart dashes as they’re annoying when typing code
+defaults write NSGlobalDomain NSAutomaticDashSubstitutionEnabled -bool false
+
+# Disable automatic termination of inactive apps
+defaults write NSGlobalDomain NSDisableAutomaticTermination -bool true
+
+# Don't open any apps when attaching a "camera"
+defaults -currentHost write com.apple.ImageCapture disableHotPlug -bool true
+
+# Set sidebar icon size to small
+defaults write NSGlobalDomain NSTableViewDefaultSizeMode -int 1
+
+###############################################################################
+# Trackpad, mouse, keyboard, Bluetooth accessories, and input                 #
+###############################################################################
+
+# Trackpad: enable secondary click
+defaults write com.apple.AppleMultitouchTrackpad TrackpadRightClick -bool true
+defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad TrackpadRightClick -bool true
+defaults write NSGlobalDomain com.apple.trackpad.enableSecondaryClick -bool true
+defaults -currentHost write NSGlobalDomain com.apple.trackpad.enableSecondaryClick -bool true
+
+# Disable press-and-hold for keys in favor of key repeat.
+defaults write -g ApplePressAndHoldEnabled -bool false
+
+# Set a fast key repeat.
+defaults write NSGlobalDomain KeyRepeat -int 2
+defaults write NSGlobalDomain InitialKeyRepeat -int 15
+
+# Set Touch Bar to show only app controls
+defaults write com.apple.touchbar.agent PresentationModeGlobal -string "app"
+defaults write com.apple.touchbar.agent PresentationModeFnModes '{
+	app = fullControlStrip;
+}'
+
+# Use list view in all Finder windows by default
+defaults write com.apple.Finder FXPreferredViewStyle -string "Nlsv"
+
+# Finder: show hidden files by default
+defaults write com.apple.Finder AppleShowAllFiles -bool true
+
+# Finder: show all filename extensions
+defaults write NSGlobalDomain AppleShowAllExtensions -bool true
+
+# Finder: show status bar
+defaults write com.apple.Finder ShowStatusBar -bool true
+
+# Display full POSIX path as Finder window title
+defaults write com.apple.Finder _FXShowPosixPathInTitle -bool true
+
+# When performing a search, search the current folder by default
+defaults write com.apple.Finder FXDefaultSearchScope -string "SCcf"
+
+# Disable the warning when changing a file extension
+defaults write com.apple.Finder FXEnableExtensionChangeWarning -bool false
+
+# Enable snap-to-grid for icons on the desktop and in other icon views
+/usr/libexec/PlistBuddy -c "Set :DesktopViewSettings:IconViewSettings:arrangeBy grid" ~/Library/Preferences/com.apple.finder.plist
+/usr/libexec/PlistBuddy -c "Set :FK_StandardViewSettings:IconViewSettings:arrangeBy grid" ~/Library/Preferences/com.apple.finder.plist
+/usr/libexec/PlistBuddy -c "Set :StandardViewSettings:IconViewSettings:arrangeBy grid" ~/Library/Preferences/com.apple.finder.plist
+
+# Use list view in all Finder windows by default
+# Four-letter codes for the other view modes: `icnv`, `clmv`, `Flwv`
+defaults write com.apple.Finder FXPreferredViewStyle -string "Nlsv"
+
+# Disable the warning before emptying the Trash
+defaults write com.apple.Finder WarnOnEmptyTrash -bool false
+
+# Empty Trash securely by default
+defaults write com.apple.Finder EmptyTrashSecurely -bool true
+
+# Disable "close windows when quitting an app"
+defaults write NSGlobalDomain NSQuitAlwaysKeepsWindows -bool true
+
 # Enables press-and-hold for nav in Vim + VSCode
 defaults write com.microsoft.VSCode ApplePressAndHoldEnabled -bool false
 
-# Xcode
-
-defaults write com.apple.dt.Xcode IDEIndexerActivityShowNumericProgress -bool true
-defaults write com.apple.dt.Xcode ShowBuildOperationDuration -bool YES
-defaults write com.apple.dt.Xcode ShowDVTDebugMenu -bool YES
 #sudo touch /Applications/Xcode.app/Contents/Developer/AppleInternal/Library/Xcode/AppleInternal.plist
 echo "%admin ALL=NOPASSWD: /usr/bin/xcode-select,/usr/bin/xcodebuild -runFirstLaunch" | sudo tee /etc/sudoers.d/xcode
 
@@ -35,12 +138,91 @@ defaults write com.apple.dt.Xcode ApplePersistenceIgnoreState -bool YES
 # Autohide quickly
 defaults write com.apple.dock autohide -bool true
 defaults write com.apple.dock autohide-delay -float 0.0
-defaults write com.apple.dock autohide-time-modifier -float 0.0
-
 defaults write com.apple.dock autohide-time-modifier -float 0.2
+
+# Make Dock icons of hidden applications translucent
+defaults write com.apple.dock showhidden -bool true
 
 # Disable 3-finger gesture
 defaults write com.apple.dock showLaunchpadGestureEnabled -int 0
+
+###############################################################################
+# Menubar                                                                     #
+###############################################################################
+
+defaults write com.apple.menuextra.clock DateFormat -string "h:mm a"
+defaults write com.apple.menuextra.clock Show24Hour -bool false
+defaults write com.apple.menuextra.clock ShowAMPM -bool true
+defaults write com.apple.menuextra.clock ShowDayOfMonth -bool false
+defaults write com.apple.menuextra.clock ShowDayOfWeek -bool false
+defaults write com.apple.menuextra.clock ShowSeconds -bool false
+
+###############################################################################
+# Activity Monitor                                                            #
+###############################################################################
+
+# Show the main window when launching Activity Monitor
+defaults write com.apple.ActivityMonitor OpenMainWindow -bool true
+
+# Visualize CPU usage in the Activity Monitor Dock icon
+defaults write com.apple.ActivityMonitor IconType -int 5
+
+# Show all processes in Activity Monitor
+defaults write com.apple.ActivityMonitor ShowCategory -int 0
+
+# Sort Activity Monitor results by CPU usage
+defaults write com.apple.ActivityMonitor SortColumn -string "CPUUsage"
+defaults write com.apple.ActivityMonitor SortDirection -int 0
+
+##############################################################################
+# Xcode                                                                      #
+##############################################################################
+
+defaults write com.apple.dt.Xcode DVTTextShowLineNumbers -bool true
+defaults write com.apple.dt.Xcode DVTTextShowPageGuide -bool true
+defaults write com.apple.dt.Xcode DVTTextPageGuideLocation -int 120
+defaults write com.apple.dt.Xcode DVTTextCodeFocusOnHover -bool false
+defaults write com.apple.dt.Xcode DVTTextShowFoldingSidebar -bool false
+defaults write com.apple.dt.Xcode DVTTextEditorTrimWhitespaceOnlyLines -bool true
+
+defaults write com.apple.dt.Xcode IDERecentEditorDocumentsLimit -int 30
+defaults write com.apple.dt.Xcode "IDEEditorCoordinatorTarget_Click2" -string Default
+
+defaults write com.apple.dt.Xcode IDESourceControlAutomaticallyAddNewFiles -bool false
+defaults write com.apple.dt.Xcode IDESourceControlEnableSourceControl_7_1 -bool true
+defaults write com.apple.dt.Xcode IDESourceControlLocalStatusCheckingEnabled -bool false
+defaults write com.apple.dt.Xcode IDESourceControlRemoteStatusFetchingEnabled -bool false
+defaults write com.apple.dt.Xcode IDESourceControlShowUpstreamChangesInChangeBar -bool true
+
+defaults write com.apple.dt.Xcode IDESuppressStopBuildWarning -bool true
+defaults write com.apple.dt.Xcode IDESuppressStopExecutionWarning -bool true
+defaults write com.apple.dt.Xcode IDESuppressStopExecutionWarningTarget -string "IDESuppressStopExecutionWarningTargetValue_Stop"
+defaults write com.apple.dt.Xcode IDESuppressStopTestWarning -bool true
+
+defaults write com.apple.dt.Xcode IDEIndexShowLog -bool true
+defaults write com.apple.dt.Xcode IDEIndexerActivityShowNumericProgress -bool true
+defaults write com.apple.dt.Xcode IDEShowPrebuildLogs -bool true
+
+defaults write com.apple.dt.Xcode ShowBuildOperationDuration -bool true
+defaults write com.apple.dt.Xcode ShowDVTDebugMenu -bool true
+
+###############################################################################
+# Applications                                                                #
+###############################################################################
+
+# 1Password
+defaults write -app "1Password" LockOnIdle -bool false
+defaults write -app "1Password" LockOnScreenSaver -bool false
+defaults write -app "1Password" LockOnSleep -bool false
+defaults write -app "1Password" LockOnUserSwitch -bool false
+
+# Kaleidoscope
+defaults write -app Kaleidoscope KS2UpTextScopeViewControllerDefaultsInitialDetailControllerClassNameKey -int 1
+defaults write -app Kaleidoscope KS3UpTextScopeViewControllerDefaultsInitialDetailControllerClassNameKey -int 1
+
+# Paste
+defaults write -app Paste kPSTPreferencesEnableSoundEffects -bool false
+defaults write -app Paste kPSTPreferencesShowMenuBarIcon -bool false
 
 if command -v dockutil; then
   dockutil --remove all
