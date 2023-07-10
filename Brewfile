@@ -18,11 +18,12 @@ brew 'diff-so-fancy'
 #brew 'dockutil' # Install manually
 brew 'duf'
 brew 'dust' # Better du -sh
+brew 'dylibtree'
 brew 'exa' # Better ls
-brew 'fasd' # Fuzzy open for recent files
 brew 'fd' # Better find
 brew 'findutils' # Extensions on 'find' such as --type f
 brew 'fish'
+brew 'wader/tap/fq'
 brew 'fx'
 brew 'fzf'
 brew 'gdu'
@@ -76,18 +77,21 @@ brew 'tldr'
 brew 'tmux'
 brew 'tokei' # Better cloc
 brew 'tree'
+brew 'vitals' # Process monitor
 brew 'watchexec' # Watch directory, perform action
 brew 'wget'
 brew 'xclip' # Makes copying bat output easier
 brew 'xcodes'
 brew 'youtube-dl'
 brew 'zsh'
+brew 'zulu-jdk19'
 #brew 'z' # NOTE: Use fisher-z
 
 tap 'ankitpokhrel/jira-cli'
 tap 'buildkite/cli'
 tap 'charmbracelet/homebrew-tap'
 tap 'heroku/brew'
+tap 'hmarr/tap'
 tap 'homebrew/bundle'
 tap 'homebrew/cask'
 tap 'homebrew/core'
@@ -97,3 +101,5 @@ tap 'milend/taps'
 tap 'robotsandpencils/made'
 tap 'teamookla/speedtest'
 tap 'majd/repo'
+tap 'mdogan/zulu'
+tap 'wader/tap'
