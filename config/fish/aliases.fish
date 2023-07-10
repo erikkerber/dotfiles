@@ -139,8 +139,6 @@ alias killsim='killall "com.apple.CoreSimulator.CoreSimulatorService" && killall
 alias makespacer='defaults write com.apple.dock persistent-apps -array-add \'{"tile-type"="spacer-tile";}\'; killall Dock'
 alias daemonblame='launchctl list | grep -v com.apple'
 alias kextblame='kextstat -l | grep -v com.apple'
-# Credit @kyleve
-alias fix_the_fucking_audio='xcrun simctl shutdown all && sudo killall coreaudiod'
 
 # Secrets
 
