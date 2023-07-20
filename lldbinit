@@ -9,3 +9,4 @@ command script import ~/.lldb_commands/initall.py
 ### Reveal LLDB commands support - DO NOT MODIFY
 command script import /Users/ekerber/Library/Application\ Support/Reveal/RevealServerCommands.py
 ###
+command source ~/.lldbinit-rules_xcodeproj
