@@ -38,5 +38,8 @@ gcloud
 # npm state file
 update-notifier-npm.json
 
+github-copilot
+raycast
+
 # Fish
 fish_variables
