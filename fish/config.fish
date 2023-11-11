@@ -1,8 +1,10 @@
 # Uncomment this if the modal indicator becomes annoying
-# function fish_mode_prompt; end
+function fish_mode_prompt; end
+
+set -q XDG_CONFIG_HOME; or set XDG_CONFIG_HOME "$HOME/.config"
 
 # Path to dotfiles repo
-set -x DOTFILES (dirname (readlink "$HOME/.config"))
+#:wqset -x DOTFILES (dirname "$HOME/dotfiles")
 
 # Set PATH using fish_user_paths for user-specific directories
 set -Ua fish_user_paths $HOME/.bin
@@ -33,7 +35,7 @@ set -gx GIT_PILE_USE_PR_TEMPLATE 1
 set -gx EDITOR nvim
 
 # Source all fish files except config.fish
-for file in $DOTFILES/**/fish/*.fish
+for file in $HOME/.config/**/fish/*.fish
   switch $file
   case "*config.fish"
     # Don't source the config itself
@@ -50,4 +52,5 @@ status is-login; and pyenv init --path | source
 status is-interactive; and pyenv init - | source
 
 # Special one-off for scmpuff
-source $DOTFILES/**/fish/conf.d/scmpuff.fish
+source $HOME/.config/**/fish/conf.d/scmpuff.fish
+
