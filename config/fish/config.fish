@@ -1,39 +1,38 @@
 # Uncomment this if the modal indicator becomes annoying
-#function fish_mode_prompt; end
+# function fish_mode_prompt; end
 
 # Path to dotfiles repo
 set -x DOTFILES (dirname (readlink "$HOME/.config"))
 
-#set -gx PATH \$PATH ~/
-set -gx PATH $HOME/.bin $PATH
-# abrew
-set -gx PATH /opt/homebrew/bin $PATH
-# go
-set -gx PATH $HOME/go/bin $PATH
-# slack
-set -gx PATH $HOME/Developer/slack/slack-objc/bin $PATH
-
-set -gx PATH $HOME/.local/bin $PATH
-# rust
+# Set PATH using fish_user_paths for user-specific directories
+set -Ua fish_user_paths $HOME/.bin
+set -Ua fish_user_paths $HOME/go/bin
+set -Ua fish_user_paths $HOME/Developer/slack/slack-objc/bin
 set -Ua fish_user_paths $HOME/.cargo/bin
-#openjdk
+set -Ua fish_user_paths $HOME/.rbenv/bin
+set -Ua fish_user_paths $HOME/.local/bin
+set -Ua fish_user_paths /opt/homebrew/bin
+
+# OpenJDK
 fish_add_path /opt/homebrew/opt/openjdk/bin
 set -gx CPPFLAGS "-I/opt/homebrew/opt/openjdk/include"
-# gpg
+
+# GPG
 set -gx GPG_TTY (tty)
 
-# FZF
+# FZF Configuration
 set -gx FZF_DEFAULT_OPTS '--cycle --layout=reverse --border --height=90% --preview-window=wrap --marker="*" --ansi'
-set -gx FZF_DEFAULT_COMMAND 'fd --type file --follow --hidden --exclude .git --exclude carthage'
+set -gx FZF_DEFAULT_COMMAND 'fd --type file --follow --hidden --exclude .git'
 set -Ux FZF_CTRL_T_COMMAND "$FZF_DEFAULT_COMMAND"
 
 # git-pile
 set -gx GIT_PILE_PREFIX ekerber/
 set -gx GIT_PILE_USE_PR_TEMPLATE 1
 
+# Editor
 set -gx EDITOR nvim
 
-# Source all fish files
+# Source all fish files except config.fish
 for file in $DOTFILES/**/fish/*.fish
   switch $file
   case "*config.fish"
@@ -43,18 +42,12 @@ for file in $DOTFILES/**/fish/*.fish
   end
 end
 
-## rbenv
-set -x PATH $HOME/.rbenv/bin $PATH
+# rbenv
 rbenv init - | source
 
-## pyenv
+# pyenv
 status is-login; and pyenv init --path | source
 status is-interactive; and pyenv init - | source
 
-# FZF key bindings and fuzzy completion:
-fzf_key_bindings
-
 # Special one-off for scmpuff
 source $DOTFILES/**/fish/conf.d/scmpuff.fish
-
-
