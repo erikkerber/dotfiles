@@ -1,4 +1,4 @@
-*.log
+
 **/*.pyc
 **/.ropeproject
 *.un~
@@ -43,3 +43,8 @@ raycast
 
 # Fish
 fish_variables
+# Fisher plugins functions
+config/fish/functions/_*
+config/fish/functions/tide/*
+
+fishd.*
