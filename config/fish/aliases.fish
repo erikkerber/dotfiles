@@ -31,7 +31,7 @@ alias glo="g lo"
 # Bazel
 alias b="bazel"
 alias br="bazel run"
-alias bb="bazel build"
+#alias bb="bazel build"
 alias bt="bazel test"
 
 # Vim
