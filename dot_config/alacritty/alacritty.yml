@@ -17,8 +17,6 @@ font:
     style: Italic
   size: 14.0
 
-  use_thin_strokes: false
-
 bell:
   duration: 0
 

@@ -17,6 +17,9 @@ fi
 # General UI/UX                                                               #
 ###############################################################################
 
+# Replaces Alacritty use_thin_strokes
+defaults write -g AppleFontSmoothing -int 0
+
 # Menu bar: show battery percentage
 defaults write com.apple.menuextra.battery ShowPercent -string "YES"
 
