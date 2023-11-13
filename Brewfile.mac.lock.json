@@ -2,32 +2,86 @@
   "entries": {
     "tap": {
       "homebrew/cask-fonts": {
-        "revision": "316240a2fd9e3e7d6f7c861936d07dee09bb84d8"
+        "revision": "efbbbbbfd34d3cffc26d3da6d3dec4858aa52af7"
       }
     },
     "mas": {
-      "A Companion for SwiftUI": null,
-      "DaisyDisk": null,
-      "Dato": null,
-      "Deliveries": null,
-      "Developer": null,
-      "Fantastical": null,
-      "Pixelmator": null,
-      "Transporter": null,
-      "Magnet": null,
-      "Paste": null,
+      "A Companion for SwiftUI": {
+        "id": "1485436674",
+        "version": "4.1"
+      },
+      "DaisyDisk": {
+        "id": "411643860",
+        "version": "4.25"
+      },
+      "Dato": {
+        "id": "1470584107",
+        "version": "4.7.0"
+      },
+      "Deliveries": {
+        "id": "290986013",
+        "version": "9.4.1"
+      },
+      "Developer": {
+        "id": "640199958",
+        "version": "10.4.1"
+      },
+      "Fantastical": {
+        "id": "975937182",
+        "version": "3.7.15"
+      },
+      "Pixelmator": {
+        "id": "407963104",
+        "version": "3.9.11"
+      },
+      "Transporter": {
+        "id": "1450874784",
+        "version": "1.2.5"
+      },
+      "Magnet": {
+        "id": "441258766",
+        "version": "2.11.0"
+      },
+      "Paste": {
+        "id": "967805235",
+        "version": "4.0.1"
+      },
       "Reeder 5": null,
-      "Slack": null,
+      "Slack": {
+        "id": "803453959",
+        "version": "4.32.127"
+      },
       "Sourcery Pro": null,
-      "Soulver 2": null,
-      "Tot": null,
+      "Soulver 2": {
+        "id": "413965349",
+        "version": "2.10.1"
+      },
+      "Tot": {
+        "id": "1491071483",
+        "version": "1.5.1"
+      },
       "TweetBot": null,
-      "Ulysses": null,
-      "Quip": null
+      "Ulysses": {
+        "id": "1225570693",
+        "version": "30.3"
+      },
+      "Quip": {
+        "id": "1003160018",
+        "version": "7.75.3"
+      },
+      "Carrot": null,
+      "Craft": {
+        "id": "1487937127",
+        "version": "2.5.7"
+      },
+      "Flighty": {
+        "id": "1358823008",
+        "version": "3.2.0"
+      }
     },
     "cask": {
       "1password-cli": {
-        "version": "2.0.0",
+        "version": "2.22.0",
         "options": {
           "full_name": "1password-cli",
           "args": {
@@ -36,7 +90,7 @@
         }
       },
       "alacritty": {
-        "version": "0.10.1",
+        "version": "0.12.3",
         "options": {
           "full_name": "alacritty",
           "args": {
@@ -45,7 +99,7 @@
         }
       },
       "alfred": {
-        "version": "4.6.4,1294",
+        "version": "5.1.4,2195",
         "options": {
           "full_name": "alfred",
           "args": {
@@ -54,7 +108,7 @@
         }
       },
       "bartender": {
-        "version": "4.1.40,41040",
+        "version": "5.0.43",
         "options": {
           "full_name": "bartender",
           "args": {
@@ -63,7 +117,7 @@
         }
       },
       "bettertouchtool": {
-        "version": "3.745,1887",
+        "version": "4.321,43210",
         "options": {
           "full_name": "bettertouchtool",
           "args": {
@@ -72,7 +126,7 @@
         }
       },
       "camo-studio": {
-        "version": "1.5.1,5687",
+        "version": "2.0.5,10158",
         "options": {
           "full_name": "camo-studio",
           "args": {
@@ -81,7 +135,7 @@
         }
       },
       "charles": {
-        "version": "4.6.2",
+        "version": "4.6.5",
         "options": {
           "full_name": "charles",
           "args": {
@@ -90,7 +144,7 @@
         }
       },
       "cleanshot": {
-        "version": "4.2",
+        "version": "4.6.1",
         "options": {
           "full_name": "cleanshot",
           "args": {
@@ -99,7 +153,7 @@
         }
       },
       "dash": {
-        "version": "6.2.3,994",
+        "version": "7.1.6",
         "options": {
           "full_name": "dash",
           "args": {
@@ -108,7 +162,7 @@
         }
       },
       "deckset": {
-        "version": "2.0.20,2595",
+        "version": "2.0.27,2641",
         "options": {
           "full_name": "deckset",
           "args": {
@@ -117,7 +171,7 @@
         }
       },
       "discord": {
-        "version": "0.0.266",
+        "version": "0.0.283",
         "options": {
           "full_name": "discord",
           "args": {
@@ -126,7 +180,7 @@
         }
       },
       "docker": {
-        "version": "4.6.1,76265",
+        "version": "4.25.0,126437",
         "options": {
           "full_name": "docker",
           "args": {
@@ -135,7 +189,7 @@
         }
       },
       "fork": {
-        "version": "2.17",
+        "version": "2.36",
         "options": {
           "full_name": "fork",
           "args": {
@@ -144,7 +198,7 @@
         }
       },
       "istat-menus": {
-        "version": "6.61",
+        "version": "6.73",
         "options": {
           "full_name": "istat-menus",
           "args": {
@@ -153,7 +207,7 @@
         }
       },
       "iterm2": {
-        "version": "3.4.15",
+        "version": "3.4.22",
         "options": {
           "full_name": "iterm2",
           "args": {
@@ -162,7 +216,7 @@
         }
       },
       "kaleidoscope": {
-        "version": "3.3,2050",
+        "version": "4.2.2,4863",
         "options": {
           "full_name": "kaleidoscope",
           "args": {
@@ -171,7 +225,7 @@
         }
       },
       "lingon-x": {
-        "version": "8.4.3",
+        "version": "9.4.2",
         "options": {
           "full_name": "lingon-x",
           "args": {
@@ -180,7 +234,7 @@
         }
       },
       "mimestream": {
-        "version": "0.34.1",
+        "version": "1.1.5",
         "options": {
           "full_name": "mimestream",
           "args": {
@@ -189,7 +243,7 @@
         }
       },
       "notion": {
-        "version": "2.0.20",
+        "version": "2.3.2",
         "options": {
           "full_name": "notion",
           "args": {
@@ -198,7 +252,7 @@
         }
       },
       "nova": {
-        "version": "9.1",
+        "version": "11.6",
         "options": {
           "full_name": "nova",
           "args": {
@@ -207,7 +261,7 @@
         }
       },
       "obsidian": {
-        "version": "0.14.2",
+        "version": "1.4.16",
         "options": {
           "full_name": "obsidian",
           "args": {
@@ -216,7 +270,7 @@
         }
       },
       "omnifocus": {
-        "version": "3.12.2",
+        "version": "3.15.4",
         "options": {
           "full_name": "omnifocus",
           "args": {
@@ -225,7 +279,7 @@
         }
       },
       "paw": {
-        "version": "3.3.6,3003006001",
+        "version": "3.4.0,3004000012",
         "options": {
           "full_name": "paw",
           "args": {
@@ -234,7 +288,7 @@
         }
       },
       "provisionql": {
-        "version": "1.6.2",
+        "version": "1.6.4",
         "options": {
           "full_name": "provisionql",
           "args": {
@@ -243,7 +297,7 @@
         }
       },
       "proxyman": {
-        "version": "3.3.0,30300",
+        "version": "4.14.0,49500",
         "options": {
           "full_name": "proxyman",
           "args": {
@@ -252,7 +306,7 @@
         }
       },
       "quitter": {
-        "version": "1.0,108",
+        "version": "1.0",
         "options": {
           "full_name": "quitter",
           "args": {
@@ -261,7 +315,7 @@
         }
       },
       "raycast": {
-        "version": "1.31.0",
+        "version": "1.61.2",
         "options": {
           "full_name": "raycast",
           "args": {
@@ -270,7 +324,7 @@
         }
       },
       "reveal": {
-        "version": "33,15756",
+        "version": "43",
         "options": {
           "full_name": "reveal",
           "args": {
@@ -279,7 +333,7 @@
         }
       },
       "rocket": {
-        "version": "1.9,80",
+        "version": "1.9.3,85",
         "options": {
           "full_name": "rocket",
           "args": {
@@ -288,7 +342,7 @@
         }
       },
       "visual-studio-code": {
-        "version": "1.65.2",
+        "version": "1.84.2",
         "options": {
           "full_name": "visual-studio-code",
           "args": {
@@ -297,7 +351,7 @@
         }
       },
       "xcodes": {
-        "version": "1.3.1,11",
+        "version": "1.10.0b18",
         "options": {
           "full_name": "xcodes",
           "args": {
@@ -306,7 +360,7 @@
         }
       },
       "zoom": {
-        "version": "5.10.1.5839",
+        "version": "5.16.6.24664",
         "options": {
           "full_name": "zoom",
           "args": {
@@ -318,6 +372,33 @@
         "version": "2.1.7-beta",
         "options": {
           "full_name": "xbar",
+          "args": {
+            "appdir": "/Applications"
+          }
+        }
+      },
+      "gitup": {
+        "version": "1.3.5",
+        "options": {
+          "full_name": "gitup",
+          "args": {
+            "appdir": "/Applications"
+          }
+        }
+      },
+      "keyboard-maestro": {
+        "version": "11.0.1,1101",
+        "options": {
+          "full_name": "keyboard-maestro",
+          "args": {
+            "appdir": "/Applications"
+          }
+        }
+      },
+      "sloth": {
+        "version": "3.2",
+        "options": {
+          "full_name": "sloth",
           "args": {
             "appdir": "/Applications"
           }
@@ -334,6 +415,14 @@
         "CLT": "13.3.0.0.1.1645755326",
         "Xcode": "13.3",
         "macOS": "12.1"
+      },
+      "sonoma": {
+        "HOMEBREW_VERSION": "4.1.20",
+        "HOMEBREW_PREFIX": "/opt/homebrew",
+        "Homebrew/homebrew-core": "api",
+        "CLT": "15.0.0.0.1.1694021235",
+        "Xcode": "15.0",
+        "macOS": "14.1"
       }
     }
   }
