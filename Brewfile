@@ -41,6 +41,7 @@ brew 'graphviz'
 brew 'gron'
 brew 'hexyl' # Pretty hex viewer
 brew 'hmap'
+brew 'htop'
 brew 'hub'
 brew 'hugo'
 brew 'hyperfine' # Command line perf
