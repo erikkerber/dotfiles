@@ -5,6 +5,7 @@ function fish_mode_prompt; end
 #:wqset -x DOTFILES (dirname "$HOME/dotfiles")
 
 # Set PATH using fish_user_paths for user-specific directories
+set -Ua fish_user_paths $HOME/bin
 set -Ua fish_user_paths $HOME/.bin
 set -Ua fish_user_paths $HOME/go/bin
 set -Ua fish_user_paths $HOME/Developer/slack/slack-objc/bin
@@ -49,5 +50,5 @@ rbenv init - | source
 status is-login; and pyenv init --path | source
 status is-interactive; and pyenv init - | source
 
-# Special one-off for scmpuff
-source $HOME/.config/**/fish/conf.d/scmpuff.fish
+# scmpuff
+scmpuff init --shell=fish | source
