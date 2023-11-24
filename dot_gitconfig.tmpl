@@ -1,7 +1,7 @@
 [user]
-  name = Erik Kerber
-  email = ekerber@slack-corp.com
-  signingkey = 1482FB8E874E4BC3
+	name = Erik Kerber
+	email = ekerber@slack-corp.com
+	signingkey = 1482FB8E874E4BC3
 [github]
   user = erikkerber
 [core]
@@ -10,14 +10,14 @@
   editor = nvim 
   whitespace = trailing-space,space-before-tab
   pager = delta
-  ignorecase = true
+	ignorecase = true
   #sshCommand = ssh -vvv 2>> ~/ssherrlog >> ~/sshlog
 [hub]
   protocol = https
   host = git.target.com
 [init]
   templatedir = ~/.git_template
-  defaultBranch = main
+	defaultBranch = main
 [help]
   autocorrect = 1
 [push]
@@ -85,7 +85,7 @@
   program = gpg
 [commit]
   verbose = true
-  gpgsign = true
+	gpgsign = true
 [submodule]
   fetchJobs = 8
 [interactive]
@@ -112,7 +112,7 @@
 [log]
   follow = true
 [pretty]
-  erik = %C(blue)%h%Creset %C(green)%ar%Creset %C(magenta)%an%Creset %s%C(cyan)%d%Creset
+	erik = %C(blue)%h%Creset %C(green)%ar%Creset %C(magenta)%an%Creset %s%C(cyan)%d%Creset
 [grep]
   column = true
   lineNumber = true
@@ -124,9 +124,11 @@
 [pull]
   rebase = true
 [credential]
+  {{- if eq .chezmoi.os "darwin" }}
   helper = osxkeychain
+  {{- end }}
 [color]
-  ui = true
+	ui = true
 [color "diff-highlight"]
   oldNormal = red
   oldHighlight = red ul
@@ -292,7 +294,7 @@
   dm          = !sh -c 'git diff $@ $(git merge-base main $(git name-rev --name-only HEAD))' -
   dstash      = !sh -c 'git stash show -p stash@{${1-0}}' -
 [filter "lfs"]
-  clean = git-lfs clean -- %f
-  smudge = git-lfs smudge -- %f
-  process = git-lfs filter-process
-  required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
