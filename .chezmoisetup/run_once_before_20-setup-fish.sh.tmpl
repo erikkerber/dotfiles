@@ -1,0 +1,12 @@
+{{ if (eq .chezmoi.os "linux") -}}
+#!/bin/bash
+
+ppa_repo_source=fish-shell/release-3
+sudo add-apt-repository -y ppa:$ppa_repo_source
+sudo apt install -y fish
+
+{{ else if eq .chezmoi.os "darwin" -}}
+
+brew install fish
+
+{{ end -}}

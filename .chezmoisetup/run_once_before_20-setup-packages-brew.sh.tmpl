@@ -1,0 +1,9 @@
+{{ if (eq .chezmoi.os "darwin") -}}
+#!/bin/bash
+
+# This script will run whenever there's an update in Brewfile
+# Brewfile hash: {{ include "Brewfile" | sha256sum }}
+
+brew install --file Brewfile
+
+{{ end -}}

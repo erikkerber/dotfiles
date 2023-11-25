@@ -1,0 +1,39 @@
+{{ if (eq .chezmoi.osRelease.id "debian" "ubuntu") -}}
+#!/bin/bash
+
+packages=(
+  corkscrew
+  rbenv
+  fzf
+  libsecret-1-0 libsecret-1-dev
+)
+
+for package in ${packages[@]}; do
+  if ! $(dpkg-query -W -f='installed' $package &> /dev/null); then
+    echo "installing $package"
+    sudo apt install -y $package
+  fi
+done
+
+# make libscret
+sudo make --directory=/usr/share/doc/git/contrib/credential/libsecret
+
+# pyenv
+curl https://pyenv.run | bash
+
+# bat
+sudo apt-get install bat
+mkdir -p ~/.local/bin
+ln -s /usr/bin/batcat ~/.local/bin/bat
+
+# git-delta
+wget https://github.com/dandavison/delta/releases/download/0.16.5/git-delta-musl_0.16.5_amd64.deb
+sudo dpkg -i git-delta-musl_0.16.5_amd64.deb
+rm git-delta-musl_0.16.5_amd64.deb
+
+# scmpuff
+wget https://github.com/mroth/scmpuff/releases/download/v0.5.0/scmpuff_0.5.0_linux_x64.tar.gz
+tar -xvf scmpuff_0.5.0_linux_x64.tar.gz scmpuff
+mv scmpuff $HOME/.local/bin
+
+{{ end -}}
