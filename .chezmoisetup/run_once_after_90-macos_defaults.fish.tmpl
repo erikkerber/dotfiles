@@ -1,5 +1,7 @@
 #!/usr/bin/fish
 
+{{- if eq .chezmoi.os "darwin" }}
+
 # ~/.osx — http://mths.be/osx
 # Watch for changes in files with either of
 #  sudo fs_usage | grep plist
@@ -240,3 +242,5 @@ fi
 # Quitter
 rm $HOME/Library/Preferences/com.marcoarment.quitter.plist
 ln -ns $PWD/macos/com.marcoarment.quitter.plist $HOME/Library/Preferences/com.marcoarment.quitter.plist
+
+{{ end -}}

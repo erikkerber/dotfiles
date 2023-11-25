@@ -1,4 +1,4 @@
-{{ if (eq .chezmoi.osRelease.id "debian" "ubuntu") -}}
+{{ if eq .chezmoi.osRelease.id "debian" "ubuntu" -}}
 #!/bin/bash
 
 packages=(
