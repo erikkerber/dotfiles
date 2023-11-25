@@ -5,14 +5,12 @@ function fish_mode_prompt; end
 #:wqset -x DOTFILES (dirname "$HOME/dotfiles")
 
 # Set PATH using fish_user_paths for user-specific directories
-set -Ua fish_user_paths $HOME/bin
-set -Ua fish_user_paths $HOME/.bin
-set -Ua fish_user_paths $HOME/go/bin
-set -Ua fish_user_paths $HOME/Developer/slack/slack-objc/bin
 set -Ua fish_user_paths $HOME/.cargo/bin
 set -Ua fish_user_paths $HOME/.rbenv/bin
 set -Ua fish_user_paths $HOME/.local/bin
+set -Ua fish_user_paths $HOME/go/bin
 set -Ua fish_user_paths /opt/homebrew/bin
+set -Ua fish_user_paths $HOME/Developer/slack/slack-objc/bin
 
 # OpenJDK
 fish_add_path /opt/homebrew/opt/openjdk/bin
