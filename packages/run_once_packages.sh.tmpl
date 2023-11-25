@@ -1,0 +1,30 @@
+#!{{ lookPath "bash" }}
+{{ if eq .chezmoi.os "linux" -}}
+
+sudo apt-get update
+sudo apt-get install fish
+sudo apt-get install corkscrew
+sudo apt-get install jless
+sudo apt-get install rbenv
+sudo apt-get install pyenv
+sudo apt-get install fzf
+sudo apt-get install scmpuff
+sudo apt-get install libsecret-1-0 libsecret-1-dev
+sudo make --directory=/usr/share/doc/git/contrib/credential/libsecret
+
+sudo apt-get install bat
+mkdir -p ~/.local/bin
+ln -s /usr/bin/batcat ~/.local/bin/bat
+
+wget https://github.com/dandavison/delta/releases/download/0.16.5/delta-0.16.5-aarch64-unknown-linux-gnu.tar.gz
+sudo dpkg -i git-delta-musl_0.16.5_amd64.deb
+rm git-delta-musl_0.16.5_amd64.deb
+
+wget https://github.com/dandavison/delta/releases/download/0.16.5/git-delta-musl_0.16.5_amd64.deb
+sudo dpkg -i git-delta-musl_0.16.5_amd64.deb
+rm git-delta-musl_0.16.5_amd64.deb
+
+{{ else if eq .chezmoi.os "darwin" -}}
+
+{{ end -}}
+
