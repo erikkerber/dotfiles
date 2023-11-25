@@ -2,6 +2,16 @@
 
 Erik's [dotfiles](https://dotfiles.github.io)
 
+# Setup
+
+This will both install chezmoi and apply this repository in one line. 
+
+For managing beyond first run, see https://www.chezmoi.io/
+
+```bash
+sh -c "$(curl -fsLS get.chezmoi.io)" -- init --apply erikkerber
+```
+
 ## About
 
 I am an iOS developer at Target in Minneapolis. These dotfiles are a
@@ -25,12 +35,9 @@ Much of my knowledge of Vim, Git, LLDB, Fish, and system configuration
 came from reverse engineering the works below.
 
 * [holman/dotfiles](https://github.com/holman/dotfiles) - The first
-    dotfiles I used early in my career.
-* [skwp/dotfiles](https://github.com/skwp/dotfiles) - For the
-    mind-melting Vim setup.
+    version of these dotfiles were heavily influenced by Zac's example.
 * [keith/dotfiles](https://github.com/keith/dotfiles) - For Xcode
     tooling, and what helped me stumble upon my two favorite color
     schemes [parsec](https://github.com/keith/parsec) and
     [panic](panic.xccolortheme)
-* [paulirish/dotfiles](https://github.com/paulirish/dotfiles) - For the
-    🐟-iest dotfile setup I could find.
+* [budimanjojo/dotfiles](https://github.com/budimanjojo/dotfiles) — A fantastic chezmoi + Fish setup
