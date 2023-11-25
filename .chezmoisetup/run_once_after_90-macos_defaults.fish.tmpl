@@ -1,11 +1,4 @@
-#!/usr/bin/env bash
-
-set -euo pipefail
-
-if [[ ! -e ./manage.sh ]]; then
-  echo "This script must be run from the root of the dotfiles repo"
-  exit 1
-fi
+#!/usr/bin/fish
 
 # ~/.osx — http://mths.be/osx
 # Watch for changes in files with either of
@@ -247,4 +240,3 @@ fi
 # Quitter
 rm $HOME/Library/Preferences/com.marcoarment.quitter.plist
 ln -ns $PWD/macos/com.marcoarment.quitter.plist $HOME/Library/Preferences/com.marcoarment.quitter.plist
-
