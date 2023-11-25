@@ -1,8 +1,8 @@
-manage.sh
 xcode
 macos
 Brewfile*
-bin
-raycast
-iterm
 README.md
+
+{{- if ne .chezmoi.os "darwin" }}
+Library/Developer/Xcode
+{{- end }}
