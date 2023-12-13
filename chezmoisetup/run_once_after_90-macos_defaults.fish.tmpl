@@ -1,4 +1,4 @@
-#!/usr/bin/fish
+#!/usr/bin/env fish
 
 {{- if eq .chezmoi.os "darwin" }}
 
@@ -222,7 +222,7 @@ defaults write -app Kaleidoscope KS3UpTextScopeViewControllerDefaultsInitialDeta
 defaults write -app Paste kPSTPreferencesEnableSoundEffects -bool false
 defaults write -app Paste kPSTPreferencesShowMenuBarIcon -bool false
 
-if command -v dockutil; then
+if command -v dockutil >/dev/null 2>&1
   dockutil --remove all
 
   dockutil --add "/System/Applications/Messages.app" --no-restart
@@ -237,7 +237,7 @@ if command -v dockutil; then
   dockutil --add "$HOME/Downloads" --view grid --display stack --sort dateadded
 else
   echo "Install dockutil GitHub releases first"
-fi
+end
 
 # Quitter
 rm $HOME/Library/Preferences/com.marcoarment.quitter.plist
