@@ -45,7 +45,7 @@ brew 'htop'
 brew 'hub'
 brew 'hugo'
 brew 'hyperfine' # Command line perf
-brew 'ipatool' # tap majd/repo
+# fixme brew 'ipatool' # tap majd/repo
 brew 'ios-deploy'
 brew 'isacikgoz/gitin/gitin'
 brew 'jira-cli'
@@ -58,7 +58,7 @@ brew 'less' # Keep less up to date
 brew 'mdcat'
 brew 'mdcat' # Terminal Markdown rendering
 brew 'mint'
-brew 'mitmproxy'
+# fixme brew 'mitmproxy'
 brew 'neovim'
 brew 'node'
 brew 'openjdk'
@@ -78,14 +78,14 @@ brew 'tldr'
 brew 'tmux'
 brew 'tokei' # Better cloc
 brew 'tree'
-brew 'vitals' # Process monitor
+# fixme brew 'vitals' # Process monitor
 brew 'watchexec' # Watch directory, perform action
 brew 'wget'
 brew 'xclip' # Makes copying bat output easier
 brew 'xcodes'
 brew 'youtube-dl'
 brew 'zsh'
-brew 'zulu-jdk19'
+#brew 'zulu-jdk19'
 #brew 'z' # NOTE: Use fisher-z
 
 tap 'ankitpokhrel/jira-cli'
