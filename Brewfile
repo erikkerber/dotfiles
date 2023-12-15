@@ -15,6 +15,7 @@ brew 'colordiff'
 brew 'coreutils'
 brew 'ctags'
 brew 'diff-so-fancy'
+brew 'direnv'
 #brew 'dockutil' # Install manually
 brew 'duf'
 brew 'dust' # Better du -sh
@@ -84,6 +85,7 @@ brew 'wget'
 brew 'xclip' # Makes copying bat output easier
 brew 'xcodes'
 brew 'youtube-dl'
+brew 'zoxide'
 brew 'zsh'
 #brew 'zulu-jdk19'
 #brew 'z' # NOTE: Use fisher-z
