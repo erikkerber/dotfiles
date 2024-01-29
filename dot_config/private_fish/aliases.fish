@@ -21,14 +21,14 @@ if type -q git
   abbr g 'git'
   abbr gti 'git'
   abbr push 'git push'
-  abbr gcm 'g co main'
-  abbr gcl 'g co -'
-  abbr grbm 'g rebase main'
-  abbr gap 'g add .;g amendne; g punch'
-  abbr ga 'g headpr' # git-pile helper
-  abbr ghs 'g headpr --squash' # git-pile helper
-  abbr ggone 'g branch -v | grep '\[gone\]' | awk '{ print \$1 }''
-  abbr glo 'g lo'
+  abbr gcm 'git co main'
+  abbr gcl 'git co -'
+  abbr grbm 'git rebase main'
+  abbr gap 'git add .;g amendne; g punch'
+  abbr ga 'git headpr' # git-pile helper
+  abbr ghs 'git headpr --squash' # git-pile helper
+  abbr ggone 'git branch -v | grep '\[gone\]' | awk '{ print \$1 }''
+  abbr glo 'git lo'
   abbr gd 'git diff'
   abbr gdc 'git diff --cached -w'
   abbr gds 'git diff --staged -w'
