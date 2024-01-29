@@ -1,3 +1,5 @@
+# Obj-C is relatively rare now
+settings set target.language swift
 # Allow stepping in to code you don't have the debug symbols for
 settings set target.process.thread.step-in-avoid-nodebug false
 # Load local .lldbinit files
