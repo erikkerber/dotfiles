@@ -50,3 +50,7 @@ status is-interactive; and pyenv init - | source
 
 # scmpuff
 scmpuff init --shell=fish | source
+
+# zoxide
+zoxide init fish | source
+
