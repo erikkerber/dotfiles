@@ -12,4 +12,7 @@ end
 # .config/fish/fish_plugins hash: {{ include "dot_config/private_fish/fish_plugins.tmpl" | sha256sum }}
 fisher update
 
+# One-off installation of fzf/Fish functions
+/usr/local/opt/fzf/install
+
 echo -e "\033[0;32m>>>>> Finish Setting Up Fish shell <<<<<\033[0m"
