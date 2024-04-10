@@ -14,9 +14,8 @@ sh -c "$(curl -fsLS get.chezmoi.io)" -- init --apply erikkerber
 
 ## About
 
-I am an iOS developer at Target in Minneapolis. These dotfiles are a
-reflection of my development style and personal workflows, with a
-particular flair for:
+These dotfiles are a reflection of my development style and personal 
+workflows, with a particular flair for:
 
 * The [Fish Shell](https://fishshell.com)
 * Vim
