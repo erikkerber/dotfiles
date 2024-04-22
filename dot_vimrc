@@ -71,56 +71,6 @@ call s:EnsureDirectory(&directory)
 set viewdir=$HOME/.tmp/vim/view
 call s:EnsureDirectory(&viewdir)
 
-" Use space as leader
-let g:mapleader="\<Space>"
-
-" ================ Indentation ======================
-
-set autoindent                 " Indent the next line matching the previous line
-set smartindent                " Smart auto-indent when creating a new line
-set tabstop=2                  " Number of spaces each tab counts for
-set shiftwidth=2               " The space << and >> moves the lines
-set softtabstop=2              " Number of spaces for some tab operations
-set shiftround                 " Round << and >> to multiples of shiftwidth
-set expandtab                  " Insert spaces instead of actual tabs
-set smarttab                   " Delete entire shiftwidth of tabs when they're inserted
-set wrap                    " Softwrap text
-set linebreak               " Don't wrap in the middle of words
-
-" ================= Remaps ===========================
-
-" Switch to the last file
-nnoremap <leader><leader> <C-^>
-
-" Clear highlight after a search
-nnoremap <silent> <leader>c :let @/=""<CR>
-
-" Save and Quit cheat codes
-nnoremap Q :quit<CR>
-nnoremap W :write<CR>
-
-" delete without yanking
-nnoremap <leader>d "_d
-vnoremap <leader>d "_d
-
-" replace currently selected text with default register
-" without yanking it
-vnoremap <leader>p "_dP
-
-" ================ Scrolling ========================
-
-set scrolloff=8         "Start scrolling when we're 8 lines away from margins
-set sidescrolloff=15
-set sidescroll=1
-
-" ================ Search ===========================
-
-set incsearch       " Find the next match as we type the search
-set hlsearch        " Highlight searches by default
-set ignorecase      " Ignore case when searching...
-set smartcase       " ...unless we type a capital
-set infercase       " Change behavior of completion since ignorecase is set
-set gdefault        " Adds g at the end of substitutions by default
 
 " ================ Clipboard ========================
 
@@ -167,11 +117,3 @@ let &titleold=getcwd()
 " Saves on changing buffers or losing focus
 autocmd BufLeave,FocusLost * nested silent! wall
 
-" ============== Color ========================
-set background=dark
-silent! colorscheme dracula
-
-" =========== Move to Lua ===========
-lua << EOF
-require'lspconfig'.pyright.setup{}
-EOF

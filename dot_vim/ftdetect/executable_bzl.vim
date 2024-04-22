@@ -1,1 +1,1 @@
-autocmd BufReadPost,BufNewFile *.BUILD,BUILD.* setfiletype bzl
+autocmd BufReadPost,BufNewFile *.bzl,*.bazel,BUILD.*,*.star,WORKSPACE.bzlmod setfiletype bzl
