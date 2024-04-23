@@ -19,7 +19,7 @@
   templatedir = ~/.git_template
 	defaultBranch = main
 [help]
-  autocorrect = 1
+  autocorrect = 10
 [push]
   default = current
   autoSetupRemote = true
@@ -27,6 +27,7 @@
   prune = true
 [branch]
   autosetupmerge = true
+  sort = -committerdate
 [branch "main"]
   pushRemote = AREYOUSURE
 [branch "master"]
@@ -48,6 +49,7 @@
   indentHeuristic = true
   colorMoved = default
   noprefix = true
+  submodule = log
 [diff "swift"]
   xfuncname = "^ *(\\w+ +)*((class|struct|enum|protocol|extension|func) +|(de)?init\\b).*$"
 [difftool]
@@ -70,7 +72,7 @@
   keepBackup = false
   log = true
   stat = true
-  conflictstyle = diff3
+  conflictstyle = zdiff3
 [rerere]
   enabled = true
   autoUpdate = true
@@ -88,6 +90,7 @@
 	gpgsign = true
 [submodule]
   fetchJobs = 8
+  recurse = true
 [interactive]
   diffFilter = delta --color-only
 [diff "plist"]
@@ -105,6 +108,7 @@
 [status]
   showUntrackedFiles = all
   showStash = true
+  submoduleSummary = true
 [sendemail]
   smtpEncryption = tls
   smtpServer = /usr/local/bin/msmtp
@@ -143,6 +147,8 @@
   old = red
   new = green
   whitespace = red reverse
+[url "git@github.com:"]
+	insteadOf = "https://github.com/"
 [alias]
   g           = !exec git
   git         = !exec git
@@ -194,8 +200,7 @@
   ra          = rebase --abort
   rc          = rebase --continue
   rs          = rebase --skip
-  rma         = rebase main
-  rmi         = rebase main -i
+  ro          = rebase -i origin/main
 
   # reflog
   rl      = reflog -20
@@ -285,7 +290,9 @@
   a           = absorb
   as          = absorb --squash
   h           = headpr
+  hn          = headpr --no-verify
   hs          = headpr --squash
+  hsn         = headpr --squash --no-verify
   u           = updatepr
   us          = updatepr --squash
 
