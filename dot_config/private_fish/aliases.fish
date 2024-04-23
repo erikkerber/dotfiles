@@ -27,13 +27,13 @@ if type -q git
   abbr gap 'git add .;g amendne; g punch'
   abbr ga 'git headpr' # git-pile helper
   abbr ghs 'git headpr --squash' # git-pile helper
-  abbr ggone 'git branch -v | grep '\[gone\]' | awk '{ print \$1 }''
   abbr glo 'git lo'
   abbr gd 'git diff'
   abbr gdc 'git diff --cached -w'
   abbr gds 'git diff --staged -w'
   abbr gsh 'git show'
   abbr gl 'git l'
+  alias ggone "git branch -v | grep '\[gone\]' | awk '{ print \$1 }'"
 end
 
 # Bazel
@@ -44,6 +44,7 @@ if type -q bazel
   abbr bb 'bazel build'
   abbr bi 'bazel info'
   abbr bbl 'bazel info bazel-bin'
+  abbr bba 'bazel build //...'
 end
 
 # Vim
@@ -120,7 +121,7 @@ end
 
 # ag
 if type -q ag
-  abbr brew 'ag --follow --hidden --ignore .git'
+  abbr ag 'ag --follow --hidden --ignore .git'
 end
 
 # JSON Pretty Print
