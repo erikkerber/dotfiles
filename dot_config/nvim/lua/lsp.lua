@@ -49,8 +49,6 @@ lspconfig.starpls.setup {
   -- You can also specify other configurations like settings or capabilities
 }
 
-vim.lsp.set_log_level 'debug'
-
 require('vim.lsp.log').set_format_func(vim.inspect)
 local nvim_lsp = require "lspconfig"
 local servers = {

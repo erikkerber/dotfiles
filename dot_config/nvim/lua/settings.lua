@@ -6,7 +6,7 @@ vim.opt.shortmess:append('Ia')
 
 -- Shell configuration and other settings
 -- vim.opt.shell = vim.env.SHELL          -- Use the shell specified in environment variable
-vim.opt.number = true                  -- Enable line numbers
+
 vim.opt.showmode = true                -- Display the current mode
 -- vim.opt.guicursor = 'a:blinkon0'       -- Disable cursor blink in all modes
 vim.opt.showmatch = true               -- Highlight matching brackets
@@ -33,4 +33,9 @@ vim.opt.sidescrolloff = 15
 vim.opt.ignorecase = true          -- Ignore case when searching...
 vim.opt.smartcase = true           -- ...unless we type a capital
 vim.opt.gdefault = true            -- Adds 'g' at the end of substitutions by default
+
+-- ========= :checkhealth ============
+vim.g.loaded_ruby_provider = 0
+vim.g.loaded_node_provider = 0
+vim.g.loaded_perl_provider = 0
 

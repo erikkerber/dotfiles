@@ -1,5 +1,3 @@
--- vim.lsp.set_log_level("debug")
-
 -- Map the leader key to <Space>
 vim.api.nvim_set_keymap("n", "<Space>", "", {})
 vim.g.mapleader = " "

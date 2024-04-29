@@ -1,3 +1,22 @@
+-- lazy.nvim pre-setup
+local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
+
+if not (vim.uv or vim.loop).fs_stat(lazypath) then
+  vim.fn.system({
+    "git",
+    "clone",
+    "--filter=blob:none",
+    "https://github.com/folke/lazy.nvim.git",
+    "--branch=stable", -- latest stable release
+    lazypath,
+  })
+end
+vim.opt.rtp:prepend(lazypath)
+
+-- Plugins
+
+
+---
 local vim = vim
 local Plug = vim.fn['plug#']
 
@@ -16,7 +35,8 @@ Plug('nvim-tree/nvim-tree.lua')
 Plug('keith/lsp_spinner.nvim')
 Plug('lvimuser/lsp-inlayhints.nvim')
 Plug('nvim-tree/nvim-web-devicons')
-Plug('nvim-treesitter/nvim-treesitter', { ['do'] = ':TSUpdate' })
+-- Plug('nvim-treesitter/nvim-treesitter', { ['branch'] = 'master', ['do'] = ':TSUpdate' })
+Plug('nvim-treesitter/nvim-treesitter', { ['branch'] = 'master' })
 -- Plug('nvim-treesitter/playground')
 Plug('keith/swift.vim')
 Plug('psliwka/vim-smoothie')
@@ -31,9 +51,6 @@ Plug('nvim-telescope/telescope.nvim')
 Plug('nvim-lua/plenary.nvim') -- telescope dependency
 
 vim.call('plug#end')
-
--- Set the background to dark
-vim.cmd('set background=dark')
 
 -- Safely apply the Dracula colorscheme
 vim.cmd('silent! colorscheme dracula')
