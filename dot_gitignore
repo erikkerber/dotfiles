@@ -22,7 +22,6 @@
 \#*\#
 build.noindex
 coc
-Icon
 node_modules
 Session.vim
 TAGS
