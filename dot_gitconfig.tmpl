@@ -1,310 +1,273 @@
 [user]
-	name = Erik Kerber
-	email = ekerber@slack-corp.com
-	signingkey = 0157E07BE965B5B6
+    name = Erik Kerber
+    email = ekerber@slack-corp.com
+    signingkey = 0157E07BE965B5B6
+
 [github]
-  user = erikkerber
+    user = erikkerber
+
 [core]
-  excludesfile = ~/.gitignore
-  attributesfile = ~/.gitattributes
-  editor = nvim 
-  whitespace = trailing-space,space-before-tab
-  pager = delta
-	ignorecase = true
-  #sshCommand = ssh -vvv 2>> ~/ssherrlog >> ~/sshlog
+    excludesfile = ~/.gitignore
+    attributesfile = ~/.gitattributes
+    editor = nvim
+    whitespace = trailing-space,space-before-tab
+    pager = delta
+    ignorecase = true
+    # sshCommand = ssh -vvv 2>> ~/ssherrlog >> ~/sshlog
+
 [hub]
-  protocol = https
-  host = git.target.com
+    protocol = https
+    host = git.target.com
+
 [init]
-  templatedir = ~/.git_template
-	defaultBranch = main
+    templatedir = ~/.git_template
+    defaultBranch = main
+
 [help]
-  autocorrect = 10
+    autocorrect = 10
+
 [push]
-  default = current
-  autoSetupRemote = true
+    default = current
+    autoSetupRemote = true
+
 [fetch]
-  prune = true
+    prune = true
+
 [branch]
-  autosetupmerge = true
-  sort = -committerdate
+    autosetupmerge = true
+    sort = -committerdate
+
 [branch "main"]
-  pushRemote = AREYOUSURE
+    pushRemote = AREYOUSURE
+
 [branch "master"]
-  pushRemote = AREYOUSURE
+    pushRemote = AREYOUSURE
+
 [blame]
-  date = short
-  coloring = highlightRecent
+    date = short
+    coloring = highlightRecent
+
 [delta]
-  navigate = true
-  light = False
-  line-numbers = true
-  hyperlinks = true
-  hyperlinks-file-link-format = "vscode://file/{path}:{line}"
+    navigate = true
+    light = false
+    line-numbers = true
+    hyperlinks = true
+    hyperlinks-file-link-format = "vscode://file/{path}:{line}"
+
 [diff]
-  tool = Kaleidoscope
-  renames = copies
-  mnemonicprefix = true
-  algorithm = patience
-  indentHeuristic = true
-  colorMoved = default
-  noprefix = true
-  submodule = log
+    tool = Kaleidoscope
+    renames = copies
+    mnemonicprefix = true
+    algorithm = patience
+    indentHeuristic = true
+    colorMoved = default
+    noprefix = true
+    submodule = log
+
 [diff "swift"]
-  xfuncname = "^ *(\\w+ +)*((class|struct|enum|protocol|extension|func) +|(de)?init\\b).*$"
+    xfuncname = "^ *(\\w+ +)*((class|struct|enum|protocol|extension|func) +|(de)?init\\b).*$"
+
 [difftool]
-  prompt = false
+    prompt = false
+
 [difftool "Kaleidoscope"]
-  cmd = ksdiff --partial-changeset --relative-path \"$MERGED\" -- \"$LOCAL\" \"$REMOTE\"
+    cmd = ksdiff --partial-changeset --relative-path "$MERGED" -- "$LOCAL" "$REMOTE"
+
 [difftool "idiff"]
-  cmd = "diff -Nuri -U3 --minimal \"$LOCAL\" \"$REMOTE\" | sed 's/^-/\\x1b[1;31m-/;s/^+/\\x1b[1;32m+/;s/^@/\\x1b[1;34m@/;s/$/\\x1b[0m/' | diff-highlight"
+    cmd = "diff -Nuri -U3 --minimal \"$LOCAL\" \"$REMOTE\" | sed 's/^-/\\x1b[1;31m-/;s/^+/\\x1b[1;32m+/;s/^@/\\x1b[1;34m@/;s/$/\\x1b[0m/' | diff-highlight"
+
 [mergetool "vim"]
-  cmd = vim -c "normal\\ gg]c" -f \"$MERGED\"
-  prompt = false
+    cmd = vim -c "normal\\ gg]c" -f "$MERGED"
+    prompt = false
+
 [mergetool "Kaleidoscope"]
-  cmd = ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" --snapshot \"$REMOTE\" --snapshot
+    cmd = ksdiff --merge --output "$MERGED" --base "$BASE" -- "$LOCAL" --snapshot "$REMOTE" --snapshot
+
 [mergetool]
-  prompt = false
-  keepBackup = false
-  trustExitCode = true
+    prompt = false
+    keepBackup = false
+    trustExitCode = true
+
 [merge]
-  tool = Kaleidoscope
-  keepBackup = false
-  log = true
-  stat = true
-  conflictstyle = zdiff3
+    tool = Kaleidoscope
+    keepBackup = false
+    log = true
+    stat = true
+    conflictstyle = zdiff3
+
 [rerere]
-  enabled = true
-  autoUpdate = true
+    enabled = true
+    autoUpdate = true
+
 [rebase]
-  autosquash = true
-  autostash = true
-  stat = true
-  updateRefs = true
+    autosquash = true
+    autostash = true
+    stat = true
+    updateRefs = true
+
 [stash]
-  showPatch = true
+    showPatch = true
+
 [gpg]
-  program = gpg
+    program = gpg
+
 [commit]
-  verbose = true
-	gpgsign = true
+    verbose = true
+    gpgsign = true
+
 [submodule]
-  fetchJobs = 8
-  recurse = true
+    fetchJobs = 8
+    recurse = true
+
 [interactive]
-  diffFilter = delta --color-only
+    diffFilter = delta --color-only
+
 [diff "plist"]
-  textconv = plutil -convert xml1 -o -
+    textconv = plutil -convert xml1 -o -
+
 [diff "provision"]
-  textconv = security cms -D -i
+    textconv = security cms -D -i
+
 [diff "exif"]
-  textconv = exiftool
+    textconv = exiftool
+
 [difftool "ksdiff"]
-  cmd = ksdiff --partial-changeset --relative-path \"$MERGED\" -- \"$LOCAL\" \"$REMOTE\"
+    cmd = ksdiff --partial-changeset --relative-path "$MERGED" -- "$LOCAL" "$REMOTE"
+
 [format]
-  pretty = erik
+    pretty = erik
+
 [mergetool "ksdiff"]
-  cmd = ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" \"$REMOTE\"
+    cmd = ksdiff --merge --output "$MERGED" --base "$BASE" -- "$LOCAL" "$REMOTE"
+
 [status]
-  showUntrackedFiles = all
-  showStash = true
-  submoduleSummary = true
+    showUntrackedFiles = all
+    showStash = true
+    submoduleSummary = true
+
 [sendemail]
-  smtpEncryption = tls
-  smtpServer = /usr/local/bin/msmtp
-  smtpServerOption = -afastmail
+    smtpEncryption = tls
+    smtpServer = /usr/local/bin/msmtp
+    smtpServerOption = -afastmail
+
 [log]
-  follow = true
+    follow = true
+
 [pretty]
-	erik = %C(blue)%h%Creset %C(green)%ar%Creset %C(magenta)%an%Creset %s%C(cyan)%d%Creset
+    erik = %C(blue)%h%Creset %C(green)%ar%Creset %C(magenta)%an%Creset %s%C(cyan)%d%Creset
+
 [grep]
-  column = true
-  lineNumber = true
+    column = true
+    lineNumber = true
+
 [advice]
-  waitingForEditor = false
-  skippedCherryPicks = false
+    waitingForEditor = false
+    skippedCherryPicks = false
+
 [pager]
-  branch = false
+    branch = false
+
 [pull]
-  rebase = true
+    rebase = true
+
 [credential]
-  {{- if eq .chezmoi.os "darwin" }}
-  helper = osxkeychain
-  {{- else }}
-  helper = /usr/share/doc/git/contrib/credential/libsecret/git-credential-libsecret
-  {{- end }}
+    {{- if eq .chezmoi.os "darwin" }}
+    helper = osxkeychain
+    {{- else }}
+    helper = /usr/share/doc/git/contrib/credential/libsecret/git-credential-libsecret
+    {{- end }}
+
 [color]
-	ui = true
+    ui = true
+
 [color "diff-highlight"]
-  oldNormal = red
-  oldHighlight = red ul
-  newNormal = green
-  newHighlight = green ul
+    oldNormal = red
+    oldHighlight = red ul
+    newNormal = green
+    newHighlight = green ul
+
 [color "diff"]
-  meta = yellow
-  frag = magenta
-  commit = yellow
-  old = red
-  new = green
-  whitespace = red reverse
-[url "git@github.com:"]
-	insteadOf = "https://github.com/"
+    meta = yellow
+    frag = magenta
+    commit = yellow
+    old = red
+    new = green
+    whitespace = red reverse
+
 [alias]
-  g           = !exec git
-  git         = !exec git
-  # add
-  a           = add
-  ap          = add --patch
-  chunkyadd   = add --patch
-
-  # Be Good
-  praise      = blame
-
-  # branch
-  b           = branch -v
-  ba          = branch -a
-  cb          = !sh -c 'git checkout --quiet -b $1 && (git push origin $1 --quiet 2> /dev/null && git branch -u origin/$1 $1 --quiet) &' -
-  branch      = branch -vv
-  branches    = for-each-ref --sort=-committerdate --format=\"%(color:blue)%(authordate:relative)\t%(color:red)%(authorname)\t%(color:white)%(color:bold)%(refname:short)\" refs/remotes
-  fixmain   = git co -b main upstream/main
-  cleanupb    = !sh -c 'git branch -vv >/tmp/merged-branches && vim /tmp/merged-branches && cat /tmp/merged-branches | awk '{print $1}' | xargs git branch -D'
-
-  # checkout
-  co          = checkout
-  s           = switch
-  cop         = !sh -c 'git branch | cut -c 3- | fzy --query=$1 | xargs git checkout' -
-  copr        = !sh -c 'git branch -r | cut -c 3- | grep -v HEAD | cut -d "/" -f 2 | fzy --query=$1 | xargs git checkout' -
-  co-pr       = !sh -c 'git fetch origin pull/$1/head:pr/$1 && git checkout pr/$1' -
-
-  # cherry-pick
-  cp          = cherry-pick
-  cpn         = cherry-pick --no-commit
-
-  # commit
-  c           = commit --verbose -m
-  ca          = commit --verbose -am
-  amend       = commit --verbose --amend
-  amendne     = commit --verbose --amend --no-edit
-  ane         = amendne
-  comf        = commit --verbose --fixup=HEAD
-
-  # diff
-  d           = diff                               # diff unstaged changes
-  dc          = diff --cached                      # diff staged changes
-  last        = diff HEAD^                         # diff last committed change
-  dt          = difftool
-  dtc         = difftool --cached
-  dtk         = difftool --tool=Kaleidoscope
-  dtck        = difftool --cached --tool=Kaleidoscope
-
-  # rebase
-  ra          = rebase --abort
-  rc          = rebase --continue
-  rs          = rebase --skip
-  ro          = rebase -i origin/main
-
-  # reflog
-  rl      = reflog -20
-
-  # remote
-  r           = remote -v
-  f           = fetch
-  ps          = push
-  punch       = push --force-with-lease
-  # Prints the refs only on the remote, suitable for scripting tag cleanup
-  remote-tags = "!f() { git ls-remote --refs -t $1 | awk '{print $2}'; }; f"
-
-  # reset
-  nuke        = reset --hard HEAD
-  undo        = reset --soft HEAD^
-  unstage     = reset HEAD
-  uncommit    = reset --soft HEAD
-  cleann       = clean -f -d
-
-  # merge
-  mt          = mergetool
-
-  # stash
-  ss          = stash
-  sc          = stash --cached
-  sl          = stash list
-  sa          = stash apply
-  sd          = stash drop
-  # via http://blog.apiaxle.com/post/handy-git-tips-to-stop-you-getting-fired/
-  snapshot = !git stash save "snapshot: $(date)" && git stash apply "stash@{0}"
-  snapshots = !git stash list --grep snapshot
-
-  # status
-  s           = status -sb
-
-  # log
-  l           = log -20 --topo-order --pretty='format:%Cblue%h%Creset %s%Cred%d%Creset %C(yellow)(%an)%Creset'
-  logshort    = log --pretty=format:\"%C(blue)%h%Creset %<(20)%C(red)%an%Creset%C(green)%cr%Creset %s\"
-  loglong     = log --pretty=format:\"%C(blue)%H%Creset %<(21)%C(red)%an%Creset%C(green)%cr%Creset %<(80,trunc)%s\"
-  logfiles    = log --pretty=erik --name-status
-  logf        = logfiles
-  logchanges  = log --pretty=erik -u
-  logk        = log --author=Kerber # It me
-  klog        = logk
-  logrename   = log --diff-filter=R --summary
-  logorigin   = log origin/main..main
-  lo          = logorigin 
-
-  # log graphs
-  lol         = log --graph --decorate --pretty=oneline --abbrev-commit # http://blog.kfish.org/2010/04/git-lola.html
-  lola        = log --graph --decorate --pretty=oneline --abbrev-commit --all # http://blog.kfish.org/2010/04/git-lola.html
-
-  # Last commit helpers
-  last        = diff HEAD^ HEAD
-  last-msg    = !git --no-pager log --format=format:%B -1
-  last-sha    = !git --no-pager log --format=format:%H -1
-  
-  history     = log --pretty=format:\"%C(blue)%h%Creset %C(green)%cr%Creset %C(red)%an%Creset %s\" -p -M --follow --stat --
-
-  scoreboard  = shortlog -sn --since=12.month
-  
-  # submodules
-  sub         = submodule update --init --recursive
-
-  # tag
-  t           = tag -n
-
-  # typos
-  g           = !exec git     # Execute Git if the command is accidentally repeated
-  git         = !exec git     # Execute Git if the command is accidentally repeated
-
-  # for fun
-  wtc         = !sh -c 'git commit $@ -m \""`curl -s http://whatthecommit.com/index.txt`"\"' -
-
-  # Github Enterprise
-
-  # Use this detect if a given SHA-1 is contained in an RC branch, branches containing this
-  # revision will be output
-  # Example: git rc-check 9209a70b454e03cd103609a33d9ce30e5d3b1402
-  rc-check = "!f() { git branch -r --contains $1 | grep -e rc_*; }; f"
-
-  # Use this to fetch the branch of a GitHub PR without needing to add other remotes
-  # Example: git fetch-pr 8785
-  fetch-pr = "!f() { git fetch upstream pull/$1/head:${2:-pr-$1}; }; f"
-
-  # Git-pile
-  a           = absorb
-  as          = absorb --squash
-  h           = headpr
-  hn          = headpr --no-verify
-  hs          = headpr --squash
-  hsn         = headpr --squash --no-verify
-  u           = updatepr
-  us          = updatepr --squash
-
-  # To Organize
-  adeleted    = !sh -c 'git ls-files `git rev-parse --show-toplevel` --deleted -z | xargs -0 git rm -r'
-  auntracked  = !sh -c 'git ls-files `git rev-parse --show-toplevel` --others --exclude-standard -z | xargs -0 git add'
-  ctags       = !.git/hooks/ctags
-  dm          = !sh -c 'git diff $@ $(git merge-base main $(git name-rev --name-only HEAD))' -
-  dstash      = !sh -c 'git stash show -p stash@{${1-0}}' -
-[filter "lfs"]
-	clean = git-lfs clean -- %f
-	smudge = git-lfs smudge -- %f
-	process = git-lfs filter-process
-	required = true
+    g = !exec git
+    git = !exec git
+    # add
+    a = add
+    ap = add --patch
+    chunkyadd = add --patch
+    # Be Good
+    praise = blame
+    # branch
+    b = branch -v
+    ba = branch -a
+    cb = !sh -c 'git checkout --quiet -b $1 && (git push origin $1 --quiet 2> /dev/null && git branch -u origin/$1 $1 --quiet) &' -
+    branch = branch -vv
+    branches = for-each-ref --sort=-committerdate --format="%(color:blue)%(authordate:relative)\t%(color:red)%(authorname)\t%(color:white)%(color:bold)%(refname:short)" refs/remotes
+    fixmain = git co -b main upstream/main
+    cleanupb = !sh -c 'git branch -vv >/tmp/merged-branches && vim /tmp/merged-branches && cat /tmp/merged-branches | awk ''{print $1}'' | xargs git branch -D'
+    # checkout
+    co = checkout
+    s = switch
+    cop = !sh -c 'git branch | cut -c 3- | fzy --query=$1 | xargs git checkout' -
+    copr = !sh -c 'git branch -r | cut -c 3- | grep -v HEAD | cut -d "/" -f 2 | fzy --query=$1 | xargs git checkout' -
+    co-pr = !sh -c 'git fetch origin pull/$1/head:pr/$1 && git checkout pr/$1' -
+    # cherry-pick
+    cp = cherry-pick
+    cpn = cherry-pick --no-commit
+    # commit
+    c = commit --verbose -m
+    ca = commit --verbose -am
+    amend = commit --verbose --amend
+    amendne = commit --verbose --amend --no-edit
+    ane = amendne
+    comf = commit --verbose --fixup=HEAD
+    # diff
+    d = diff                               # diff unstaged changes
+    dc = diff --cached                      # diff staged changes
+    last = diff HEAD^                         # diff last committed change
+    dt = difftool
+    dtc = difftool --cached
+    dtk = difftool --tool=Kaleidoscope
+    dtck = difftool --cached --tool=Kaleidoscope
+    # rebase
+    ra = rebase --abort
+    rc = rebase --continue
+    rs = rebase --skip
+    ro = rebase -i origin/main
+    # reflog
+    rl = reflog -20
+    # remote
+    r = remote -v
+    f = fetch
+    ps = push
+    punch = push --force-with-lease
+    # Prints the refs only on the remote, suitable for scripting tag cleanup
+    remote-tags = "!f() { git ls-remote --refs -t $1 | awk ''{print $2}''; }; f"
+    # reset
+    nuke = reset --hard HEAD
+    undo = reset --soft HEAD^
+    unstage = reset HEAD
+    uncommit = reset --soft HEAD
+    cleann = clean -f -d
+    # merge
+    mt = mergetool
+    # stash
+    ss = stash
+    sc = stash --cached
+    sl = stash list
+    sa = stash apply
+    sd = stash drop
+    # via http://blog.apiaxle.com/post/handy-git-tips-to-stop-you-getting-fired/
+    snapshot = !git stash save "snapshot: $(date)" && git stash apply "stash@{0}"
+    snapshots = !git stash list --grep snapshot
+    # status
+    s = status -sb
+    # log
+    l = log -20 --topo-order --pretty='format:%Cblue%h%Creset %s%Cred%d%Creset %C(yellow)(%an)%Creset'
+    logshort = log --pretty=format:"%C(blue)%
