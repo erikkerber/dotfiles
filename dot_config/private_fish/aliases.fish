@@ -10,10 +10,12 @@ function ...   ; cd ../.. ; end
 function ....  ; cd ../../.. ; end
 function ..... ; cd ../../../.. ; end
 
-function grep     ; command grep --color auto $argv ; end
+  #function grep     ; command grep --color auto $argv ; end
 
-if type -q exa
-  abbr ls "exa"
+abbr ser '2>&1'
+
+if type -q eza
+  abbr ls "eza"
 end
 
 # Git
@@ -41,7 +43,7 @@ if type -q bazel
   abbr b 'bazel'
   abbr br 'bazel run'
   abbr bt 'bazel test'
-  abbr bb 'bazel build'
+  # abbr bb 'bazel build'
   abbr bi 'bazel info'
   abbr bbl 'bazel info bazel-bin'
   abbr bba 'bazel build //...'
@@ -85,8 +87,8 @@ if type -q chezmoi
   abbr ae 'chezmoi edit ~/.config/fish/aliases.fish'
   abbr ve 'chezmoi edit ~/.vimrc'
   abbr ge 'chezmoi edit ~/.gitconfig'
-  abbr be 'v ~/.local/share/chezmoi/Brewfile'
-  abbr bce 'v ~/.local/share/chezmoi/Brewfile.mac'
+  abbr be 'vim ~/.local/share/chezmoi/Brewfile'
+  abbr bce 'vim ~/.local/share/chezmoi/Brewfile.mac'
   abbr bre 'chezmoi ~/.bazelrc'
   abbr pe 'chezmoi edit ~/.vim/plugs.vim'
   abbr te 'chezmoi edit ~/.tmux.conf'
@@ -97,8 +99,8 @@ end
 if type -q xcrun
   abbr xc-cleansims 'xcrun simctl delete unavailable'
   abbr xc-resignxcode 'sudo codesign -f -s XcodeSigner' # Pass Xcode path
-  abbr xc-provfiles 'cd ~/Library/MobileDevice/Provisioning\ Profiles'
-  abbr xc-dd 'cd ~/Library/Developer/Xcode/DerivedData'
+  abbr xc-provfiles 'cd ~/Library/Developer/Xcode/UserData/Provisioning Profiles'
+  abbr xc-dd 'cd ~/Library/Developer/Xcode/UserData/Provisioning Profiles'
   abbr xc-rmdd 'rm -fr ~/Library/Developer/Xcode/DerivedData'
   abbr xc-buildnum 'xcodebuild -version | tail -1 | cut -d " " -f3'
   # iOS Simulator
@@ -128,6 +130,11 @@ end
 if type -q json_pp
   abbr jpp 'pbpaste | json_pp | bat'
 end
+
+# bat
+# if type -q bat
+#   abbr batp 'bat --paging=always'
+# end
 
 # macOS
 abbr daemonblame 'launchctl list | grep -v com.apple'
