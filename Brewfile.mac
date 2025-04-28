@@ -28,6 +28,7 @@ cask 'alacritty'
 cask 'alfred'
 cask 'bartender'
 cask 'bettertouchtool'
+cask 'bruno' # API client
 cask 'camo-studio'
 cask 'charles'
 cask 'cleanshot'
@@ -54,7 +55,7 @@ cask 'quitter'
 cask 'raycast'
 cask 'reveal'
 cask 'rocket' # Slack-esque emoji picker for macOS
-cask 'sloth' # Slack-esque emoji picker for macOS
+cask 'sloth' # lsof for Mac
 cask 'visual-studio-code'
 cask 'xbar'
 cask 'xcodes'
