@@ -6,6 +6,6 @@ echo -e "\033[0;32m>>>>> Begin Setting up Brew Bundle  <<<<<\033[0m"
 # This script will run whenever there's an update in Brewfile
 # Brewfile hash: {{ include "Brewfile" | sha256sum }}
 
-brew bundle --file ~/.local/share/chezmoi/Brewfile
+brew bundle --no-fail --file ~/.local/share/chezmoi/Brewfile
 
 {{ end -}}
