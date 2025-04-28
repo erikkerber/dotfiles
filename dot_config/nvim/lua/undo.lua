@@ -5,7 +5,6 @@ local function ensure_directory(directory)
   end
 end
 
-vim.opt.undofile = true -- save undo history
 local keyset = vim.keymap.set
 keyset("i", ",", ",<C-g>U")
 keyset("i", ".", ".<C-g>U")
