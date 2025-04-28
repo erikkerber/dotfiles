@@ -1,0 +1,26 @@
+gui:
+  windowSize: 'normal'
+    #sidePanelWidth: 0.5 # number from 0 to 1
+  theme:
+    activeBorderColor:
+      - "#ff79c6"
+      - bold
+    inactiveBorderColor:
+      - "#6272a4"
+    searchingActiveBorderColor:
+      - "#bd93f9"
+      - bold
+    optionsTextColor:
+      - "#f8f8f2"
+    selectedLineBgColor:
+      - "#44475a" # set to `default` to have no background colour
+    cherryPickedCommitBgColor:
+      - "#6272a4"
+    cherryPickedCommitFgColor:
+      - "#f8f8f2"
+    unstagedChangesColor:
+      - "#ff5555"
+    defaultFgColor:
+      - default
+os:
+  editPreset: 'nvim'
