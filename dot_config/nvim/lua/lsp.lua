@@ -1,14 +1,4 @@
-local lsp_spinner = require "lsp_spinner"
-
-lsp_spinner.setup {
-  placeholder = "  ",
-}
-
--- TODO: Remove once on neovim >= 0.10.0
-require("lsp-inlayhints").setup()
-
 local function on_attach(client, bufnr)
-  require("lsp_spinner").on_attach(client, bufnr)
   require("lsp-inlayhints").on_attach(client, bufnr)
 end
 
@@ -28,7 +18,6 @@ capabilities.textDocument.completion.completionItem.resolveSupport = {
     "additionalTextEdits",
   },
 }
-lsp_spinner.init_capabilities(capabilities)
 
 -- vim.lsp.start({
 --   name = 'starpls',
@@ -60,7 +49,8 @@ local servers = {
   "mojo",
   "rust_analyzer",
   "terraformls",
-  "kotlin_language_server",
+  -- "kotlin_language_server",
+  "java_language_server",
   "zls",
 }
 for _, lsp in ipairs(servers) do
@@ -111,38 +101,41 @@ require("lspconfig").sourcekit.setup {
   root_dir = lspconfig.util.root_pattern("buildServer.json", "*.xcodeproj", "*.xcworkspace", ".git", "compile_commands.json", "Package.swift"),
 }
 
--- require("lsp_signature").on_attach {
---   bind = true,
---   hint_prefix = "",
---   -- TODO: the border is huge, but these don't seem to work
---   -- handler_opts = {
---   --   border = "single"
---   -- },
--- }
+require'lspconfig'.java_language_server.setup{}
 
-require("compe").setup {
-  enabled = true,
-  autocomplete = true,
-  debug = false,
-  min_length = 1,
-  preselect = "enable",
-  throttle_time = 80,
-  source_timeout = 200,
-  incomplete_delay = 400,
-  max_abbr_width = 100,
-  max_kind_width = 100,
-  max_menu_width = 100,
-  documentation = true,
-
-  source = {
-    path = true,
-    buffer = {
-      ignored_filetypes = { "gitconfig", "gitcommit", "gitrebase", "git", "markdown" },
-    },
-    nvim_lsp = true,
-    nvim_lua = true,
-  },
+require("lsp_signature").on_attach {
+  bind = true,
+  hint_prefix = "",
+  -- TODO: the border is huge, but these don't seem to work
+  -- handler_opts = {
+  --   border = "single"
+  -- },
 }
+
+-- TODO compe change to cmp
+-- require("compe").setup {
+--   enabled = true,
+--   autocomplete = true,
+--   debug = false,
+--   min_length = 1,
+--   preselect = "enable",
+--   throttle_time = 80,
+--   source_timeout = 200,
+--   incomplete_delay = 400,
+--   max_abbr_width = 100,
+--   max_kind_width = 100,
+--   max_menu_width = 100,
+--   documentation = true,
+
+--   source = {
+--     path = true,
+--     buffer = {
+--       ignored_filetypes = { "gitconfig", "gitcommit", "gitrebase", "git", "markdown" },
+--     },
+--     nvim_lsp = true,
+--     nvim_lua = true,
+--   },
+-- }
 
 local function has_highlights(lang)
   local supported = {
