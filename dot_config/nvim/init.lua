@@ -34,7 +34,6 @@ vim.keymap.set('n', '<leader>sp', '<cmd>lua require("spectre").open_file_search(
 require("lsp_signature").on_attach {
   bind = true,
   hint_prefix = "WORKING",
-  bind = true, -- This is mandatory, otherwise border config won't get registered.
   handler_opts = {
     border = "rounded"
   }
