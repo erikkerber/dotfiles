@@ -15,12 +15,13 @@ brew 'colordiff'
 brew 'coreutils'
 brew 'ctags'
 brew 'diff-so-fancy'
+brew 'diffuse'
 brew 'direnv'
 #brew 'dockutil' # Install manually
 brew 'duf'
 brew 'dust' # Better du -sh
 brew 'dylibtree'
-brew 'exa' # Better ls
+brew 'eza' # Better ls
 brew 'fd' # Better find
 brew 'findutils' # Extensions on 'find' such as --type f
 brew 'fish'
@@ -106,3 +107,4 @@ tap 'majd/repo'
 tap 'mdogan/zulu'
 tap 'wader/tap'
 tap 'withered-magic/brew'
+tap 'JakeWharton/repo'
