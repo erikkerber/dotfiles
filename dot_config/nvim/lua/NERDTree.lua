@@ -1,5 +1,3 @@
--- let NERDTreeShowHidden=1
-
 vim.api.nvim_set_keymap('n', '<leader>n', ':NvimTreeFocus<CR>', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('n', '<C-t>', ':NvimTreeToggle<CR>', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('n', '<C-f>', ':NvimTreeFindFile<CR>', { noremap = true, silent = true })
@@ -12,16 +10,22 @@ vim.g.loaded_netrwPlugin = 1
 -- set termguicolors to enable highlight groups
 vim.opt.termguicolors = true
 
--- empty setup using defaults
-require("nvim-tree").setup()
-
 -- OR setup with some options
 require("nvim-tree").setup({
   sort_by = "case_sensitive",
+  view = {
+    preserve_window_proportions = false,
+  },
+  actions = {
+    open_file = {
+      resize_window = false,
+    },
+  },
   renderer = {
     group_empty = true,
   },
   filters = {
     dotfiles = true,
+    custom = { "^bazel-" },
   },
 })
