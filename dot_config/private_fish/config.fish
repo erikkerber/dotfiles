@@ -25,7 +25,7 @@ set -gx FZF_DEFAULT_COMMAND 'fd --type file --follow --hidden --exclude .git'
 set -Ux FZF_CTRL_T_COMMAND "$FZF_DEFAULT_COMMAND"
 
 # git-pile
-set -gx GIT_PILE_PREFIX ekerber/
+set -gx GIT_PILE_PREFIX ek/
 set -gx GIT_PILE_USE_PR_TEMPLATE 1
 
 # Editor
