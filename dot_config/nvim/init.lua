@@ -1,7 +1,6 @@
 require('settings')
 require('setup')
 require('plugs')
-require('telescope')
 require('NERDTree')
 require('undo')
 require('highlight')
@@ -10,4 +9,5 @@ require('color-column')
 require('newline-comment')
 require('lsp')
 --require('nvim-treesitter')
+require('telescope-setup')
 
