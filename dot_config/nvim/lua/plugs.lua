@@ -1,120 +1,185 @@
--- lazy.nvim pre-setup
-local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
+---@brief [[
+--- Neovim plugin configuration using lazy.nvim
+--- Manages plugin loading, dependencies, and initialization
+---@brief ]]
 
+-- Bootstrap lazy.nvim if not installed
+local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not (vim.uv or vim.loop).fs_stat(lazypath) then
-  vim.fn.system({
-    "git",
-    "clone",
-    "--filter=blob:none",
-    "https://github.com/folke/lazy.nvim.git",
-    "--branch=main", -- latest stable release
-    lazypath,
-  })
+    vim.fn.system({
+        "git",
+        "clone",
+        "--filter=blob:none",
+        "https://github.com/folke/lazy.nvim.git",
+        "--branch=main",
+        lazypath,
+    })
 end
 vim.opt.rtp:prepend(lazypath)
 
+-- Plugin specification
 require('lazy').setup({
-  -- Test
-  -- {
-  --     "smjonas/live-command.nvim", -- live command
-  --     config = function()
-  --         require("live-command").setup({commands = {Norm = {cmd = "norm"}}})
-  --     end
-  -- },
-  -- End Test
-  {'ray-x/lsp_signature.nvim'},
-  {
-     'Mofiqul/dracula.nvim',
-     config = function()
-       vim.cmd("colorscheme dracula")      
-     end
-  },
-  {'gfontenot/vim-xcode'},
-  {
-	'nvim-pack/nvim-spectre',
-    	dependencies = {'nvim-lua/plenary.nvim'}  -- Specify dependencies
-  },
-  -- {
-  --   'yetone/avante.nvim',
-  --   event = "VeryLazy",
-  --   -- build = "make",
-  --   build = "make BUILD_FROM_SOURCE=true luajit",
-  --   opts = {
-  --       -- add any opts here
-  --   },
-  --   dependencies = {
-  --       "nvim-tree/nvim-web-devicons", -- or echasnovski/mini.icons
-  --       "stevearc/dressing.nvim",
-  --       "nvim-lua/plenary.nvim",
-  --       "MunifTanjim/nui.nvim",
-  --       --- The below is optional, make sure to setup it properly if you have lazy=true
-  --       {
-  --       'MeanderingProgrammer/render-markdown.nvim',
-  --       opts = {
-  --           file_types = { "markdown", "Avante" },
-  --       },
-  --       ft = { "markdown", "Avante" },
-  --       },
-  --   },
-  -- },
-  {
-    "MeanderingProgrammer/render-markdown.nvim",
-    opts = {
-        file_types = { "markdown", "Avante" },
+    -- LSP support
+    {
+        'neovim/nvim-lspconfig',
+        lazy = false,
+        priority = 1000,
     },
-    ft = { "markdown", "Avante" },
-  },
-  {'hrsh7th/nvim-cmp', lazy = false},  -- Essential for autocompletion, load immediately
-  {
-    'junegunn/fzf',
-    lazy = false,
-    -- build = 'fzf#install()'
-  },
-  {'junegunn/fzf.vim'},
-  {'neovim/nvim-lspconfig', lazy = false},  -- Essential for LSP, load immediately
-  -- {'hrsh7th/cmp-nvim-lsp'},
-  {'nvim-tree/nvim-tree.lua'},
-  -- {'lvimuser/lsp-inlayhints.nvim'},
-  {'nvim-tree/nvim-web-devicons', lazy = false},
-  -- {
-  --   'nvim-treesitter/nvim-treesitter',
-  --   build = ':TSUpdate',
-  --   lazy = false
-  -- },
-  { 'nvim-treesitter/nvim-treesitter-context' },
-  {'keith/swift.vim'},
-  {'psliwka/vim-smoothie'},
-  {'tpope/vim-commentary'},
-  {'tpope/vim-fugitive'},
-  {'tpope/vim-git'},
-  {'tpope/vim-rhubarb'},
-  {'tpope/vim-surround'},
-  {'nvim-lspconfig'},  -- Uses native LSP diagnostics
-  {'mfussenegger/nvim-lint'},
-  {'nanotee/zoxide.vim'},
-  {
-    'nvim-telescope/telescope.nvim',
-    lazy = true,
-    dependencies = {'nvim-lua/plenary.nvim'}  -- Specify dependencies
-  },
-  {
-    "kdheepak/lazygit.nvim",
-    cmd = {
-      "LazyGit",
-      "LazyGitConfig",
-      "LazyGitCurrentFile",
-      "LazyGitFilter",
-      "LazyGitFilterCurrentFile",
+
+    -- Autocompletion
+    {
+        'hrsh7th/nvim-cmp',
+        lazy = false,
+        priority = 900,
     },
-    -- optional for floating window border decoration
-    dependencies = {
-        "nvim-lua/plenary.nvim",
+
+    -- Function signature help while typing
+    { 'ray-x/lsp_signature.nvim' },
+
+    -- Color scheme
+    {
+        'Mofiqul/dracula.nvim',
+        lazy = false,
+        priority = 1000,
+        config = function()
+            vim.cmd("colorscheme dracula")
+        end
     },
-    -- setting the keybinding for LazyGit with 'keys' is recommended in
-    -- order to load the plugin when the command is run for the first time
-    keys = {
-       { "<leader>lg", "<cmd>LazyGit<cr>", desc = "LazyGit" }
-    }
-  },
+
+    -- File icons
+    {
+        'nvim-tree/nvim-web-devicons',
+        lazy = false,
+    },
+
+    -- File explorer
+    {
+        'nvim-tree/nvim-tree.lua',
+        cmd = {
+            "NvimTreeToggle",
+            "NvimTreeFocus",
+            "NvimTreeFindFile",
+        },
+    },
+
+    -- Fuzzy finder
+    {
+        'junegunn/fzf',
+        lazy = false,
+        build = function()
+            vim.fn['fzf#install']()
+        end,
+    },
+    { 'junegunn/fzf.vim' },
+
+    -- Telescope for advanced searching
+    {
+        'nvim-telescope/telescope.nvim',
+        cmd = "Telescope",
+        keys = {
+            { "<leader>ff", "<cmd>Telescope find_files<cr>", desc = "Find Files" },
+            { "<leader>fg", "<cmd>Telescope live_grep<cr>", desc = "Live Grep" },
+            { "<leader>fb", "<cmd>Telescope buffers<cr>", desc = "Buffers" },
+        },
+        dependencies = {'nvim-lua/plenary.nvim'}
+    },
+
+    -- Directory navigation
+    { 'nanotee/zoxide.vim' },
+
+    -- Smooth scrolling
+    { 'psliwka/vim-smoothie' },
+
+    -- Git integration with LazyGit
+    {
+        "kdheepak/lazygit.nvim",
+        cmd = {
+            "LazyGit",
+            "LazyGitConfig",
+            "LazyGitCurrentFile",
+            "LazyGitFilter",
+            "LazyGitFilterCurrentFile",
+        },
+        dependencies = { "nvim-lua/plenary.nvim" },
+        keys = {
+            { "<leader>lg", "<cmd>LazyGit<cr>", desc = "LazyGit" }
+        }
+    },
+
+    -- Git commands
+    { 'tpope/vim-fugitive' },
+    { 'tpope/vim-git' },
+    { 'tpope/vim-rhubarb' },
+
+    -- Code manipulation
+    { 'tpope/vim-commentary' },
+    { 'tpope/vim-surround' },
+
+    -- Syntax highlighting and code context
+    {
+        'nvim-treesitter/nvim-treesitter-context',
+        dependencies = {
+            {
+                'nvim-treesitter/nvim-treesitter',
+                build = ':TSUpdate',
+                lazy = false,
+            },
+        },
+    },
+
+    -- Asynchronous linting
+    { 'mfussenegger/nvim-lint' },
+
+    -- Swift language support
+    { 'keith/swift.vim' },
+    { 'gfontenot/vim-xcode' },
+
+    -- Search and replace
+    {
+        'nvim-pack/nvim-spectre',
+        dependencies = {'nvim-lua/plenary.nvim'},
+        cmd = "Spectre",
+    },
+
+    -- Markdown rendering
+    {
+        "MeanderingProgrammer/render-markdown.nvim",
+        opts = {
+            file_types = { "markdown", "Avante" },
+        },
+        ft = { "markdown", "Avante" },
+    },
+
+    -- Commented/Experimental plugins
+    -- {
+    --     "smjonas/live-command.nvim",
+    --     config = function()
+    --         require("live-command").setup({commands = {Norm = {cmd = "norm"}}})
+    --     end
+    -- },
+    -- {
+    --   'yetone/avante.nvim',
+    --   event = "VeryLazy",
+    --   -- build = "make",
+    --   build = "make BUILD_FROM_SOURCE=true luajit",
+    --   opts = {
+    --       -- add any opts here
+    --   },
+    --   dependencies = {
+    --       "nvim-tree/nvim-web-devicons",
+    --       "stevearc/dressing.nvim",
+    --       "nvim-lua/plenary.nvim",
+    --       "MunifTanjim/nui.nvim",
+    --       {
+    --       'MeanderingProgrammer/render-markdown.nvim',
+    --       opts = {
+    --           file_types = { "markdown", "Avante" },
+    --       },
+    --       ft = { "markdown", "Avante" },
+    --       },
+    --   },
+    -- },
+    -- {'hrsh7th/cmp-nvim-lsp'},
+    -- {'lvimuser/lsp-inlayhints.nvim'},
 })
 
