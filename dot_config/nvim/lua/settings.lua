@@ -1,12 +1,12 @@
 -- General Config
 vim.cmd('syntax enable')               -- Enable syntax highlighting
-
 -- Short messages configuration to avoid startup message and pressing enter after saves
 vim.opt.shortmess:append('Ia')
 
 -- Shell configuration and other settings
 -- vim.opt.shell = vim.env.SHELL          -- Use the shell specified in environment variable
 
+vim.opt.number = true
 vim.opt.showmode = true                -- Display the current mode
 -- vim.opt.guicursor = 'a:blinkon0'       -- Disable cursor blink in all modes
 vim.opt.showmatch = true               -- Highlight matching brackets
@@ -33,9 +33,19 @@ vim.opt.sidescrolloff = 15
 vim.opt.ignorecase = true          -- Ignore case when searching...
 vim.opt.smartcase = true           -- ...unless we type a capital
 vim.opt.gdefault = true            -- Adds 'g' at the end of substitutions by default
+vim.opt.inccommand = "split" -- "for incsearch while sub
+vim.opt.autoread = true
 
 -- ========= :checkhealth ============
 vim.g.loaded_ruby_provider = 0
 vim.g.loaded_node_provider = 0
 vim.g.loaded_perl_provider = 0
 
+vim.opt.wildmode = "list:longest,list:full" -- for : stuff
+vim.opt.wildignore:append({".javac", "node_modules", "*.pyc"})
+vim.opt.wildignore:append({".aux", ".out", ".toc"}) -- LaTeX
+vim.opt.wildignore:append({
+    ".o", ".obj", ".dll", ".exe", ".so", ".a", ".lib", ".pyc", ".pyo", ".pyd",
+    ".swp", ".swo", ".class", ".DS_Store", ".git", ".hg", ".orig"
+})
+vim.opt.suffixesadd:append({".java", ".rs"}) -- search for suffexes using gf
