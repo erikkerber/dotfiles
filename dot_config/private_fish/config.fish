@@ -4,13 +4,10 @@ function fish_mode_prompt; end
 # Path to dotfiles repo
 #:wqset -x DOTFILES (dirname "$HOME/dotfiles")
 
-# Set PATH using fish_user_paths for user-specific directories
-set -Ua fish_user_paths $HOME/.cargo/bin
-set -Ua fish_user_paths $HOME/.rbenv/bin
-set -Ua fish_user_paths $HOME/.local/bin
-set -Ua fish_user_paths $HOME/go/bin
-set -Ua fish_user_paths /opt/homebrew/bin
-set -Ua fish_user_paths $HOME/Developer/slack/slack-objc/bin
+# set -x JAVA_HOME $HOME/Library/Java/JavaVirtualMachines/openjdk-21.0.2/Contents/Home
+
+# .config setting (for several apps including lazygit)
+set -q XDG_CONFIG_HOME; or set -g XDG_CONFIG_HOME "$HOME/.config"
 
 # OpenJDK
 fish_add_path /opt/homebrew/opt/openjdk/bin
@@ -18,6 +15,9 @@ set -gx CPPFLAGS "-I/opt/homebrew/opt/openjdk/include"
 
 # GPG
 set -gx GPG_TTY (tty)
+
+# bat
+set -gx BAT_THEME Dracula
 
 # FZF Configuration
 set -gx FZF_DEFAULT_OPTS '--cycle --layout=reverse --border --height=90% --preview-window=wrap --marker="*" --ansi'
@@ -54,3 +54,13 @@ scmpuff init --shell=fish | source
 # zoxide
 zoxide init fish | source
 
+# direnv
+direnv hook fish | source
+
+# Slack PDE
+/usr/bin/ssh-add --apple-load-keychain >/dev/null 2>&1
+
+# For fish subshells, add to ~/.config/fish/config.fish.
+# if status is-interactive
+#   printf '\eP$f{"hook": "SourcedRcFileForWarp", "value": { "shell": "fish"}}\x9c'
+# end
