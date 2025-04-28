@@ -8,6 +8,6 @@ require('clipboard')
 require('color-column')
 require('newline-comment')
 require('lsp')
---require('nvim-treesitter')
 require('telescope-setup')
+-- require('nvim-treesitter-setup')
 
