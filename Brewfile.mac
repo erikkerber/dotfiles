@@ -19,10 +19,9 @@ mas 'Slack', id: 803453959
 mas 'Sourcery Pro', id: 1561780836
 mas 'Soulver 2', id: 413965349
 mas 'Tot', id: 1491071483
-mas 'TweetBot', id: 1384080005
 mas 'Ulysses', id: 1225570693
-mas 'Quip', id: 1003160018
 
+cask '1password'
 cask '1password-cli'
 cask 'alacritty'
 cask 'alfred'
@@ -31,6 +30,7 @@ cask 'bettertouchtool'
 cask 'bruno' # API client
 cask 'camo-studio'
 cask 'charles'
+cask 'chatgpt'
 cask 'cleanshot'
 cask 'dash'
 cask 'deckset'
@@ -43,6 +43,7 @@ cask 'iterm2'
 cask 'kaleidoscope'
 cask 'keyboard-maestro'
 cask 'lingon-x'
+cask 'kitty'
 cask 'mimestream'
 cask 'notion'
 cask 'nova'
