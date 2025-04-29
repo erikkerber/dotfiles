@@ -107,7 +107,7 @@ vim.opt.wildignore:append({
 
 -- Enable syntax highlighting with Treesitter if available
 if vim.fn.has('nvim-0.8') == 1 then
-    vim.opt.syntax = false  -- Disable old syntax for better performance
+    -- vim.opt.syntax = false  -- Disable old syntax for better performance
     vim.cmd([[
         if exists('g:loaded_treesitter')
             TSEnable highlight
