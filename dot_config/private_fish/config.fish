@@ -4,7 +4,12 @@ function fish_mode_prompt; end
 # Path to dotfiles repo
 #:wqset -x DOTFILES (dirname "$HOME/dotfiles")
 
-# set -x JAVA_HOME $HOME/Library/Java/JavaVirtualMachines/openjdk-21.0.2/Contents/Home
+# set -x JAVA_HOME /Users/ekerber/.cache/bazel/zulu23.32.11-ca-crac-jdk23.0.2-macosx_aarch64/zulu-23.jdk/Contents/Home
+
+set -x ANDROID_HOME ~/Library/Android/sdk
+fish_add_path $ANDROID_HOME/platform-tools 
+fish_add_path $ANDROID_HOME/emulator 
+fish_add_path $ANDROID_HOME/cmdline-tools/latest/bin
 
 # .config setting (for several apps including lazygit)
 set -q XDG_CONFIG_HOME; or set -g XDG_CONFIG_HOME "$HOME/.config"
@@ -64,3 +69,10 @@ direnv hook fish | source
 # if status is-interactive
 #   printf '\eP$f{"hook": "SourcedRcFileForWarp", "value": { "shell": "fish"}}\x9c'
 # end
+
+direnv hook fish | source
+
+set -gx PNPM_HOME "/Users/ekerber/Library/pnpm"
+if not string match -q -- $PNPM_HOME $PATH
+  set -gx PATH "$PNPM_HOME" $PATH
+end

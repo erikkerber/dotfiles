@@ -100,7 +100,7 @@ if type -q xcrun
   abbr xc-cleansims 'xcrun simctl delete unavailable'
   abbr xc-resignxcode 'sudo codesign -f -s XcodeSigner' # Pass Xcode path
   abbr xc-provfiles 'cd ~/Library/Developer/Xcode/UserData/Provisioning Profiles'
-  abbr xc-dd 'cd ~/Library/Developer/Xcode/UserData/Provisioning Profiles'
+  abbr xc-dd 'cd ~/Library/Developer/Xcode/UserData/Provisioning\ Profiles'
   abbr xc-rmdd 'rm -fr ~/Library/Developer/Xcode/DerivedData'
   abbr xc-buildnum 'xcodebuild -version | tail -1 | cut -d " " -f3'
   # iOS Simulator

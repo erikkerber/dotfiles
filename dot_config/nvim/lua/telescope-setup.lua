@@ -1,24 +1,24 @@
 local telescope = require('telescope')
--- telescope.setup{
---   -- pickers = {
---   --   find_files = {
---   --     -- find_command = { 'rg', '--files', '--iglob', '!.git', '--no-ignore' },
---   --     hidden = true,
---   --   },
---   --   grep_string = {
---   --     additional_args = {"--hidden"}
---   --   },
---   --   live_grep = {
---   --     additional_args = {"--hidden"},
---   --     theme = "dropdown",
---   --   },
---   -- },
---   -- defaults = {
---   --   layout_config = {
---   --     vertical = { width = 0.9 }
---   --   },
---   -- },
--- }
+telescope.setup{
+  pickers = {
+    find_files = {
+      -- find_command = { 'rg', '--files', '--iglob', '!.git', '--no-ignore' },
+      hidden = true,
+    },
+    grep_string = {
+      additional_args = {"--hidden"}
+    },
+    live_grep = {
+      additional_args = {"--hidden"},
+      theme = "dropdown",
+    },
+  },
+  defaults = {
+    layout_config = {
+      vertical = { width = 0.9 }
+    },
+  },
+}
 
 -- Set key mappings with options
 local opts = { noremap = true, silent = true }

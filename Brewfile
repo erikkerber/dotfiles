@@ -1,4 +1,5 @@
 brew 'awscli'
+brew 'uv'
 brew 'aria2' # Used to speed up xcodes
 brew 'bash'
 brew 'bat'
@@ -66,6 +67,7 @@ brew 'node'
 brew 'openjdk'
 brew 'pyenv'
 brew 'python'
+brew 'pv'
 brew 'radare2'
 brew 'rbenv'
 brew 'rg'
