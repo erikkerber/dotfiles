@@ -16,7 +16,6 @@ brew 'colordiff'
 brew 'coreutils'
 brew 'ctags'
 brew 'diff-so-fancy'
-brew 'diffuse'
 brew 'direnv'
 #brew 'dockutil' # Install manually
 brew 'duf'
