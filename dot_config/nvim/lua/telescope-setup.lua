@@ -23,13 +23,10 @@ telescope.setup{
 -- Set key mappings with options
 local opts = { noremap = true, silent = true }
 
--- Buffer and file navigation
+-- FZF.vim mappings (for commands Telescope doesn't replace)
 vim.keymap.set('n', '<Leader>b', ':Buffers<CR>', opts)
-vim.keymap.set('n', '<C-p>', ':Files<CR>', opts)
-vim.keymap.set('n', '<Leader>f', ':Rg<CR>', opts)
 vim.keymap.set('n', '<Leader>/', ':BLines<CR>', opts)
 vim.keymap.set('n', '<Leader>\'', ':Marks<CR>', opts)
--- vim.keymap.set('n', '<Leader>g', ':Commits<CR>', opts) -- Commented as in original
 vim.keymap.set('n', '<Leader>H', ':Helptags<CR>', opts)
 vim.keymap.set('n', '<Leader>hh', ':History<CR>', opts)
 vim.keymap.set('n', '<Leader>h:', ':History:<CR>', opts)
@@ -43,10 +40,3 @@ vim.keymap.set('n', '<leader>fg', builtin.live_grep, opts)
 vim.keymap.set('n', '<leader>fl', builtin.git_files, opts)
 vim.keymap.set('n', '<leader>fb', builtin.buffers, opts)
 vim.keymap.set('n', '<leader>fh', builtin.help_tags, opts)
-
--- require("telescope.builtin").find_files({
---     cwd = buffer_directory(),
---     prompt_title = "Find Around",
---     find_command = vim.list_extend(vim.list_slice(default_find_command), {"-d2"}),
--- })
-
