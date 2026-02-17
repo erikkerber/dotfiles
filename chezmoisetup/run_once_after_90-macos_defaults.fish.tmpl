@@ -106,15 +106,8 @@ defaults write com.apple.Finder FXEnableExtensionChangeWarning -bool false
 /usr/libexec/PlistBuddy -c "Set :FK_StandardViewSettings:IconViewSettings:arrangeBy grid" ~/Library/Preferences/com.apple.finder.plist
 /usr/libexec/PlistBuddy -c "Set :StandardViewSettings:IconViewSettings:arrangeBy grid" ~/Library/Preferences/com.apple.finder.plist
 
-# Use list view in all Finder windows by default
-# Four-letter codes for the other view modes: `icnv`, `clmv`, `Flwv`
-defaults write com.apple.Finder FXPreferredViewStyle -string "Nlsv"
-
 # Disable the warning before emptying the Trash
 defaults write com.apple.Finder WarnOnEmptyTrash -bool false
-
-# Empty Trash securely by default
-defaults write com.apple.Finder EmptyTrashSecurely -bool true
 
 # Disable "close windows when quitting an app"
 defaults write NSGlobalDomain NSQuitAlwaysKeepsWindows -bool true
@@ -241,6 +234,6 @@ end
 
 # Quitter
 rm $HOME/Library/Preferences/com.marcoarment.quitter.plist
-ln -ns $PWD/macos/com.marcoarment.quitter.plist $HOME/Library/Preferences/com.marcoarment.quitter.plist
+ln -ns $HOME/.local/share/chezmoi/macos/com.marcoarment.quitter.plist $HOME/Library/Preferences/com.marcoarment.quitter.plist
 
 {{ end -}}
