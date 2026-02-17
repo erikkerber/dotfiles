@@ -1,7 +1,8 @@
 function git-large-blobs
-    set limit $argv[1]
-    if not set -q limit
+    if test (count $argv) -eq 0
         set limit 10
+    else
+        set limit $argv[1]
     end
 
     git rev-list --objects --all \
