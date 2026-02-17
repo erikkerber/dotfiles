@@ -1,5 +1,3 @@
-local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
-
 require('settings')
 require('setup')
 require('plugs')
@@ -13,7 +11,7 @@ require('lsp')
 require('telescope-setup')
 -- require('nvim-treesitter-setup')
 -- require('avante-setup')
--- require oil.nvim)
+-- require('oil.nvim')
 
 -- https://news.ycombinator.com/item?id=40838747
 vim.keymap.set('n', '\\.', ':tabedit %:p:h<CR>')
@@ -33,7 +31,7 @@ vim.keymap.set('n', '<leader>sp', '<cmd>lua require("spectre").open_file_search(
 
 require("lsp_signature").on_attach {
   bind = true,
-  hint_prefix = "WORKING",
+  hint_prefix = "",
   handler_opts = {
     border = "rounded"
   }

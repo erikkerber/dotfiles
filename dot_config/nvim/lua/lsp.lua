@@ -1,5 +1,4 @@
 local function on_attach(client, bufnr)
-  require("lsp-inlayhints").on_attach(client, bufnr)
 end
 
 vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(vim.lsp.diagnostic.on_publish_diagnostics, {
@@ -101,16 +100,6 @@ require("lspconfig").sourcekit.setup {
   root_dir = lspconfig.util.root_pattern("buildServer.json", "*.xcodeproj", "*.xcworkspace", ".git", "compile_commands.json", "Package.swift"),
 }
 
-require'lspconfig'.java_language_server.setup{}
-
-require("lsp_signature").on_attach {
-  bind = true,
-  hint_prefix = "",
-  -- TODO: the border is huge, but these don't seem to work
-  -- handler_opts = {
-  --   border = "single"
-  -- },
-}
 
 -- TODO compe change to cmp
 -- require("compe").setup {
