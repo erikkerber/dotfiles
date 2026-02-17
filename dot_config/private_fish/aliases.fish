@@ -89,7 +89,7 @@ if type -q chezmoi
   abbr ge 'chezmoi edit ~/.gitconfig'
   abbr be 'vim ~/.local/share/chezmoi/Brewfile'
   abbr bce 'vim ~/.local/share/chezmoi/Brewfile.mac'
-  abbr bre 'chezmoi ~/.bazelrc'
+  abbr bre 'chezmoi edit ~/.bazelrc'
   abbr pe 'chezmoi edit ~/.vim/plugs.vim'
   abbr te 'chezmoi edit ~/.tmux.conf'
   abbr ace 'chezmoi edit ~/.config/alacritty/alacritty.yml'
@@ -99,7 +99,7 @@ end
 if type -q xcrun
   abbr xc-cleansims 'xcrun simctl delete unavailable'
   abbr xc-resignxcode 'sudo codesign -f -s XcodeSigner' # Pass Xcode path
-  abbr xc-provfiles 'cd ~/Library/Developer/Xcode/UserData/Provisioning Profiles'
+  abbr xc-provfiles 'cd ~/Library/Developer/Xcode/UserData/"Provisioning Profiles"'
   abbr xc-dd 'cd ~/Library/Developer/Xcode/UserData/Provisioning\ Profiles'
   abbr xc-rmdd 'rm -fr ~/Library/Developer/Xcode/DerivedData'
   abbr xc-buildnum 'xcodebuild -version | tail -1 | cut -d " " -f3'
