@@ -5,7 +5,7 @@ echo -e "\033[0;32m>>>>> Begin Setting Up Fish shell <<<<<\033[0m"
 ## Install fisher
 if not type -q fisher
   echo "installing fisher"
-  curl -sL https://git.io/fisher | source && fisher install jorgebucaran/fisher
+  curl -sL https://raw.githubusercontent.com/jorgebucaran/fisher/main/functions/fisher.fish | source && fisher install jorgebucaran/fisher
 end
 
 # This script will run whenever I added something to .config/fish/fish_plugins
@@ -13,6 +13,6 @@ end
 fisher update
 
 # One-off installation of fzf/Fish functions
-/usr/local/opt/fzf/install
+/opt/homebrew/opt/fzf/install
 
 echo -e "\033[0;32m>>>>> Finish Setting Up Fish shell <<<<<\033[0m"
