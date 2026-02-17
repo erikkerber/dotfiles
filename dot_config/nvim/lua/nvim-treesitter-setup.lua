@@ -24,7 +24,7 @@ require'nvim-treesitter.configs'.setup {
     "kotlin",
     "bash",
     "cue",
-    "fsh",
+    "fish",
     "jq",
     "toml",
     "python",
