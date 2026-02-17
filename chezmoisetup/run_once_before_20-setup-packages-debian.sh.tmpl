@@ -7,11 +7,11 @@ packages=(
   fzf
   libsecret-1-0 libsecret-1-dev
   neovim
-  exa
+  eza
 )
 
 for package in ${packages[@]}; do
-  if ! $(dpkg-query -W -f='installed' $package &> /dev/null); then
+  if ! dpkg -s "$package" &> /dev/null; then
     echo "installing $package"
     sudo apt install -y $package
   fi
