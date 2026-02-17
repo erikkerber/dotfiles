@@ -28,7 +28,7 @@ set -gx BAT_THEME Dracula
 # FZF Configuration
 set -gx FZF_DEFAULT_OPTS '--cycle --layout=reverse --border --height=90% --preview-window=wrap --marker="*" --ansi'
 set -gx FZF_DEFAULT_COMMAND 'fd --type file --follow --hidden --exclude .git'
-set -Ux FZF_CTRL_T_COMMAND "$FZF_DEFAULT_COMMAND"
+set -gx FZF_CTRL_T_COMMAND "$FZF_DEFAULT_COMMAND"
 
 # git-pile
 set -gx GIT_PILE_PREFIX ek/
@@ -71,9 +71,7 @@ direnv hook fish | source
 #   printf '\eP$f{"hook": "SourcedRcFileForWarp", "value": { "shell": "fish"}}\x9c'
 # end
 
-direnv hook fish | source
-
-set -gx PNPM_HOME "/Users/ekerber/Library/pnpm"
+set -gx PNPM_HOME "$HOME/Library/pnpm"
 if not string match -q -- $PNPM_HOME $PATH
   set -gx PATH "$PNPM_HOME" $PATH
 end
