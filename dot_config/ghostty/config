@@ -1,1 +1,14 @@
 theme = dracula
+shell-integration = fish
+link-url=true
+link-previews=true
+
+# Font configuration
+font-family = Operator Mono Book
+font-size = 14
+
+# Scrollback optimization
+scrollback-limit = 10000
+unfocused-split-opacity=1.0
+
+keybind = shift+enter=text:\x1b\r

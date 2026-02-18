@@ -14,3 +14,4 @@ aliases:
     open: pr view  -w
     a: pr list -a ErikKerber --state=open --limit=10
     s: pr status
+version: "1"
