@@ -293,3 +293,8 @@
     # pull
     pulln = pull --no-recurse-submodules
     scoreboard  = shortlog -sn --since=12.month
+[filter "lfs"]
+    clean = git-lfs clean -- %f
+    smudge = git-lfs smudge -- %f
+    process = git-lfs filter-process
+    required = true
