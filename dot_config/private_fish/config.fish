@@ -10,6 +10,7 @@ set -x ANDROID_HOME ~/Library/Android/sdk
 fish_add_path $ANDROID_HOME/platform-tools 
 fish_add_path $ANDROID_HOME/emulator 
 fish_add_path $ANDROID_HOME/cmdline-tools/latest/bin
+fish_add_path /Applications/Obsidian.app/Contents/MacOS
 fish_add_path ~/.bun/bin
 
 # .config setting (for several apps including lazygit)

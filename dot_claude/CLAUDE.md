@@ -39,7 +39,7 @@ Use `--no-gpg-sign` when committing (GPG pinentry doesn't work well in this term
 
 # Obsidian Long-Term Memory
 
-Use the Obsidian MCP as persistent memory for project-specific knowledge. This survives across sessions and context compaction.
+Use the `obsidian` CLI as persistent memory for project-specific knowledge. This survives across sessions and context compaction.
 
 ## Directory Structure
 Store project memories in: `Claude Memory/<project-name>/`
@@ -47,7 +47,7 @@ Store project memories in: `Claude Memory/<project-name>/`
 ## Proactive Memory Check
 At the START of any conversation involving code work:
 1. Identify the project from the working directory
-2. Check if `Claude Memory/<project-name>/` exists using obsidian_list_files_in_dir
+2. Check if `Claude Memory/<project-name>/` exists.
 3. If it exists, read the relevant files before proceeding
 4. Reference this knowledge naturally - don't announce "I'm checking memory"
 
