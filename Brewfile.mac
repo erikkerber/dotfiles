@@ -23,7 +23,6 @@ mas 'Ulysses', id: 1225570693
 
 cask '1password'
 cask '1password-cli'
-cask 'alacritty'
 cask 'alfred'
 cask 'bartender'
 cask 'bettertouchtool'
@@ -62,5 +61,4 @@ cask 'sloth' # lsof for Mac
 cask 'visual-studio-code'
 cask 'xbar'
 cask 'xcodes'
-cask 'zoom'
 
