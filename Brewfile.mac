@@ -24,6 +24,7 @@ mas 'Ulysses', id: 1225570693
 cask '1password'
 cask '1password-cli'
 cask 'alfred'
+cask 'anki'
 cask 'bartender'
 cask 'bettertouchtool'
 cask 'bruno' # API client
@@ -40,7 +41,8 @@ cask 'fork'
 cask 'gitup'
 cask 'istat-menus'
 cask 'iterm2'
-cask 'kaleidoscope@2'
+cask 'jetbrains-toolbox'
+cask 'kaleidoscope@3'
 cask 'keyboard-maestro'
 cask 'lingon-x'
 cask 'key-codes'
@@ -61,4 +63,3 @@ cask 'sloth' # lsof for Mac
 cask 'visual-studio-code'
 cask 'xbar'
 cask 'xcodes'
-
