@@ -1,12 +1,29 @@
-brew 'awscli'
-brew 'uv'
+# Taps
+tap 'atlassian/homebrew-acli'
+tap 'ankitpokhrel/jira-cli'
+tap 'charmbracelet/homebrew-tap'
+tap 'hmarr/tap'
+tap 'isacikgoz/gitin'
+tap 'JakeWharton/repo'
+tap 'keith/formulae'
+tap 'majd/repo'
+tap 'mdogan/zulu'
+tap 'milend/taps'
+tap 'oven-sh/bun'
+# tap 'robotsandpencils/made'
+tap 'teamookla/speedtest'
+tap 'wader/tap'
+tap 'withered-magic/brew'
+
+# Formulae
+brew 'acli'
 brew 'aria2' # Used to speed up xcodes
+brew 'awscli'
 brew 'bash'
 brew 'bat'
 brew 'bazelisk'
 brew 'buildifier'
-brew 'bk'
-brew 'buildkite/buildkite/buildkite-agent' # Dependency of bk
+brew 'bun'
 brew 'bzip2' # Needed manually for idb-companion
 brew 'charmbracelet/homebrew-tap/glow'
 brew 'chisel'
@@ -17,7 +34,7 @@ brew 'coreutils'
 brew 'ctags'
 brew 'diff-so-fancy'
 brew 'direnv'
-#brew 'dockutil' # Install manually
+# brew 'dockutil' # Install manually
 brew 'duf'
 brew 'dust' # Better du -sh
 brew 'dylibtree'
@@ -25,7 +42,6 @@ brew 'eza' # Better ls
 brew 'fd' # Better find
 brew 'findutils' # Extensions on 'find' such as --type f
 brew 'fish'
-brew 'wader/tap/fq'
 brew 'fx'
 brew 'fzf'
 brew 'gdu'
@@ -50,58 +66,46 @@ brew 'hyperfine' # Command line perf
 # fixme brew 'ipatool' # tap majd/repo
 brew 'ios-deploy'
 brew 'isacikgoz/gitin/gitin'
+brew 'jfrog-cli'
 brew 'jira-cli'
 brew 'jless'
-brew 'jfrog-cli'
 brew 'jq'
+brew 'keith/formulae/git-pile'
 brew 'keith/formulae/reminders-cli' # keith/formula
 brew 'keith/formulae/tag' # keith/formula
 brew 'less' # Keep less up to date
-brew 'mdcat'
 brew 'mdcat' # Terminal Markdown rendering
 brew 'mint'
 # fixme brew 'mitmproxy'
 brew 'neovim'
 brew 'node'
 brew 'openjdk'
+brew 'pv'
 brew 'pyenv'
 brew 'python'
-brew 'pv'
 brew 'radare2'
 brew 'rbenv'
 brew 'rg'
 brew 'rustup'
 brew 'scmpuff'
 brew 'shellcheck'
+brew 'sourcegraph/src-cli/src-cli'
 brew 'speedtest-cli'
+brew 'starpls'
 brew 'the_silver_searcher'
 brew 'tig'
 brew 'tldr'
 brew 'tmux'
 brew 'tokei' # Better cloc
 brew 'tree'
+brew 'uv'
 # fixme brew 'vitals' # Process monitor
+brew 'wader/tap/fq'
 brew 'watchexec' # Watch directory, perform action
 brew 'wget'
 brew 'xclip' # Makes copying bat output easier
 brew 'xcodes'
 brew 'zoxide'
 brew 'zsh'
-brew 'starpls'
-#brew 'zulu-jdk19'
-#brew 'z' # NOTE: Use fisher-z
-
-tap 'ankitpokhrel/jira-cli'
-tap 'buildkite/cli'
-tap 'charmbracelet/homebrew-tap'
-tap 'hmarr/tap'
-tap 'isacikgoz/gitin'
-tap 'keith/formulae'
-tap 'milend/taps'
-tap 'robotsandpencils/made'
-tap 'teamookla/speedtest'
-tap 'majd/repo'
-tap 'mdogan/zulu'
-tap 'wader/tap'
-tap 'withered-magic/brew'
-tap 'JakeWharton/repo'
+# brew 'z' # NOTE: Use fisher-z
+# brew 'zulu-jdk19'
